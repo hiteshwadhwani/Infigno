@@ -113,7 +113,7 @@ const CertifiedPlanner = () => {
       </div>
 
       {/* You can be a Certified Career Planner, IF YOU ARE A */}
-      <div className="mt-20">
+      <div className="mt-20 bg-slate-100 -z-20 py-12">
         <div className="text-3xl text-center font-semibold">
           You can be a Certified Career Planner, IF YOU ARE A
         </div>
