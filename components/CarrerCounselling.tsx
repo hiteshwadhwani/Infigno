@@ -26,21 +26,18 @@ const CarrerCounselling = () => {
               average of{" "}
               <span className="font-semibold">₹5000 per student*</span>
             </h1>
-            <div className="text-white bg-gradient-to-br from-[#004EC1] rounded-2xl p-4 mt-10 md:w-[70%]">
-              <h3 className="text-white ml-4 mb-2">
+            <div className="text-white bg-gradient-to-br from-[#004EC1] rounded-2xl mt-10 md:w-[70%] px-8 py-4">
+              <h3 className="text-white mb-2">
                 Additional Sources of income
               </h3>
-              <ul>
-                <li className="text-white flex flex-row items-center">
-                  <BsDot /> Referral from Universities and other academic
-                  institutions
+              <ul className="list-disc">
+                <li className="text-white">
+                  Referral from Universities and other academic institutions
                 </li>
-                <li className="text-white flex flex-row items-center">
-                  <BsDot />
+                <li className="text-white ">
                   Referral from NBFCs and other educational institutions
                 </li>
-                <li className="text-white flex flex-row items-center">
-                  <BsDot />
+                <li className="text-white ">
                   Referral from 3rd party educational service providers
                 </li>
               </ul>
@@ -85,18 +82,27 @@ const CarrerCounselling = () => {
             />
           </div>
           <div className="md:absolute bottom-0 mx-auto  text-xl md:text-2xl lg:text-4xl bg-yellow-300 text-slate-600  p-2 md:p-5 rounded-2xl md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-bl-none lg:rounded-br-none">
-            <span className="text-blue-900">Earn</span> up to 32.4 Lakh per annum <br className="hidden md:block" /> through Counselling
+            <span className="text-blue-900">Earn</span> up to 32.4 Lakh per
+            annum <br className="hidden md:block" /> through Counselling
           </div>
         </div>
       </div>
       <div className="min-h-[154.193px] h-fit px-[50px] rounded-2xl md:bg-[#0047AB] flex flex-col md:grid md:grid-cols-3 mt-12 overflow-hidden items-center border border-slate-200 shadow-4xl md:shadow-none md:border-none">
-        <div className="text-lg md:text-2xl lg:text-3xl text-[#0047AB] md:text-white text-center md:text-left py-4">Download our 
-Career Counselling Program brochure for more details.</div>
-        <Button className="bg-white text-[#0047AB] rounded-full w-fit mx-auto shadow-3xl md:shadow-none border border-slate-200 md:border-none hover:bg-white hover:opacity-75 transition">Download Brochure</Button>
-        <div className="relative w-full h-full mt-4 hidden md:block">
-            <Image src={'/images/CarrerCounselling/img3.svg'} fill  alt="image" className="object-cover"/>
+        <div className="text-lg md:text-2xl lg:text-3xl text-[#0047AB] md:text-white text-center md:text-left py-4">
+          Download our Career Counselling Program brochure for more details.
         </div>
-      </div>  
+        <Button className="bg-white text-[#0047AB] rounded-full w-fit mx-auto shadow-3xl md:shadow-none border border-slate-200 md:border-none hover:bg-white hover:opacity-75 transition">
+          Download Brochure
+        </Button>
+        <div className="relative w-full h-full mt-4 hidden md:block">
+          <Image
+            src={"/images/CarrerCounselling/img3.svg"}
+            fill
+            alt="image"
+            className="object-cover"
+          />
+        </div>
+      </div>
     </div>
   );
 };
