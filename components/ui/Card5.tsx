@@ -4,8 +4,8 @@ import { twMerge } from "tailwind-merge";
 
 interface Card4Props {
   imageSrc?: string;
-  heading: string;
-  subheading: string;
+  heading?: string;
+  subheading?: string;
   description?: string;
   mainClass?: string;
   headingClass?: string;

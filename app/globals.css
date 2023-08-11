@@ -76,5 +76,12 @@
 }
 
 .react-multi-carousel-list {
-  padding: 0rem 0 1rem 0;
+  padding: 0rem 0 2rem 0;
+  }
+
+  .AccordionChevron {
+    transition: transform 300ms;
+  }
+  .AccordionTrigger[data-state='open'] > .AccordionChevron {
+    transform: rotate(180deg);
   }

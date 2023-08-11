@@ -117,7 +117,8 @@ const ClubPartners = () => {
         <span className="font-semibold">60+ College Club</span> Partners
       </div>
       <div className="mt-12">
-        <Carousel responsive={responsive} autoPlay arrows={false} autoPlaySpeed={1500} infinite={true} partialVisible={false}>
+        <Carousel responsive={responsive} autoPlay arrows={false} autoPlaySpeed={1500} infinite={true} partialVisible={false} customTransition="all 2s ease"
+          transitionDuration={1000}>
           {partners.map((item) => (
             <Card5 mainClass="h-[155.539px]" key={item.heading} {...item} />
           ))}

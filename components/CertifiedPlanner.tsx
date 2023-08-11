@@ -6,8 +6,30 @@ import CertifiedForm from "./ui/CertifiedForm";
 import { url } from "inspector";
 import Card2 from "./ui/Card2";
 import Card3 from "./ui/Card3";
+import Carousel from "react-multi-carousel";
+import { Button } from "./ui/button";
+import { useState } from "react";
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+    partialVisibilityGutter: 100
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
 
 const CertifiedPlanner = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   return (
     <div className="flex flex-col w-full">
       {/* Become a Certified Career Planner */}
@@ -108,7 +130,7 @@ const CertifiedPlanner = () => {
               fill
               className="object-cover xl:object-contain"
             /> */}
-             <Image
+            <Image
               src={"/images/employee.svg"}
               alt="image"
               fill
@@ -119,31 +141,33 @@ const CertifiedPlanner = () => {
       </div>
 
       {/* You can be a Certified Career Planner, IF YOU ARE A */}
-      <div className="mt-20 bg-slate-100 -z-20 py-12">
+      <div className="mt-20 bg-slate-100 py-12">
         <div className="text-3xl text-center font-semibold">
           You can be a Certified Career Planner, IF YOU ARE A
         </div>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-14 gap-y-14 m-20">
-            <Card3>
-                <div className="text-3xl font-semibold">
-                <span className="text-[#0047AB]">Education Business Owner</span> wanting to expand your offerings
-                </div>
+        <div className="mt-12">
+          <Carousel responsive={responsive} infinite partialVisbile={true}>
+            <Card3 imageSrc="/images/CarrerPlanner/img1.svg">
+              <div className="w-[70%] text-[20px] font-semibold">
+                <span className="text-[#0047AB]">Education Business</span> Owner
+                wanting to expand your offerings
+              </div>
             </Card3>
-            <Card3>
-                <div className="text-3xl font-semibold">
-                <span className="text-[#0047AB]">Education Business Owner</span> wanting to expand your offerings
-                </div>
+            <Card3 imageSrc="/images/CarrerPlanner/img2.svg">
+              <div className="w-[70%] text-[20px] font-semibold">
+                Wanting to{" "}
+                <span className="text-[#0047AB]">generate Passive income</span>
+              </div>
             </Card3>
-            <Card3>
-                <div className="text-3xl font-semibold">
-                <span className="text-[#0047AB]">Education Business Owner</span> wanting to expand your offerings
-                </div>
+            <Card3 imageSrc="/images/CarrerPlanner/img3.svg">
+              <div className="w-[70%] text-[20px] font-semibold">
+                <span className="text-[#0047AB]">
+                  Passionate about helping students
+                </span>{" "}
+                to achieve their dreams
+              </div>
             </Card3>
-            <Card3>
-                <div className="text-3xl font-semibold">
-                <span className="text-[#0047AB]">Education Business Owner</span> wanting to expand your offerings
-                </div>
-            </Card3>
+          </Carousel>
         </div>
       </div>
     </div>
