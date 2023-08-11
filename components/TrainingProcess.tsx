@@ -96,7 +96,7 @@ const TrainingProcess = () => {
       <div className="md:hidden m-4">
         <Carousel responsive={responsive}>
           {cardData.map((card) => (
-            <div key={card.heading} className="h-[400px] border border-slate-300 shadow-lg rounded-3xl">
+            <div key={card.heading} className="h-[400px] border border-slate-300 shadow-lg rounded-3xl overflow-hidden">
               <div className="p-6 md:px-20 md:py-12">
                 <h1 className="text-2xl md:text-3xl">{card.heading}</h1>
                 <p className="text-neutral-600 text-base md:text-xl md:mt-5">
