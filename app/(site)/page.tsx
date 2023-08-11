@@ -2,6 +2,7 @@ import CarrerCounselling from "@/components/CarrerCounselling";
 import CertifiedPlanner from "@/components/CertifiedPlanner";
 import ClubPartners from "@/components/ClubPartners";
 import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
 import MediaMentions from "@/components/MediaMentions";
 import TrainingProcess from "@/components/TrainingProcess";
 import WhatPeopleSaying from "@/components/WhatPeopleSaying";
@@ -18,6 +19,7 @@ export default function LandingPage() {
       <WhatPeopleSaying />
       {/* <MediaMentions /> */}
       <FAQ />
+      <Footer />
     </div>
   );
 }
