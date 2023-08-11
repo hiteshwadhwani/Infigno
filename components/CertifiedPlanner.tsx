@@ -61,7 +61,7 @@ const CertifiedPlanner = () => {
               src={"/images/people.svg"}
               alt="image"
               fill
-              className="object-cover xl:object-contain scale-100 md:scale-110 xl:scale-125"
+              className="scale-100 md:scale-110 xl:scale-125 md:hidden 2xl:block"
             />
           </div>
           <CertifiedForm />
@@ -102,11 +102,17 @@ const CertifiedPlanner = () => {
             />
           </div>
           <div className="relative h-full w-full">
-            <Image
+            {/* <Image
               src={"/images/employee.svg"}
               alt="image"
               fill
               className="object-cover xl:object-contain"
+            /> */}
+             <Image
+              src={"/images/employee.svg"}
+              alt="image"
+              fill
+              className="absolute bottom-0 object-cover"
             />
           </div>
         </div>

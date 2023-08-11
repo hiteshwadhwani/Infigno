@@ -62,7 +62,7 @@ const responsive = {
 
 const TrainingProcess = () => {
   return (
-    <div className="my-12 lg:m-20">
+    <div className="m-12 lg:m-20">
       {/* top heading */}
       <div className="flex flex-col items-start lg:items-center gap-y-3 w-[95vw] lg:w-[60vw] m-auto">
         <Image
@@ -86,7 +86,7 @@ const TrainingProcess = () => {
       {/* process */}
 
       {/* desktop view */}
-      <div className="hidden md:block  flex-col gap-y-6 my-6">
+      <div className="hidden md:block flex-col my-6">
         {cardData.map((card) => (
           <Card4 key={card.heading} {...card} />
         ))}
