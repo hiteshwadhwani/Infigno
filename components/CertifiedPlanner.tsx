@@ -125,7 +125,7 @@ const CertifiedPlanner = () => {
             <h3 className="text-[16px] md:text-[21px]">
               Help millions of students to achieve their career goals
             </h3>
-            <div className="mt-[30px] md:mt-[40px]">
+            <div className="mt-[30px] md:mt-[40px] flex flex-col gap-y-2">
               <CertifiedCard>
                 Earn up to <br />{" "}
                 <span className="text-[#F16136] font-semibold text-[18px]">
