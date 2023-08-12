@@ -22,16 +22,21 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Quicksand } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 
+import { FiChevronLeft } from "react-icons/fi";
+import { BiChevronRight } from "react-icons/bi";
+import "react-multi-carousel/lib/styles.css";
+import { ChevronLeft, ChevronRight, MoveLeft, MoveRight } from "lucide-react";
+
+import { Quicksand } from "next/font/google";
 const font = Quicksand({ subsets: ["latin"] });
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
-    partialVisibilityGutter: 100,
+    partialVisibilityGutter: 50,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -47,6 +52,31 @@ const responsive = {
 const formSchema = z.object({
   username: z.string().min(2).max(50),
 });
+
+const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
+  const {
+    carouselState: { currentSlide },
+  } = rest;
+  return (
+    <div
+      className="carousel-button-group mt-[30px] mb-4 gap-4 flex justify-center
+      items-center w-full"
+    >
+      <button
+        className="rounded-full border-2 bg-transparent text-[#0047AB] border-[#0047AB] hover:text-white hover:bg-[#0047AB] transition p-1"
+        onClick={() => previous()}
+      >
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+      <button
+        className="rounded-full border-2 bg-transparent text-[#0047AB] border-[#0047AB] p-1 hover:text-white hover:bg-[#0047AB] transition"
+        onClick={() => next()}
+      >
+        <ChevronRight className="w-5 h-5" />
+      </button>
+    </div>
+  );
+};
 
 const CertifiedPlanner = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -108,8 +138,7 @@ const CertifiedPlanner = () => {
                 <span className="text-[#F16136] font-semibold text-[21px] leading-[140%]">
                   IIT & IIM
                 </span>{" "}
-                <span className="font-semibold text-[21px]">
-                Graduates</span>
+                <span className="font-semibold text-[21px]">Graduates</span>
               </CertifiedCard>
               <CertifiedCard>
                 Trusted by <br />{" "}
@@ -120,7 +149,12 @@ const CertifiedPlanner = () => {
             </div>
             <div className="text-[12px] md:text-[16px] mt-3 md:mt-[30px]">
               Recognised by: <br />{" "}
-              <Image src={'/images/startupindia.svg'}width={125.24} height={27.541} alt="startup" />
+              <Image
+                src={"/images/startupindia.svg"}
+                width={125.24}
+                height={27.541}
+                alt="startup"
+              />
             </div>
             <div>
               <Image
@@ -232,12 +266,17 @@ const CertifiedPlanner = () => {
 
       {/* why be certified planner */}
       <div className="mt-12 lg:mt-[100px]">
-        <div className={twMerge(font.className, "text-[28px] md:text-[36px] text-center")}>
+        <div
+          className={twMerge(
+            font.className,
+            "text-[28px] md:text-[36px] text-center"
+          )}
+        >
           Why be a{" "}
           <span className="font-semibold">certified career planner?</span>
         </div>
-        <div className="bg-[#034DB3] mt-12 bg-bg2 bg-no-repeat bg-right w-[80vw] mx-auto rounded-[30px] overflow-hidden relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6 lg:w-[50%]">
+        <div className="bg-[#034DB3] mt-12 bg-right mx-[20px] md:mx-[100px] rounded-[30px] relative overflow-hidden bg-rocket bg-no-repeat bg-cover">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-6 lg:w-[50%]">
             <Card2 title="Strong Earning Potential">
               <div>
                 <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
@@ -285,8 +324,15 @@ const CertifiedPlanner = () => {
             alt="image"
             width={600}
             height={431}
-            className="absolute bottom-0 right-0 transform -scale-x-[1] hidden lg:block scale-105"
+            className="absolute bottom-0 right-0 transform -scale-x-[1] hidden lg:block z-10 scale-105"
           />
+          {/* <Image
+            src={"/images/bg2.svg"}
+            height={1244.496}
+            width={993.215}
+            className="absolute bottom-0 scale-90 translate-x-28 translate-y-"
+            alt="background"
+          /> */}
         </div>
       </div>
 
@@ -295,26 +341,73 @@ const CertifiedPlanner = () => {
         <div className="text-3xl text-center font-semibold">
           You can be a Certified Career Planner, IF YOU ARE A
         </div>
-        <div className="mt-12">
-          <Carousel responsive={responsive} infinite partialVisbile={true}>
+        <div className="mt-[60px]">
+          <Carousel
+            responsive={responsive}
+            arrows={false}
+            centerMode={true}
+            renderButtonGroupOutside={true}
+            customButtonGroup={<ButtonGroup />}
+          >
             <Card3 imageSrc="/images/CarrerPlanner/img1.svg">
-              <div className="w-[70%] text-[20px] font-semibold">
-                <span className="text-[#0047AB]">Education Business</span> Owner
-                wanting to expand your offerings
+              <div className="text-[18px] font-normal">
+                <span className="font-bold text-[#0047AB]">Housewife </span>
+                wanting to do counselling as your passion
               </div>
             </Card3>
             <Card3 imageSrc="/images/CarrerPlanner/img2.svg">
-              <div className="w-[70%] text-[20px] font-semibold">
+              <div className="text-[18px] font-normal">
                 Wanting to{" "}
-                <span className="text-[#0047AB]">generate Passive income</span>
+                <span className="font-bold text-[#0047AB]">
+                  start your own business
+                </span>
               </div>
             </Card3>
             <Card3 imageSrc="/images/CarrerPlanner/img3.svg">
-              <div className="w-[70%] text-[20px] font-semibold">
-                <span className="text-[#0047AB]">
+              <div className="text-[18px] font-normal">
+                <span className="font-bold text-[#0047AB]">
+                  Working professional
+                </span>{" "}
+                wanting to switch your career
+              </div>
+            </Card3>
+            <Card3 imageSrc="/images/CarrerPlanner/img4.svg">
+              <div className="text-[18px] font-normal">
+                Wanting to generate{" "}
+                <span className="font-bold text-[#0047AB]">Passive income</span>
+              </div>
+            </Card3>
+            <Card3 imageSrc="/images/CarrerPlanner/img5.svg">
+              <div className="text-[18px] font-normal">
+                <span className="font-bold text-[#0047AB]">
                   Passionate about helping students
                 </span>{" "}
                 to achieve their dreams
+              </div>
+            </Card3>
+            <Card3 imageSrc="/images/CarrerPlanner/img6.svg">
+              <div className="text-[18px] w-[70%] font-normal">
+                <span className="font-bold text-[#0047AB]">
+                  Education Business Owner
+                </span>{" "}
+                wanting to expand your offerings
+              </div>
+            </Card3>
+            <Card3 imageSrc="/images/CarrerPlanner/img7.svg">
+              <div className="text-[16px] font-normal">
+                <span className="font-bold text-[#0047AB]">
+                  Retired Professional
+                </span>{" "}
+                looking for a low investment business opportunity
+              </div>
+            </Card3>
+            <Card3 imageSrc="/images/CarrerPlanner/img8.svg">
+              <div className="text-[18px] font-normal text-white">
+                <span className="font-bold">
+                  A School/College/Tuition teacher
+                </span>{" "}
+                or have experience of{" "}
+                <span className="font-bold">Education Industry</span>
               </div>
             </Card3>
           </Carousel>

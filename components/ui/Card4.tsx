@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { twMerge } from "tailwind-merge";
+import { Quicksand } from "next/font/google";
+const font = Quicksand({ subsets: ["latin"] });
 
 interface Card4Props {
   heading: string;
@@ -37,7 +39,7 @@ const Card4: React.FC<Card4Props> = ({
     //     />
     //   </div>
     // </div>
-    <div className="min-h-[340px] lg:w-[90%] xl:w-[70%] h-fit rounded-[30px] shadow-xl border border-slate-200 mx-auto mt-[35px] relative flex flex-row overflow-hidden">
+    <div className="min-h-[340px]  h-fit rounded-[30px] mx-[100px] mt-[35px] relative flex flex-row overflow-hidden customShadow">
       {/* <Image
         src={`images/numbers/${number}.svg`}
         width={50}
@@ -46,11 +48,11 @@ const Card4: React.FC<Card4Props> = ({
         className="absolute left-8 -top-5"
       /> */}
 
-      <div className="w-[50%] pl-8">
-        <h1 className="text-[20px] lg:text-[42px] font-semibold mt-[30px]">
+      <div className="w-[40%] pl-8">
+        <h1 className={twMerge("text-[20px] lg:text-[42px] font-semibold mt-[30px] leading-[110%]", font.className)}>
           {heading}
         </h1>
-        <div className="mt-[10px] text-[#5F6163] lg:text-[21px] text-[12px]">
+        <div className="mt-[10px] text-[#5F6163] lg:text-[21px] text-[12px] leading-[130%]">
           {children}
         </div>
       </div>

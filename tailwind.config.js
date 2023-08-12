@@ -59,7 +59,7 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
-        'bg2': "url('/images/bg2.svg')"
+        'rocket': "url('/images/rocket.svg')"
       },
       
       keyframes: {

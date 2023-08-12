@@ -4,9 +4,14 @@ import Image from "next/image";
 import { BsDot } from "react-icons/bs";
 import { Button } from "./ui/button";
 
+import { Quicksand, Readex_Pro } from "next/font/google";
+import { twMerge } from "tailwind-merge";
+const font = Quicksand({ subsets: ["latin"] });
+const radix = Readex_Pro({ subsets: ["latin"] });
+
 const CarrerCounselling = () => {
   return (
-    <div className="w-[90%] xl:w-[70%] mt-12 lg:mt-[100px]  m-auto">
+    <div className="mx-[20px] md:mx-[100px] mt-12 lg:mt-[100px]">
       <div className="text-center text-3xl text-blue-600">
         <span className="font-semibold">Why INFIGON’S</span> Career Counselling
         Program
@@ -27,9 +32,7 @@ const CarrerCounselling = () => {
               <span className="font-semibold">₹5000 per student*</span>
             </h1>
             <div className="text-white bg-gradient-to-br from-[#004EC1] rounded-2xl mt-10 md:w-[70%] px-8 py-4">
-              <h3 className="text-white mb-2">
-                Additional Sources of income
-              </h3>
+              <h3 className="text-white mb-2">Additional Sources of income</h3>
               <ul className="list-disc">
                 <li className="text-white">
                   Referral from Universities and other academic institutions
@@ -72,7 +75,7 @@ const CarrerCounselling = () => {
               <span className="font-semibold text-xl">#startupindia</span>
             </div>
           </div>
-          <div className="md:absolute md:bottom-0 md:right-4 lg:right-8 xl:right-20">
+          <div className="md:absolute md:bottom-0 md:right-4 lg:right-4 xl:right-10 z-10">
             <Image
               src={"/images/CarrerCounselling/img2.svg"}
               alt="image"
@@ -81,15 +84,28 @@ const CarrerCounselling = () => {
               className="mt-10"
             />
           </div>
-          <div className="md:absolute bottom-0 mx-auto  text-xl md:text-2xl lg:text-4xl bg-yellow-300 text-slate-600  p-2 md:p-5 rounded-2xl md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-bl-none lg:rounded-br-none">
-            <span className="text-blue-900">Earn</span> up to 32.4 Lakh per
-            annum <br className="hidden md:block" /> through Counselling
+          <div
+            className={twMerge(
+              "md:absolute bottom-0 mx-auto  text-xl md:text-[36px] bg-yellow-300 text-[#5F6163]  p-2 md:p-[40px] rounded-2xl md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-bl-none lg:rounded-br-none leading-[120%] lg:w-[800px]",
+              font.className
+            )}
+          >
+            <span className={twMerge("text-blue-900", radix.className)}>
+              Earn
+            </span>{" "}
+            up to <br className="hidden lg:block" />{" "}
+            <span className={twMerge("text-blue-900", radix.className)}>
+              32.4 Lakh per annum
+            </span>{" "}
+            <br className="hidden md:block" /> through Counselling
           </div>
         </div>
       </div>
       <div className="min-h-[154.193px] h-fit px-[50px] rounded-2xl md:bg-[#0047AB] flex flex-col md:grid md:grid-cols-3 mt-12 overflow-hidden items-center border border-slate-200 shadow-4xl md:shadow-none md:border-none">
-        <div className="text-lg md:text-2xl lg:text-3xl text-[#0047AB] md:text-white text-center md:text-left py-4">
-          Download our Career Counselling Program brochure for more details.
+        <div className={twMerge("text-lg md:text-[24px] text-[#0047AB] md:text-white text-center md:text-left py-4 font-medium", font.className)}>
+          Download our{" "}
+          <span className="font-bold">Career Counselling Program brochure</span>{" "}
+          for more details.
         </div>
         <Button className="bg-white text-[#0047AB] rounded-full w-fit mx-auto shadow-3xl md:shadow-none border border-slate-200 md:border-none hover:bg-white hover:opacity-75 transition">
           Download Brochure

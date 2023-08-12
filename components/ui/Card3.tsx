@@ -3,15 +3,17 @@
 import React from "react";
 
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 
 interface Card2Props {
   imageSrc: string
   children: React.ReactNode;
+  className?: string
 }
 
-const Card3: React.FC<Card2Props> = ({ children, imageSrc }) => {
+const Card3: React.FC<Card2Props> = ({ children, imageSrc , className}) => {
   return (
-    <div className="relative h-[455.162px] rounded-2xl shadow-xl border border-slate-200 mx-[10px] md:mx-[20px]">
+    <div className={twMerge("relative h-[400px] rounded-2xl shadow-xl border border-slate-200 mx-[10px] md:mx-[10px]", className)}>
       <Image
         src={imageSrc}
         alt="asf"

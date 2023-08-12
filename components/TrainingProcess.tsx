@@ -64,7 +64,7 @@ const TrainingProcess = () => {
   return (
     <div className="mt-12 lg:mt-[100px]">
       {/* top heading */}
-      <div className="flex flex-col items-start lg:items-center gap-y-3 w-[95vw] lg:w-[60vw] m-auto">
+      <div className="flex flex-col items-start lg:items-center gap-y-3 w-[95vw] lg:w-[65vw] m-auto">
         <div className="relative w-[200px] h-[42px]">
           <Image
             src={"/images/logo.svg"}

@@ -17,7 +17,7 @@ interface Card2Props{
 
 const Card2: React.FC<Card2Props> = ({title, children}) => {
   return (
-    <div className="md:px-[22px] px-[18px] md:py-[18px] py-[15px] bg-white rounded-[15px]">
+    <div className="px-[26px] md:py-[18px] py-[18px] bg-white rounded-[15px] customShadow z-10">
       <h1 className="text-[14px] md:text-[14px] font-semibold text-[#0047AB]">
         {title}
       </h1>
