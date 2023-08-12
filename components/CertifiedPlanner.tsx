@@ -118,11 +118,9 @@ const CertifiedPlanner = () => {
                 </span>
               </CertifiedCard>
             </div>
-            <div className="text-[12px] md:text-[18px] mt-3 md:mt-[30px]">
+            <div className="text-[12px] md:text-[16px] mt-3 md:mt-[30px]">
               Recognised by: <br />{" "}
-              <span className="text-xl md:text-2xl font-semibold text-[#F16136]">
-                #startupindia
-              </span>
+              <Image src={'/images/startupindia.svg'}width={125.24} height={27.541} alt="startup" />
             </div>
             <div>
               <Image
@@ -134,7 +132,7 @@ const CertifiedPlanner = () => {
               />
             </div>
           </div>
-          <div className="w-full md:w-[360px] bg-gradient-to-br from-[#034DB3] to-[#1F86FF] py-[30px] px-[20px] md:px-[30px] rounded-3xl z-10">
+          <div className="w-full md:w-[360px] bg-gradient-to-br from-[#034DB3] to-[#1F86FF] py-[20px] px-[20px] md:px-[30px] rounded-3xl z-10">
             <h1
               className={twMerge(
                 "text-[21px] md:text-[36px] text-[#FDE74C] font-bold leading-[120%]",
@@ -222,7 +220,7 @@ const CertifiedPlanner = () => {
                 />
                 <Button
                   type="submit"
-                  className="mt-6 px-[20px] py-[15px] md:py-[20px] w-full text-[18px] h-fit bg-[#FDE74C] hover:bg-[#FDE74C] hover:opacity-80 transition text-[#0047AB] rounded-[10px]"
+                  className="mt-6 px-[15px] py-[10px] md:py-[15px] w-full text-[18px] h-fit bg-[#FDE74C] hover:bg-[#FDE74C] hover:opacity-80 transition text-[#0047AB] rounded-[10px]"
                 >
                   Book Session
                 </Button>
