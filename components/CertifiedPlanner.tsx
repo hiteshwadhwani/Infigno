@@ -22,6 +22,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Quicksand } from "next/font/google";
+import { twMerge } from "tailwind-merge";
+
+const font = Quicksand({ subsets: ["latin"] });
 
 const responsive = {
   desktop: {
@@ -32,11 +36,11 @@ const responsive = {
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 2,
-    partialVisibilityGutter: 50,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
+    partialVisibilityGutter: 30,
   },
 };
 
@@ -59,31 +63,31 @@ const CertifiedPlanner = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Become a Certified Career Planner */}
-      <div className="md:h-[760px] h-fit w-full bg-gradient-to-br from-[#004EC1] to-[#1E86FF] md:p-5 xl:p-10">
+      <div className="md:h-[calc(100%-72px)]  h-fit w-full bg-gradient-to-br from-[#004EC1] to-[#1E86FF] md:p-5 xl:py-[20px] xl:px-[40px]">
         <div className="relative p-[40px] md:bg-white rounded-3xl flex flex-col md:flex-row justify-between h-full items-center overflow-hidden">
           <Image
             src={"/images/people.svg"}
             alt="image"
             width={536.372}
             height={502.625}
-            className="z-10 absolute bottom-0 left-[50%] transform -translate-x-[50%] hidden xl:block scale-125"
+            className="z-10 absolute bottom-0 left-[50%] transform -translate-x-[50%] hidden xl:block"
           />
 
           {/* background image   */}
           <Image
             src={"/images/bg2.svg"}
             fill
-            className="hidden xl:block absolute bottom-0 right-0 opacity-60"
+            className="hidden xl:block absolute transform translate-x-[25%] translate-y-[25%] opacity-75"
             alt="background"
           />
 
           <div className="flex flex-col items-center md:block bg-gradient-to-br from-[#FFF] to-[#1E86FF] md:bg-none px-[20px] pt-[20px] md:p-0 rounded-3xl md:rounded-none mb-[20px] md:mb-0 z-10">
-            <h1 className="text-[28px] md:text-[42px] text-[#004EC1]">
+            <h1 className={twMerge("text-[28px] md:text-[42px] text-[#004EC1] font-medium leading-[120%]", font.className)}>
               Become a <br className="hidden md:block" />
-              <span className="font-semibold">Certified Career Planner</span>
+              <span className="font-bold">Certified Career Planner</span>
             </h1>
-            <h3 className="text-[16px] md:text-[21px]">
-              Help millions of students to achieve their career goals
+            <h3 className="text-[16px] md:text-[21px] leading-[120%] font-normal mt-[15px]">
+              Help millions of students to <br className="hidden md:block" />achieve  their career goals
             </h3>
             <div className="mt-[30px] md:mt-[40px] flex flex-col gap-y-2">
               <CertifiedCard>
@@ -91,21 +95,21 @@ const CertifiedPlanner = () => {
                 <span className="text-[#F16136] font-semibold text-[18px]">
                   32 Lakh*
                 </span>
-                <span className="font-semibold">per year</span>
+                <span className="font-semibold"> per year</span>
               </CertifiedCard>
               <CertifiedCard>
                 Earn up to <br />{" "}
                 <span className="text-[#F16136] font-semibold text-[18px]">
                   32 Lakh*
                 </span>
-                <span className="font-semibold">per year</span>
+                <span className="font-semibold"> per year</span>
               </CertifiedCard>
               <CertifiedCard>
                 Earn up to <br />{" "}
                 <span className="text-[#F16136] font-semibold text-[18px]">
                   32 Lakh*
                 </span>
-                <span className="font-semibold">per year</span>
+                <span className="font-semibold"> per year</span>
               </CertifiedCard>
             </div>
             <div className="text-[12px] md:text-[18px] mt-3 md:mt-[80px]">
@@ -125,11 +129,11 @@ const CertifiedPlanner = () => {
             </div>
           </div>
           <div className="w-full md:w-[360px] bg-gradient-to-br from-[#034DB3] to-[#1F86FF] py-[30px] px-[20px] md:px-[30px] rounded-3xl z-10">
-            <h1 className="text-[21px] md:text-[36px] text-[#FDE74C]">
+            <h1 className={twMerge("text-[21px] md:text-[36px] text-[#FDE74C] font-bold leading-[120%]", font.className)}>
               Book a FREE Demo Session
             </h1>
-            <h3 className="text-[18px] md:text-[18px] text-white font-light">
-              Tell us more about yourself & we will get back to you{" "}
+            <h3 className={"text-[18px] md:text-[18px] text-white font-light leading-[120%] mt-[8px]"}>
+              Tell us more about yourself <br className="hidden md:block" /> & we will get back to you{" "}
             </h3>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="">
@@ -140,7 +144,7 @@ const CertifiedPlanner = () => {
                     <FormItem>
                       <FormControl>
                         <Input
-                          className="py-[18px] px-[27px] h-fit mt-[20px]"
+                          className="py-[18px] px-[27px] h-fit mt-[30px]"
                           placeholder="Full Name"
                           {...field}
                         />
@@ -227,11 +231,11 @@ const CertifiedPlanner = () => {
               </div>
             </Card2>
             <Card2 title="Nation Building">
-              <div>
-                Help confused students to achieve their{" "}
+              <p>
+                Help confused students to achieve their 
                 <span className="font-semibold">Career goals</span> building a
                 <span className="font-semibold">bright future for India.</span>
-              </div>
+              </p>
             </Card2>
             <Card2 title="Government Initiatives">
               <div>

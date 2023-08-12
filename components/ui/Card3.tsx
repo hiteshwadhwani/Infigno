@@ -11,7 +11,7 @@ interface Card2Props {
 
 const Card3: React.FC<Card2Props> = ({ children, imageSrc }) => {
   return (
-    <div className="relative h-[455.162px] rounded-2xl shadow-xl border border-slate-200 mx-[20px] md:mx-[40px]">
+    <div className="relative h-[455.162px] rounded-2xl shadow-xl border border-slate-200 mx-[10px] md:mx-[20px]">
       <Image
         src={imageSrc}
         alt="asf"
