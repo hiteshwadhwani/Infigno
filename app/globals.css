@@ -119,5 +119,9 @@ html, body,:root{
   }
 
   .customHeight {
-    height: calc(100% - 72px);
+    min-height: calc(100% - 72px);
+  }
+
+  .customShadow{
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.20);
   }

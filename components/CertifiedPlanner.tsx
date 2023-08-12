@@ -84,7 +84,7 @@ const CertifiedPlanner = () => {
           <div className="flex flex-col items-center md:block bg-gradient-to-br from-[#FFF] to-[#1E86FF] md:bg-none px-[20px] py-[20px] md:p-0 rounded-[25px] md:rounded-none mb-[20px] md:mb-0 z-10">
             <h1
               className={twMerge(
-                "text-[28px] md:text-[42px] text-[#004EC1] font-medium leading-[120%]",
+                "text-[28px] md:text-[38px] text-[#004EC1] font-medium leading-[120%]",
                 font.className
               )}
             >
@@ -95,20 +95,20 @@ const CertifiedPlanner = () => {
               Help millions of students to <br className="hidden md:block" />
               achieve their career goals
             </h3>
-            <div className="mt-[30px] md:mt-[40px] flex flex-col gap-y-2">
+            <div className="mt-[30px] md:mt-[40px] flex flex-col gap-y-[15px]">
               <CertifiedCard>
                 Earn up to <br />{" "}
                 <span className="text-[#F16136] font-semibold text-[21px] leading-[140%]">
                   32 Lakh*
                 </span>
-                <span className="font-semibold"> per year</span>
+                <span className="font-semibold text-[21px]"> per year</span>
               </CertifiedCard>
               <CertifiedCard>
                 Lead by ex: <br />
                 <span className="text-[#F16136] font-semibold text-[21px] leading-[140%]">
                   IIT & IIM
                 </span>{" "}
-                <span className="font-semibold">
+                <span className="font-semibold text-[21px]">
                 Graduates</span>
               </CertifiedCard>
               <CertifiedCard>
