@@ -17,7 +17,7 @@ const Navbar = () => {
         <NavItems>About us</NavItems> */}
         
         <NavItems>For more details : </NavItems>
-        <Button className="px-[20px] py-[12px] bg-[#0047AB] text-white rounded-full hover:bg-[#0047AB] hover:opacity-75 transition">
+        <Button className="px-[20px] py-[12px] bg-[#0047AB] text-white hover:bg-[#0047AB] hover:opacity-75 transition rounded-[10px]">
           Contact us
         </Button>
       </div>

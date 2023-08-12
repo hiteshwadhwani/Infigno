@@ -63,56 +63,62 @@ const CertifiedPlanner = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Become a Certified Career Planner */}
-      <div className="md:h-[calc(100%-72px)]  h-fit w-full bg-gradient-to-br from-[#004EC1] to-[#1E86FF] md:p-5 xl:py-[20px] xl:px-[40px]">
-        <div className="relative p-[40px] md:bg-white rounded-3xl flex flex-col md:flex-row justify-between h-full items-center overflow-hidden">
+      <div className="md:customHeight  h-fit w-full bg-gradient-to-br from-[#004EC1] via-[#004EC1] bgop to-[#1E86FF] md:p-5 xl:py-[30px] xl:px-[40px]">
+        <div className="relative py-[20px] px-[40px] md:bg-gradient-to-br from-white via-white to-[#1E86FF] rounded-3xl flex flex-col md:flex-row justify-between h-full items-center overflow-hidden">
           <Image
             src={"/images/people.svg"}
             alt="image"
             width={536.372}
             height={502.625}
-            className="z-10 absolute bottom-0 left-[50%] transform -translate-x-[50%] hidden xl:block"
+            className="z-20 absolute bottom-0 left-[50%] transform -translate-x-[55%] hidden xl:block"
           />
 
           {/* background image   */}
           <Image
             src={"/images/bg2.svg"}
             fill
-            className="hidden xl:block absolute transform translate-x-[25%] translate-y-[25%] opacity-75"
+            className="hidden xl:block absolute transform translate-x-[9%] translate-y-[25%]"
             alt="background"
           />
 
-          <div className="flex flex-col items-center md:block bg-gradient-to-br from-[#FFF] to-[#1E86FF] md:bg-none px-[20px] pt-[20px] md:p-0 rounded-3xl md:rounded-none mb-[20px] md:mb-0 z-10">
-            <h1 className={twMerge("text-[28px] md:text-[42px] text-[#004EC1] font-medium leading-[120%]", font.className)}>
+          <div className="flex flex-col items-center md:block bg-gradient-to-br from-[#FFF] to-[#1E86FF] md:bg-none px-[20px] py-[20px] md:p-0 rounded-[25px] md:rounded-none mb-[20px] md:mb-0 z-10">
+            <h1
+              className={twMerge(
+                "text-[28px] md:text-[42px] text-[#004EC1] font-medium leading-[120%]",
+                font.className
+              )}
+            >
               Become a <br className="hidden md:block" />
               <span className="font-bold">Certified Career Planner</span>
             </h1>
-            <h3 className="text-[16px] md:text-[21px] leading-[120%] font-normal mt-[15px]">
-              Help millions of students to <br className="hidden md:block" />achieve  their career goals
+            <h3 className="text-[16px] md:text-[21px] leading-[120%] font-normal mt-[10px]">
+              Help millions of students to <br className="hidden md:block" />
+              achieve their career goals
             </h3>
             <div className="mt-[30px] md:mt-[40px] flex flex-col gap-y-2">
               <CertifiedCard>
                 Earn up to <br />{" "}
-                <span className="text-[#F16136] font-semibold text-[18px]">
+                <span className="text-[#F16136] font-semibold text-[21px] leading-[140%]">
                   32 Lakh*
                 </span>
                 <span className="font-semibold"> per year</span>
               </CertifiedCard>
               <CertifiedCard>
-                Earn up to <br />{" "}
-                <span className="text-[#F16136] font-semibold text-[18px]">
-                  32 Lakh*
-                </span>
-                <span className="font-semibold"> per year</span>
+                Lead by ex: <br />
+                <span className="text-[#F16136] font-semibold text-[21px] leading-[140%]">
+                  IIT & IIM
+                </span>{" "}
+                <span className="font-semibold">
+                Graduates</span>
               </CertifiedCard>
               <CertifiedCard>
-                Earn up to <br />{" "}
-                <span className="text-[#F16136] font-semibold text-[18px]">
-                  32 Lakh*
+                Trusted by <br />{" "}
+                <span className="text-[#F16136] font-semibold text-[21px] leading-[140%]">
+                  50,000+ Students
                 </span>
-                <span className="font-semibold"> per year</span>
               </CertifiedCard>
             </div>
-            <div className="text-[12px] md:text-[18px] mt-3 md:mt-[80px]">
+            <div className="text-[12px] md:text-[18px] mt-3 md:mt-[30px]">
               Recognised by: <br />{" "}
               <span className="text-xl md:text-2xl font-semibold text-[#F16136]">
                 #startupindia
@@ -129,11 +135,21 @@ const CertifiedPlanner = () => {
             </div>
           </div>
           <div className="w-full md:w-[360px] bg-gradient-to-br from-[#034DB3] to-[#1F86FF] py-[30px] px-[20px] md:px-[30px] rounded-3xl z-10">
-            <h1 className={twMerge("text-[21px] md:text-[36px] text-[#FDE74C] font-bold leading-[120%]", font.className)}>
+            <h1
+              className={twMerge(
+                "text-[21px] md:text-[36px] text-[#FDE74C] font-bold leading-[120%]",
+                font.className
+              )}
+            >
               Book a FREE Demo Session
             </h1>
-            <h3 className={"text-[18px] md:text-[18px] text-white font-light leading-[120%] mt-[8px]"}>
-              Tell us more about yourself <br className="hidden md:block" /> & we will get back to you{" "}
+            <h3
+              className={
+                "text-[18px] md:text-[18px] text-white font-light leading-[120%] mt-[8px]"
+              }
+            >
+              Tell us more about yourself <br className="hidden md:block" /> &
+              we will get back to you{" "}
             </h3>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="">
@@ -144,7 +160,7 @@ const CertifiedPlanner = () => {
                     <FormItem>
                       <FormControl>
                         <Input
-                          className="py-[18px] px-[27px] h-fit mt-[30px]"
+                          className="py-[18px] px-[27px] h-fit mt-[30px] rounded-[10px]"
                           placeholder="Full Name"
                           {...field}
                         />
@@ -161,7 +177,7 @@ const CertifiedPlanner = () => {
                     <FormItem>
                       <FormControl>
                         <Input
-                          className="py-[18px] px-[27px] h-fit mt-[20px]"
+                          className="py-[18px] px-[27px] h-fit mt-[15px] rounded-[10px]"
                           placeholder="Phone Number"
                           {...field}
                         />
@@ -178,7 +194,7 @@ const CertifiedPlanner = () => {
                     <FormItem>
                       <FormControl>
                         <Input
-                          className="py-[18px] px-[27px] h-fit mt-[20px]"
+                          className="py-[18px] px-[27px] h-fit mt-[15px] rounded-[10px]"
                           placeholder="E-Mail"
                           {...field}
                         />
@@ -195,7 +211,7 @@ const CertifiedPlanner = () => {
                     <FormItem>
                       <FormControl>
                         <Input
-                          className="py-[18px] px-[27px] h-fit mt-[20px]"
+                          className="py-[18px] px-[27px] h-fit mt-[15px] rounded-[10px]"
                           placeholder="What is your current profession?"
                           {...field}
                         />
@@ -206,7 +222,7 @@ const CertifiedPlanner = () => {
                 />
                 <Button
                   type="submit"
-                  className="mt-6 px-[20px] py-[15px] md:py-[20px] w-full text-[18px] h-fit bg-[#FDE74C] hover:bg-[#FDE74C] hover:opacity-80 transition text-[#0047AB]"
+                  className="mt-6 px-[20px] py-[15px] md:py-[20px] w-full text-[18px] h-fit bg-[#FDE74C] hover:bg-[#FDE74C] hover:opacity-80 transition text-[#0047AB] rounded-[10px]"
                 >
                   Book Session
                 </Button>
@@ -232,7 +248,7 @@ const CertifiedPlanner = () => {
             </Card2>
             <Card2 title="Nation Building">
               <p>
-                Help confused students to achieve their 
+                Help confused students to achieve their
                 <span className="font-semibold">Career goals</span> building a
                 <span className="font-semibold">bright future for India.</span>
               </p>

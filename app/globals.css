@@ -117,3 +117,7 @@ html, body,:root{
     right:-50px;
     border-left:50px solid red; 
   }
+
+  .customHeight {
+    height: calc(100% - 72px);
+  }
