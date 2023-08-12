@@ -232,7 +232,7 @@ const CertifiedPlanner = () => {
 
       {/* why be certified planner */}
       <div className="mt-12 lg:mt-[100px]">
-        <div className="text-[28px] md:text-[36px] text-center">
+        <div className={twMerge(font.className, "text-[28px] md:text-[36px] text-center")}>
           Why be a{" "}
           <span className="font-semibold">certified career planner?</span>
         </div>
@@ -284,8 +284,8 @@ const CertifiedPlanner = () => {
             src={"/images/employee.svg"}
             alt="image"
             width={600}
-            height={500}
-            className="absolute bottom-0 right-0 transform -scale-x-[1] hidden lg:block"
+            height={431}
+            className="absolute bottom-0 right-0 transform -scale-x-[1] hidden lg:block scale-105"
           />
         </div>
       </div>
