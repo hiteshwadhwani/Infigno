@@ -58,64 +58,23 @@ const CertifiedPlanner = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Become a Certified Career Planner */}
-      {/* <div className="bg-[#004EC1] p-[40px]">
-        <div className=" bg-white rounded-3xl md:px-[40px] pt-[20px] md:pt-[40px] grid grid-cols-1 xl:grid-cols-3 overflow-hidden">
-          <div className="items-center md:items-start p-[20px] flex flex-col gap-y-4">
-            <div className="text-[#004EC1] text-[28px] md:text-[42px] text-center md:text-left">
-              Become a <br />
-              <span className="font-semibold">Certified Career Planner</span>
-            </div>
-            <div className="text-center md:text-left text-[16px] md:text-[21px]">
-              Help millions of students to <br /> achieve their carrer goals
-            </div>
-
-            <CertifiedCard>
-              Earn up to <br />{" "}
-              <span className="text-[#F16136] font-semibold text-[18px]">
-                32 Lakh*
-              </span>
-              <span className="font-semibold">per year</span>
-            </CertifiedCard>
-            <CertifiedCard>
-              Earn up to <br />{" "}
-
-              <span className="text-[#F16136] font-semibold text-[18px]">
-                32 Lakh*
-              </span>
-              <span className="font-semibold">per year</span>
-            </CertifiedCard>
-            <CertifiedCard>
-              Earn up to <br />{" "}
-              <span className="text-[#F16136] font-semibold text-[18px]">
-                32 Lakh*
-              </span>
-              <span className="font-semibold">per year</span>
-            </CertifiedCard>
-            <div className="text-[12px] md:text-[18px] mb-4">
-              Recognised by: <br />{" "}
-              <span className="text-xl md:text-2xl font-semibold text-[#F16136]">
-                #startupindia
-              </span>
-            </div>
-          </div>
-          <div className="relative h-[309.974px] w-[320px] md:h-full md:w-full sm:mt-4 sm:mb-8 z-10">
-            <Image
-              src={"/images/people.svg"}
-              alt="image"
-              fill
-              className="scale-100 md:scale-110 xl:scale-125 md:hidden 2xl:block"
-            />
-          </div>
-          <CertifiedForm />
-        </div>
-      </div> */}
-
       <div className="md:h-[760px] h-fit w-full bg-gradient-to-br from-[#004EC1] to-[#1E86FF] md:p-5 xl:p-10">
         <div className="relative p-[40px] md:bg-white rounded-3xl flex flex-col md:flex-row justify-between h-full items-center overflow-hidden">
-          <Image src={'/images/people.svg'} alt="image" width={536.372} height={502.625} className="z-10 absolute bottom-0 left-[50%] transform -translate-x-[50%] hidden xl:block scale-125" />
-          
-          
-          <Image src={'/images/bg2.svg'} fill className="hidden xl:block absolute bottom-0 right-0 opacity-60" alt="background"/>
+          <Image
+            src={"/images/people.svg"}
+            alt="image"
+            width={536.372}
+            height={502.625}
+            className="z-10 absolute bottom-0 left-[50%] transform -translate-x-[50%] hidden xl:block scale-125"
+          />
+
+          {/* background image   */}
+          <Image
+            src={"/images/bg2.svg"}
+            fill
+            className="hidden xl:block absolute bottom-0 right-0 opacity-60"
+            alt="background"
+          />
 
           <div className="flex flex-col items-center md:block bg-gradient-to-br from-[#FFF] to-[#1E86FF] md:bg-none px-[20px] pt-[20px] md:p-0 rounded-3xl md:rounded-none mb-[20px] md:mb-0 z-10">
             <h1 className="text-[28px] md:text-[42px] text-[#004EC1]">
@@ -155,26 +114,35 @@ const CertifiedPlanner = () => {
               </span>
             </div>
             <div>
-            <Image src={'/images/people.svg'} alt="image" width={320} height={309} className="md:hidden" />
+              <Image
+                src={"/images/people.svg"}
+                alt="image"
+                width={320}
+                height={309}
+                className="md:hidden"
+              />
             </div>
           </div>
-          <div className="w-[320px] md:w-[360px] bg-gradient-to-br from-[#034DB3] to-[#1F86FF] py-[30px] px-[20px] md:px-[30px] rounded-3xl z-10">
-            <h1 className="text-[21px] md:text-[36px] text-[#FDE74C]">Book a FREE Demo Session</h1>
+          <div className="w-full md:w-[360px] bg-gradient-to-br from-[#034DB3] to-[#1F86FF] py-[30px] px-[20px] md:px-[30px] rounded-3xl z-10">
+            <h1 className="text-[21px] md:text-[36px] text-[#FDE74C]">
+              Book a FREE Demo Session
+            </h1>
             <h3 className="text-[18px] md:text-[18px] text-white font-light">
               Tell us more about yourself & we will get back to you{" "}
             </h3>
             <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className=""
-              >
+              <form onSubmit={form.handleSubmit(onSubmit)} className="">
                 <FormField
                   control={form.control}
                   name="username"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input className="py-[18px] px-[27px] h-fit mt-[20px]" placeholder="Full Name" {...field} />
+                        <Input
+                          className="py-[18px] px-[27px] h-fit mt-[20px]"
+                          placeholder="Full Name"
+                          {...field}
+                        />
                       </FormControl>
 
                       <FormMessage />
@@ -187,7 +155,11 @@ const CertifiedPlanner = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input className="py-[18px] px-[27px] h-fit mt-[20px]" placeholder="Phone Number" {...field} />
+                        <Input
+                          className="py-[18px] px-[27px] h-fit mt-[20px]"
+                          placeholder="Phone Number"
+                          {...field}
+                        />
                       </FormControl>
 
                       <FormMessage />
@@ -200,7 +172,11 @@ const CertifiedPlanner = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input className="py-[18px] px-[27px] h-fit mt-[20px]" placeholder="E-Mail" {...field} />
+                        <Input
+                          className="py-[18px] px-[27px] h-fit mt-[20px]"
+                          placeholder="E-Mail"
+                          {...field}
+                        />
                       </FormControl>
 
                       <FormMessage />
@@ -213,13 +189,22 @@ const CertifiedPlanner = () => {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input className="py-[18px] px-[27px] h-fit mt-[20px]" placeholder="What is your current profession?" {...field} />
+                        <Input
+                          className="py-[18px] px-[27px] h-fit mt-[20px]"
+                          placeholder="What is your current profession?"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="mt-6 p-[20px] w-full text-[18px] h-fit bg-[#FDE74C] hover:bg-[#FDE74C] hover:opacity-80 transition text-[#0047AB]">Book Session</Button>
+                <Button
+                  type="submit"
+                  className="mt-6 px-[20px] py-[15px] md:py-[20px] w-full text-[18px] h-fit bg-[#FDE74C] hover:bg-[#FDE74C] hover:opacity-80 transition text-[#0047AB]"
+                >
+                  Book Session
+                </Button>
               </form>
             </Form>
           </div>
@@ -227,52 +212,57 @@ const CertifiedPlanner = () => {
       </div>
 
       {/* why be certified planner */}
-      <div className="mt-20">
-        <div className="text-3xl text-center">
+      <div className="mt-12 lg:mt-[100px]">
+        <div className="text-[28px] md:text-[36px] text-center">
           Why be a{" "}
           <span className="font-semibold">certified career planner?</span>
         </div>
-        <div className="bg-[#034DB3] mt-12 bg-bg2 bg-no-repeat bg-right w-[80vw] mx-auto rounded-3xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
-            <Card2
-              title="Strong Earning Potential"
-              description="Earn up to ₹32.4 Lakh per annum as a Career Counsellor."
-            />
-            <Card2
-              title="Strong Earning Potential"
-              description="Earn up to ₹32.4 Lakh per annum as a Career Counsellor."
-            />
-            <Card2
-              title="Strong Earning Potential"
-              description="Earn up to ₹32.4 Lakh per annum as a Career Counsellor."
-            />
-            <Card2
-              title="Strong Earning Potential"
-              description="Earn up to ₹32.4 Lakh per annum as a Career Counsellor."
-            />
-            <Card2
-              title="Strong Earning Potential"
-              description="Earn up to ₹32.4 Lakh per annum as a Career Counsellor."
-            />
-            <Card2
-              title="Strong Earning Potential"
-              description="Earn up to ₹32.4 Lakh per annum as a Career Counsellor."
-            />
+        <div className="bg-[#034DB3] mt-12 bg-bg2 bg-no-repeat bg-right w-[80vw] mx-auto rounded-[30px] overflow-hidden relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6 lg:w-[50%]">
+            <Card2 title="Strong Earning Potential">
+              <div>
+                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
+                annum as a Career Counsellor.
+              </div>
+            </Card2>
+            <Card2 title="Strong Earning Potential">
+              <div>
+                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
+                annum as a Career Counsellor.
+              </div>
+            </Card2>
+            <Card2 title="Strong Earning Potential">
+              <div>
+                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
+                annum as a Career Counsellor.
+              </div>
+            </Card2>
+            <Card2 title="Strong Earning Potential">
+              <div>
+                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
+                annum as a Career Counsellor.
+              </div>
+            </Card2>
+            <Card2 title="Strong Earning Potential">
+              <div>
+                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
+                annum as a Career Counsellor.
+              </div>
+            </Card2>
+            <Card2 title="Strong Earning Potential">
+              <div>
+                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
+                annum as a Career Counsellor.
+              </div>
+            </Card2>
           </div>
-          <div className="relative h-full w-full">
-            {/* <Image
+          <Image
               src={"/images/employee.svg"}
               alt="image"
-              fill
-              className="object-cover xl:object-contain"
-            /> */}
-            <Image
-              src={"/images/employee.svg"}
-              alt="image"
-              fill
-              className="absolute bottom-0 object-cover"
+              width={600}
+              height={500}
+              className="absolute bottom-0 right-0 transform -scale-x-[1] hidden lg:block"
             />
-          </div>
         </div>
       </div>
 

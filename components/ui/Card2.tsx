@@ -12,19 +12,20 @@ import {
 
 interface Card2Props{
     title: string,
-    description: string
+    children: React.ReactNode
 }
 
-const Card2: React.FC<Card2Props> = ({title, description}) => {
+const Card2: React.FC<Card2Props> = ({title, children}) => {
   return (
-    <Card className="h-fit rounded-3xl">
-      <CardHeader>
-        <CardTitle className="text-[#034DB3]">{title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p>{description}</p>
-      </CardContent>
-    </Card>
+    <div className="md:px-[22px] px-[18px] md:py-[18px] py-[15px] bg-white rounded-[15px]">
+      <h1 className="text-[10px] md:text-[14px] font-semibold text-[#0047AB]">
+        {title}
+      </h1>
+      <div className="mt-2 md:mt-[10px] text-[16px] md:text-[16px]">
+      {children}
+      </div>
+      
+    </div>
   );
 };
 export default Card2;
