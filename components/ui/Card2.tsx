@@ -21,7 +21,7 @@ const Card2: React.FC<Card2Props> = ({title, children}) => {
       <h1 className="text-[10px] md:text-[14px] font-semibold text-[#0047AB]">
         {title}
       </h1>
-      <div className="mt-2 md:mt-[10px] text-[16px] md:text-[16px]">
+      <div className="font-light mt-2 md:mt-[10px] text-[16px] md:text-[16px]">
       {children}
       </div>
       

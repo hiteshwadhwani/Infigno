@@ -62,19 +62,22 @@ const responsive = {
 
 const TrainingProcess = () => {
   return (
-    <div className="m-12 lg:m-20">
+    <div className="mt-12 lg:mt-[100px]">
       {/* top heading */}
       <div className="flex flex-col items-start lg:items-center gap-y-3 w-[95vw] lg:w-[60vw] m-auto">
-        <Image
-          src={"/images/logo.svg"}
-          className="object-cover"
-          width={200}
-          height={200}
-          alt="logo"
-        />
+        <div className="relative w-[200px] h-[42px]">
+          <Image
+            src={"/images/logo.svg"}
+            className="object-cover"
+            fill
+            alt="logo"
+          />
+        </div>
 
-        <h1 className="text-4xl font-semibold">Our 5-step Training Process</h1>
-        <div className="text-xl text-neutral-600 lg:text-center">
+        <h1 className="text-[24px] md:text-[42px] font-semibold">
+          Our 5-step Training Process
+        </h1>
+        <div className="text-[12px] md:text-[21px] text-neutral-600 lg:text-center">
           <span className="font-semibold">
             In accordance to the New Education Policy 2020
           </span>
@@ -86,17 +89,38 @@ const TrainingProcess = () => {
       {/* process */}
 
       {/* desktop view */}
-      <div className="hidden md:block flex-col my-6">
+      {/* <div className="hidden lg:block flex-col my-6 mt-[40px] md:mt-[60px]">
         {cardData.map((card) => (
           <Card4 key={card.heading} {...card} />
         ))}
+      </div> */}
+
+      <div className="hidden lg:block flex-col mt-[40px] md:mt-[60px]">
+          <Card4 heading="Counselling Training" show imageSrc="/images/training-process/img1.svg" number="1">
+            <div>Get in-depth knowledge of psychometric tests, learn to identify user personas, access an extensive career-library, with 51+ industries and 1300+ career options</div>
+          </Card4>
+          <Card4 heading="Certification"  imageSrc="/images/training-process/img2.svg" number="2">
+            <div>Earn the prestigious title of a ‘Certified Career Planner’, acknowledged with a certificate awarded by Infigon, a recognized institution accredited by Startup India.</div>
+          </Card4>
+          <Card4 heading="Website/Product Set-up"  imageSrc="/images/training-process/img3.svg" number="3">
+            <div>Get your own co-branded website set-up with an integrated secure payment portal, and an Intuitive Admin Panel to manage your clients.</div>
+          </Card4>
+          <Card4 heading="Business Set-Up/Sales Training"  imageSrc="/images/training-process/img4.svg" number="4">
+            <div>Get expert help to boost online presence with social media, lead generation, and sales training.</div>
+          </Card4>
+          <Card4 heading="Lifetime Handholding" show imageSrc="/images/training-process/img5.svg" number="5" className="scale-125 xl:scale-110 2xl:scale-105">
+            <div>Get instant support for unfamiliar career inquiries made by clients, through our dedicated R&D team.</div>
+          </Card4>
       </div>
 
       {/* mobile view carousel */}
-      <div className="md:hidden m-4">
+      <div className="lg:hidden m-4">
         <Carousel responsive={responsive}>
           {cardData.map((card) => (
-            <div key={card.heading} className="h-[400px] border border-slate-300 shadow-lg rounded-3xl overflow-hidden">
+            <div
+              key={card.heading}
+              className="h-[400px] border border-slate-300 shadow-lg rounded-3xl overflow-hidden"
+            >
               <div className="p-6 md:px-20 md:py-12">
                 <h1 className="text-2xl md:text-3xl">{card.heading}</h1>
                 <p className="text-neutral-600 text-base md:text-xl md:mt-5">

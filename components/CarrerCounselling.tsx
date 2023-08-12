@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 
 const CarrerCounselling = () => {
   return (
-    <div className="w-[95vw] lg:w-[70vw] m-auto">
+    <div className="w-[90%] xl:w-[70%] mt-12 lg:mt-[100px]  m-auto">
       <div className="text-center text-3xl text-blue-600">
         <span className="font-semibold">Why INFIGON’S</span> Career Counselling
         Program

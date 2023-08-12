@@ -31,7 +31,8 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 1,
+    items: 2,
+    partialVisibilityGutter: 50,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -225,44 +226,49 @@ const CertifiedPlanner = () => {
                 annum as a Career Counsellor.
               </div>
             </Card2>
-            <Card2 title="Strong Earning Potential">
+            <Card2 title="Nation Building">
               <div>
-                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
-                annum as a Career Counsellor.
+                Help confused students to achieve their{" "}
+                <span className="font-semibold">Career goals</span> building a
+                <span className="font-semibold">bright future for India.</span>
               </div>
             </Card2>
-            <Card2 title="Strong Earning Potential">
+            <Card2 title="Government Initiatives">
               <div>
-                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
-                annum as a Career Counsellor.
+                New Education Policy 2020,{" "}
+                <span className="font-semibold">
+                  mandates career guidance for all students.
+                </span>
               </div>
             </Card2>
-            <Card2 title="Strong Earning Potential">
+            <Card2 title="Lack of Awarenes">
               <div>
-                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
-                annum as a Career Counsellor.
+                <span className="font-semibold">90% Indian students</span> are
+                only aware of the top{" "}
+                <span className="font-semibold">7 career options.</span> 
               </div>
             </Card2>
-            <Card2 title="Strong Earning Potential">
+            <Card2 title="Rising Demand">
               <div>
-                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
-                annum as a Career Counsellor.
+                35 Crore Graduate students in India, but{" "}
+                <span className="font-semibold">65% are unemployable.</span>
               </div>
             </Card2>
-            <Card2 title="Strong Earning Potential">
+            <Card2 title="Pool of Opportunities">
               <div>
-                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
-                annum as a Career Counsellor.
+                <span className="font-semibold">1300+ career</span> and{" "}
+                <span className="font-semibold">400+ Education</span> Degrees
+                are available in India. 
               </div>
             </Card2>
           </div>
           <Image
-              src={"/images/employee.svg"}
-              alt="image"
-              width={600}
-              height={500}
-              className="absolute bottom-0 right-0 transform -scale-x-[1] hidden lg:block"
-            />
+            src={"/images/employee.svg"}
+            alt="image"
+            width={600}
+            height={500}
+            className="absolute bottom-0 right-0 transform -scale-x-[1] hidden lg:block"
+          />
         </div>
       </div>
 
