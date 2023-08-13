@@ -22,7 +22,7 @@ const Card5: React.FC<Card4Props> = ({
   return (
     <div
       className={twMerge(
-        "flex items-center flex-col py-5 border border-slate-200 shadow-xl rounded-2xl mx-8",
+        "flex items-center flex-col py-5 border border-[#D1D3D4] rounded-2xl stroke-[#D1D3D4]",
         mainClass
       )}
     >
@@ -31,10 +31,13 @@ const Card5: React.FC<Card4Props> = ({
           <Image src={imageSrc} alt="image" fill />
         </div>
       )}
+      <div className="mt-5">
 
+      
       <div className={twMerge("font-semibold", headingClass)}>{heading}</div>
-      <div className="text-slate-600 text-sm">{subheading}</div>
+      <div className="text-[#979797] text-sm ">{subheading}</div>
       <div className="mt-[20px] font-light">{description}</div>
+      </div>
     </div>
   );
 };

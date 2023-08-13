@@ -4,124 +4,97 @@ import Carousel from "react-multi-carousel";
 import Card5 from "./ui/Card5";
 import "react-multi-carousel/lib/styles.css";
 import { useEffect, useState } from "react";
+import { Quicksand } from "next/font/google";
+import { twMerge } from "tailwind-merge";
+import Image from "next/image";
+const font = Quicksand({ subsets: ["latin"] });
+
+import "react-multi-carousel/lib/styles.css";
 
 
-const partners = [
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-  {
-    imageSrc: "/images/CollegePartners/ecell.svg",
-    heading: "ECELL",
-    subheading: "IIT Dhanbad",
-  },
-];
+
+// const partners = [
+//   {
+//     imageSrc: "/images/CollegePartners/ecell.svg",
+//     heading: "ECELL",
+//     subheading: "IIT Dhanbad",
+//   },
+//   {
+//     imageSrc: "/images/CollegePartners/cyborg.svg",
+//     heading: "Cyborg",
+//     subheading: "NIT Rourkela",
+//   },
+//   {
+//     imageSrc: "/images/CollegePartners/ecell.svg",
+//     heading: "IEEE NCU",
+//     subheading: "The NorthCap University",
+//   },
+//   {
+//     imageSrc: "/images/CollegePartners/ecell.svg",
+//     heading: "Enactus",
+//     subheading: "Ram Lal Anand College",
+//   },
+//   {
+//     imageSrc: "/images/CollegePartners/ecell.svg",
+//     heading: "Enactus",
+//     subheading: "Hassaram Rijhumal College",
+//   },
+// ];
+
+const data = [
+  '/images/CollegePartners/img1.svg',
+  '/images/CollegePartners/img2.svg',
+  '/images/CollegePartners/img1.svg',
+  '/images/CollegePartners/img2.svg',
+  '/images/CollegePartners/img1.svg',
+  '/images/CollegePartners/img2.svg',
+  '/images/CollegePartners/img1.svg',
+  '/images/CollegePartners/img2.svg',
+  '/images/CollegePartners/img1.svg',
+  '/images/CollegePartners/img2.svg',
+  '/images/CollegePartners/img1.svg',
+  '/images/CollegePartners/img2.svg',
+  '/images/CollegePartners/img1.svg',
+  '/images/CollegePartners/img2.svg',
+  '/images/CollegePartners/img1.svg',
+  '/images/CollegePartners/img2.svg'
+]
 
 const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 6
+  },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 6,
+    items: 4
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 3,
+    items: 2
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
+    items: 1
+  }
 };
 
 const ClubPartners = () => {
   return (
     <div className="mt-12 lg:mt-[100px]">
       {/* heading */}
-      <div className="text-[32px] text-center">
-        <span className="font-semibold">60+ College Club</span> Partners
+      <div className={twMerge(font.className, "text-[32px] text-center font-normal")}>
+        <span className="font-bold">60+ College Club</span> Partners
       </div>
       <div className="mt-12">
-        <Carousel responsive={responsive} autoPlay arrows={false} autoPlaySpeed={1500} infinite={true} partialVisible={false} customTransition="all 2s ease"
-          transitionDuration={1000}>
-          {partners.map((item) => (
-            <Card5 mainClass="h-[155.539px]" key={item.heading} {...item} />
-          ))}
+        <Carousel responsive={responsive} autoPlay arrows={false} autoPlaySpeed={1500} infinite={true} centerMode={true}  customTransition="all 2s ease"
+          transitionDuration={1000} containerClass="carousel-container" itemClass="container-item">
+            {data.map((item) => (
+              <div className="h-[155.54px] relative ml-4" key={item}>
+                  <Image src={item} alt="club image" fill />
+              </div>
+            ))}
         </Carousel>
       </div>
     </div>
