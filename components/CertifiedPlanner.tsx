@@ -52,7 +52,7 @@ const formSchema = z.object({
     message: "Required",
   }),
   phone: z.string().refine(validator.isMobilePhone, {
-    message: 'Invalid phone number'
+    message: "Invalid phone number",
   }),
   email: z.string().email(),
   profession: z.string().min(1),
@@ -230,6 +230,7 @@ const CertifiedPlanner = () => {
                           value={field.value}
                           onChange={field.onChange}
                           defaultCountry="IN"
+                          disabled={loading}
                         />
                       </FormControl>
 
@@ -247,6 +248,7 @@ const CertifiedPlanner = () => {
                           className="py-[18px] px-[27px] h-fit mt-[15px] rounded-[10px]"
                           placeholder="E-Mail"
                           {...field}
+                          disabled={loading}
                         />
                       </FormControl>
 
@@ -264,6 +266,7 @@ const CertifiedPlanner = () => {
                           className="py-[18px] px-[27px] h-fit mt-[15px] rounded-[10px]"
                           placeholder="What is your current profession?"
                           {...field}
+                          disabled={loading}
                         />
                       </FormControl>
                       <FormMessage className="text-xs" />
@@ -272,6 +275,7 @@ const CertifiedPlanner = () => {
                 />
                 <Button
                   type="submit"
+                  disabled={loading}
                   className="mt-6 px-[15px] py-[10px] md:py-[15px] w-full text-[18px] h-fit bg-[#FDE74C] hover:bg-[#FDE74C] hover:opacity-80 transition text-[#0047AB] rounded-[10px]"
                 >
                   Book Session
