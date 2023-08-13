@@ -15,22 +15,21 @@ import { useForm } from "react-hook-form";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { twMerge } from "tailwind-merge";
-
-import { FiChevronLeft } from "react-icons/fi";
-import { BiChevronRight } from "react-icons/bi";
 import "react-multi-carousel/lib/styles.css";
 import { ChevronLeft, ChevronRight, MoveLeft, MoveRight } from "lucide-react";
-
 import { Quicksand } from "next/font/google";
+import PhoneInput from "react-phone-number-input/input";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import PhoneInputWithCountrySelect from "react-phone-number-input";
 const font = Quicksand({ subsets: ["latin"] });
+import validator from "validator";
 
 const responsive = {
   desktop: {
@@ -45,12 +44,18 @@ const responsive = {
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    partialVisibilityGutter: 30,
   },
 };
 
 const formSchema = z.object({
-  username: z.string().min(2).max(50),
+  name: z.string().nonempty({
+    message: "Required",
+  }),
+  phone: z.string().refine(validator.isMobilePhone, {
+    message: 'Invalid phone number'
+  }),
+  email: z.string().email(),
+  profession: z.string().min(1),
 });
 
 const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
@@ -79,16 +84,26 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
 };
 
 const CertifiedPlanner = () => {
+  const [loading, setLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      name: "",
+      email: "",
+      profession: "",
     },
   });
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      setLoading(true);
+      await axios.post("/api/book-session", values);
+      toast.success("Session booked");
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
   }
   return (
     <div className="flex flex-col w-full">
@@ -187,41 +202,44 @@ const CertifiedPlanner = () => {
               <form onSubmit={form.handleSubmit(onSubmit)} className="">
                 <FormField
                   control={form.control}
-                  name="username"
+                  name="name"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
                         <Input
                           className="py-[18px] px-[27px] h-fit mt-[30px] rounded-[10px]"
                           placeholder="Full Name"
+                          disabled={loading}
                           {...field}
                         />
                       </FormControl>
 
-                      <FormMessage />
+                      <FormMessage className="text-xs" />
                     </FormItem>
                   )}
                 />
                 <FormField
                   control={form.control}
-                  name="username"
+                  name="phone"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input
-                          className="py-[18px] px-[27px] h-fit mt-[15px] rounded-[10px]"
+                        <PhoneInputWithCountrySelect
+                          className="outline-none flex w-full border border-input bg-background text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 py-[18px] px-[27px] h-fit mt-[15px] rounded-[10px]"
                           placeholder="Phone Number"
-                          {...field}
+                          value={field.value}
+                          onChange={field.onChange}
+                          defaultCountry="IN"
                         />
                       </FormControl>
 
-                      <FormMessage />
+                      <FormMessage className="text-xs" />
                     </FormItem>
                   )}
                 />
                 <FormField
                   control={form.control}
-                  name="username"
+                  name="email"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
@@ -232,13 +250,13 @@ const CertifiedPlanner = () => {
                         />
                       </FormControl>
 
-                      <FormMessage />
+                      <FormMessage className="text-xs" />
                     </FormItem>
                   )}
                 />
                 <FormField
                   control={form.control}
-                  name="username"
+                  name="profession"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
@@ -248,7 +266,7 @@ const CertifiedPlanner = () => {
                           {...field}
                         />
                       </FormControl>
-                      <FormMessage />
+                      <FormMessage className="text-xs" />
                     </FormItem>
                   )}
                 />

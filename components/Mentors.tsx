@@ -1,11 +1,8 @@
 "use client";
 
 import Carousel from "react-multi-carousel";
-import Card5 from "./ui/Card5";
-
-import { Quicksand } from "next/font/google";
 import { twMerge } from "tailwind-merge";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Quicksand } from "next/font/google";
 const font = Quicksand({ subsets: ["latin"] });
 
 const responsive = {
@@ -75,7 +72,7 @@ const Mentors = () => {
           responsive={responsive}
           autoPlay
           arrows={false}
-          autoPlaySpeed={4000}
+          autoPlaySpeed={1500}
           infinite={true}
           centerMode={true}
           customTransition="all 2s ease"

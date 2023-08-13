@@ -1,8 +1,6 @@
 "use client";
 
 import Carousel from "react-multi-carousel";
-import Card5 from "./ui/Card5";
-
 import { Quicksand } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -106,7 +104,6 @@ const WhatPeopleSaying = () => {
           arrows={false}
           autoPlaySpeed={4000}
           infinite={true}
-          centerMode={true}
           customTransition="all 2s ease"
           transitionDuration={1000}
           containerClass="carousel-container"
@@ -115,7 +112,7 @@ const WhatPeopleSaying = () => {
         >
           {data.map((item) => (
             <div
-              className="p-[25px] border border-[#D1D3D4] h-[254px] overflow-hidden ml-4 rounded-[15px]"
+              className="p-[25px] border border-[#D1D3D4] min-h-[254px] overflow-hidden ml-4 rounded-[15px]"
               key={item.heading}
             >
               <div>
