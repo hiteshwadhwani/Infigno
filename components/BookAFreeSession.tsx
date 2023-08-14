@@ -7,10 +7,12 @@ const font = Quicksand({ subsets: ["latin"] });
 const BookAFreeSession = () => {
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0,
+      top: 650,
+      left: 0,
       behavior: 'smooth', // You can use 'auto' for instant scrolling
     });
-  };
+  }
+  
   return (
     <div className="md:hidden p-[20px] grid grid-cols-2 gap-x-[20px] fixed bottom-4 bg-white customShadow mx-4 rounded-[10px] z-30">
       <div className={twMerge("text-[16px] text-[#0047AB]", font.className)}>

@@ -8,7 +8,7 @@ import Card2 from "./ui/Card2";
 import Card3 from "./ui/Card3";
 import Carousel from "react-multi-carousel";
 import { Button } from "./ui/button";
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -468,4 +468,4 @@ const CertifiedPlanner = () => {
     </div>
   );
 };
-export default CertifiedPlanner;
+export default CertifiedPlanner
