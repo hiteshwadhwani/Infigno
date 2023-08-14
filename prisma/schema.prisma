@@ -17,3 +17,10 @@ model Session {
   email      String
   profession String
 }
+
+model ConnectUs{
+  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  phone      String
+  email      String
+}

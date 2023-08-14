@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 import NavItems from "./ui/NavItems";
+import {useScrollToBottom} from 'react-scroll-to-bottom'
 
 const Navbar = () => {
+  
   return (
     <header className="flex flex-row justify-center  md:justify-between items-center md:mx-8 xl:mx-24 p-4 ">
       <div className="relative h-[40px] w-[140px]">

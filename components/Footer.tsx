@@ -28,17 +28,25 @@ import {
 } from "lucide-react";
 import { ReCAPTCHA } from "react-google-recaptcha";
 import { useState } from "react";
+import PhoneInputWithCountrySelect from "react-phone-number-input";
+import validator from "validator";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+
 
 const formSchema = z.object({
   name: z.string().nonempty({
     message: "Required",
   }),
-  phone: z.string().length(13, { message: "Invalid Phone number" }),
+  phone: z.string().refine(validator.isMobilePhone, {
+    message: "Invalid phone number",
+  }),
   mail: z.string().email(),
 });
 
 const Footer = () => {
   const [verified, setIsVerified] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const handleRecaptcha = (token: string | null) => {
     if (token) {
@@ -53,10 +61,17 @@ const Footer = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      setLoading(true);
+      await axios.post("/api/connect-us", values);
+      toast.success("Session booked");
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -79,6 +94,8 @@ const Footer = () => {
                         placeholder="Full Name"
                         {...field}
                         className="rounded-full"
+                        disabled={loading}
+
                       />
                     </FormControl>
 
@@ -92,18 +109,14 @@ const Footer = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      {/* <Input
+                      <PhoneInputWithCountrySelect
+                          className="flex h-10 w-full rounded-full border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                           placeholder="Phone Number"
-                          type="tel"
-                          {...field}
-                        /> */}
-                      <PhoneInput
-                        className="flex h-10 w-full rounded-full border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Enter phone number"
-                        value={field.value}
-                        onChange={field.onChange}
-                        country="IN"
-                      />
+                          value={field.value}
+                          onChange={field.onChange}
+                          defaultCountry="IN"
+                          disabled={loading}
+                        />
                     </FormControl>
                     <FormMessage className="text-xs font-normal" />
                   </FormItem>
@@ -119,6 +132,7 @@ const Footer = () => {
                         placeholder="E-Mail"
                         {...field}
                         className="rounded-full"
+                        disabled={loading}
                       />
                     </FormControl>
                     <FormMessage className="text-xs font-normal" />
