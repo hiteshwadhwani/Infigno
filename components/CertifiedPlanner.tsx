@@ -307,14 +307,14 @@ const CertifiedPlanner = () => {
           <div
             className={twMerge(
               font.className,
-              "text-[28px] md:text-[36px] md:text-center mx-[20px] md:mx-[100px] text-white md:text-black"
+              "text-[28px] md:text-[36px] md:text-center mx-[20px] md:mx-[100px] text-white md:text-black leading-[130%] mt-[10px]"
             )}
           >
             Why be a{" "}
             <span className="font-semibold">certified career planner?</span>
           </div>
           <div className="md:bg-[#034DB3] bg-none mt-[30px] bg-right md:mx-[100px] rounded-[30px] relative overflow-hidden md:bg-rocket bg-no-repeat bg-cover">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-[20px] lg:w-[50%]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-[20px] lg:w-[50%]">
               <Card2 title="Strong Earning Potential">
                 <div>
                   <span className="font-semibold">Earn up to ₹32.4 Lakh</span>{" "}
@@ -324,9 +324,10 @@ const CertifiedPlanner = () => {
               <Card2 title="Nation Building">
                 <p>
                   Help confused students to achieve their
-                  <span className="font-semibold"> Career goals</span> building a
+                  <span className="font-semibold"> Career goals</span> building
+                  a{" "}
                   <span className="font-semibold">
-                     bright future for India.
+                    bright future for India.
                   </span>
                 </p>
               </Card2>
@@ -378,7 +379,7 @@ const CertifiedPlanner = () => {
       </div>
 
       {/* You can be a Certified Career Planner, IF YOU ARE A */}
-      <div className="mt-20 py-12">
+      <div className="mt-8 md:mt-20 py-10 bg-[#F6F6F6]">
         <div
           className={twMerge(
             "md:text-[36px] text-[24px] md:text-center font-bold px-[20px] md:px-0",
@@ -386,12 +387,13 @@ const CertifiedPlanner = () => {
           )}
         >
           <span className="font-semibold md:font-bold">
-            You can be a Certified Career Planner,
+            You can be a <br className="md:hidden" />
+            Certified Career Planner,
           </span>{" "}
-          <br className="md:hidden" /> <br className="md:hidden" />
+          <br className="md:hidden" />
           IF YOU ARE A
         </div>
-        <div className="md:mt-[60px]">
+        <div className="md:mt-[60px] px-[10px] md:px-0">
           <Carousel
             responsive={responsive}
             arrows={false}
