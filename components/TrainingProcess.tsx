@@ -104,7 +104,7 @@ const TrainingProcess = () => {
         <h1 className="text-[24px] md:text-[42px] font-semibold">
           Our 5-step Training Process
         </h1>
-        <div className="text-[12px] md:text-[21px] text-neutral-600 lg:text-center">
+        <div className="text-[14px] md:text-[21px] text-neutral-600 lg:text-center leading-[130%]">
           <span className="font-semibold">
             In accordance to the New Education Policy 2020
           </span>
@@ -250,7 +250,7 @@ const TrainingProcess = () => {
             </div>
           ))} */}
 
-          <div className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
+          <div className="h-[360px] rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
             <div className="p-[20px] md:px-20 md:py-12">
               <div className="flex flex-row justify-between gap-x-2 items-start">
                 <h1 className="text-[20px] leading-[130%]">
@@ -285,12 +285,10 @@ const TrainingProcess = () => {
               />
             </div>
           </div>
-          <div className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
+          <div className="h-[360px]  rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
             <div className="p-[20px] md:px-20 md:py-12">
               <div className="flex flex-row justify-between gap-x-2 items-start">
-                <h1 className="text-[20px] leading-[130%]">
-                Certification
-                </h1>
+                <h1 className="text-[20px] leading-[130%]">Certification</h1>
                 <Image
                   src={`/images/numbers/2.svg`}
                   width={25}
@@ -300,7 +298,10 @@ const TrainingProcess = () => {
               </div>
 
               <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
-              Earn the prestigious title of a ‘Certified Career Planner’, acknowledged with a certificate awarded by Infigon, a recognized institution accredited by Startup India. Recognized by #StartupIndia
+                Earn the prestigious title of a ‘Certified Career Planner’,
+                acknowledged with a certificate awarded by Infigon, a recognized
+                institution accredited by Startup India. Recognized by
+                #StartupIndia
               </div>
             </div>
             <div className="w-[235px] h-[175px] relative">
@@ -312,11 +313,11 @@ const TrainingProcess = () => {
               />
             </div>
           </div>
-          <div className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
+          <div className="h-[360px]  rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
             <div className="p-[20px] md:px-20 md:py-12">
               <div className="flex flex-row justify-between gap-x-2 items-start">
                 <h1 className="text-[20px] leading-[130%]">
-                Website/ <br /> Product Set-up
+                  Website/ <br /> Product Set-up
                 </h1>
                 <Image
                   src={`/images/numbers/3.svg`}
@@ -327,7 +328,9 @@ const TrainingProcess = () => {
               </div>
 
               <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
-              Get your own co-branded website set-up with an integrated secure payment portal, and an Intuitive Admin Panel to manage your clients.
+                Get your own co-branded website set-up with an integrated secure
+                payment portal, and an Intuitive Admin Panel to manage your
+                clients.
               </div>
             </div>
             <div className="w-[235px] h-[175px] relative">
@@ -339,11 +342,11 @@ const TrainingProcess = () => {
               />
             </div>
           </div>
-          <div className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
+          <div className="h-[360px]  rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
             <div className="p-[20px] md:px-20 md:py-12">
               <div className="flex flex-row justify-between gap-x-2 items-start">
                 <h1 className="text-[20px] leading-[130%]">
-                Business Set-Up <br /> /Sales Training
+                  Business Set-Up <br /> /Sales Training
                 </h1>
                 <Image
                   src={`/images/numbers/4.svg`}
@@ -354,7 +357,8 @@ const TrainingProcess = () => {
               </div>
 
               <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
-              Get expert help to boost online presence with social media, lead generation, and sales training.
+                Get expert help to boost online presence with social media, lead
+                generation, and sales training.
               </div>
             </div>
             <div className="w-[235px] h-[180px] relative">
@@ -366,11 +370,11 @@ const TrainingProcess = () => {
               />
             </div>
           </div>
-          <div className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
+          <div className="h-[360px]  rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
             <div className="p-[20px] md:px-20 md:py-12">
               <div className="flex flex-row justify-between gap-x-2 items-start">
                 <h1 className="text-[20px] leading-[130%]">
-                Lifetime Handholding
+                  Lifetime Handholding
                 </h1>
                 <Image
                   src={`/images/numbers/5.svg`}
@@ -381,7 +385,8 @@ const TrainingProcess = () => {
               </div>
 
               <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
-              Get instant support for unfamiliar career inquiries made by clients, through our dedicated R&D team.
+                Get instant support for unfamiliar career inquiries made by
+                clients, through our dedicated R&D team.
               </div>
             </div>
             <div className="w-[367.073px] h-[224.631px] relative">

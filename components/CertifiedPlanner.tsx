@@ -134,17 +134,17 @@ const CertifiedPlanner = () => {
             alt="background"
           />
 
-          <div className="flex flex-col items-center md:block bg-gradient-to-br customGradiant2 md:bg-none px-[15px] md:px-[30px] pt-[30px] md:pt-0 py-0 md:py-[30px] md:p-0 rounded-[25px] md:rounded-none mb-[20px] md:mb-0 z-10">
+          <div className="flex flex-col items-start md:items-center md:block bg-gradient-to-br customGradiant2 md:bg-none px-[25px] md:px-[30px] pt-[30px] md:pt-0 py-0 md:py-[30px] md:p-0 rounded-[25px] md:rounded-none mb-[20px] md:mb-0 z-10">
             <h1
               className={twMerge(
-                "text-[28px] md:text-[38px] text-[#004EC1] font-medium leading-[120%] px-[10px]",
+                "text-[28px] md:text-[38px] text-[#004EC1] font-medium leading-[120%]",
                 font.className
               )}
             >
               Become a <br className="hidden md:block" />
               <span className="font-bold">Certified Career Planner</span>
             </h1>
-            <h3 className="text-[16px] md:text-[21px] leading-[120%] font-normal mt-[10px] px-[10px]">
+            <h3 className="text-[16px] md:text-[21px] leading-[120%] font-normal mt-[10px]">
               Help millions of students to <br className="hidden md:block" />
               achieve their career goals
             </h3>
@@ -176,7 +176,7 @@ const CertifiedPlanner = () => {
                 </span>
               </CertifiedCard>
             </div>
-            <div className="text-[12px] md:text-[16px] mt-3 md:mt-[30px] flex flex-row gap-x-2 md:block py-2">
+            <div className="text-[12px] md:text-[16px] mt-3 md:mt-[30px] flex flex-row gap-x-2 md:block py-2 ml-[6px] md:ml-0">
               Recognised by:
               <br className="hidden md:block" />{" "}
               <Image
@@ -382,7 +382,7 @@ const CertifiedPlanner = () => {
       <div className="mt-8 md:mt-20 py-10">
         <div
           className={twMerge(
-            "md:text-[36px] text-[24px] md:text-center font-bold px-[20px] md:px-0",
+            "md:text-[36px] text-[24px] md:text-center font-bold px-[20px] md:px-0 leading-[130%]",
             font.className
           )}
         >
