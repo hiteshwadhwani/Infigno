@@ -22,23 +22,6 @@ const Card4: React.FC<Card4Props> = ({
   className,
 }) => {
   return (
-    // <div className="flex flex-col justify-between items-center lg:items-start lg:grid lg:grid-cols-2 min-h-[400px] h-fit border border-slate-300 shadow-lg rounded-3xl w-[90vw] md:w-[70vw] mx-auto overflow-hidden mt-5">
-    //   <div className="p-6 md:px-20 md:py-12">
-    //     <h1 className="text-2xl md:text-3xl">{heading}</h1>
-    //     <p className="text-neutral-600 text-base md:text-xl md:mt-5">
-    //       {description}
-    //     </p>
-    //   </div>
-    //   <div className="relative h-[200px] w-full lg:h-full">
-    //     <Image src={imageSrc} alt="img1" fill className="" />
-    //     <Image
-    //       src={"/images/bg2.svg"}
-    //       alt="img1"
-    //       fill
-    //       className={`-z-10 ${!show && "hidden"} opacity-75`}
-    //     />
-    //   </div>
-    // </div>
     <div className="min-h-[340px]  h-fit rounded-[30px] mx-[100px] mt-[35px] relative flex flex-row overflow-hidden customShadow">
       {/* <Image
         src={`images/numbers/${number}.svg`}
@@ -49,7 +32,19 @@ const Card4: React.FC<Card4Props> = ({
       /> */}
 
       <div className="w-[40%] pl-8">
-        <h1 className={twMerge("text-[20px] lg:text-[42px] font-semibold mt-[30px] leading-[110%]", font.className)}>
+        <Image
+          src={`/images/numbers/${number}.svg`}
+          width={50}
+          height={50}
+          alt="number"
+          className="mt-[15px]"
+        />
+        <h1
+          className={twMerge(
+            "text-[20px] lg:text-[42px] font-semibold mt-[15px] leading-[110%]",
+            font.className
+          )}
+        >
           {heading}
         </h1>
         <div className="mt-[10px] text-[#5F6163] lg:text-[21px] text-[12px] leading-[130%]">

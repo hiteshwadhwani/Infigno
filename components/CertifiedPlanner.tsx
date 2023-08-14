@@ -371,7 +371,7 @@ const CertifiedPlanner = () => {
       </div>
 
       {/* You can be a Certified Career Planner, IF YOU ARE A */}
-      <div className="mt-20 bg-slate-100 py-12">
+      <div className="mt-20 py-12">
         <div className={twMerge("md:text-[36px] text-[24px] md:text-center font-bold px-[20px] md:px-0", font.className)}>
           <span className="font-semibold md:font-bold">
           You can be a Certified Career Planner,</span> <br className="md:hidden" /> <br className="md:hidden" />IF YOU ARE A
