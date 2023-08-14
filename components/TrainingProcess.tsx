@@ -18,7 +18,7 @@ const cardData = [
   {
     heading: "Certification",
     description:
-      "Earn the prestigious title of a ‘Certified Career Planner’, acknowledged with a certificate awarded by Infigon, a recognized institution accredited by Startup India.",
+      "Earn the prestigious title of a ‘Certified Career Planner’, acknowledged with a certificate awarded by Infigon, a recognized institution accredited by Startup India. Recognized by #StartupIndia",
     imageSrc: "/images/training-process/img2.svg",
     show: false,
   },
@@ -152,10 +152,10 @@ const TrainingProcess = () => {
           {cardData.map((card, idx) => (
             <div
               key={card.heading}
-              className="h-[360px] border shadow-lg rounded-3xl overflow-hidden ml-[20px]"
+              className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] relative"
             >
-              <div className="p-6 md:px-20 md:py-12">
-                <div className="flex flex-row justify-between gap-x-2 items-center">
+              <div className="p-[20px] md:px-20 md:py-12">
+                <div className="flex flex-row justify-between gap-x-2 items-start">
                   <h1 className="text-[20px] leading-[130%]">{card.heading}</h1>
                   <Image
                     src={`/images/numbers/${idx + 1}.svg`}
@@ -165,19 +165,17 @@ const TrainingProcess = () => {
                   />
                 </div>
 
-                <p className="text-neutral-600 text-base mt-[7px] text-[10px] leading-[130%]">
+                <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
                   {card.description}
-                </p>
+                </div>
               </div>
-              <div className="relative h-[200px] w-full md:h-full">
-                <Image src={card.imageSrc} alt="img1" fill className="" />
+                <Image src={card.imageSrc} alt="img1" width={235} height={175.445} className="absolute bottom-0" />
                 <Image
                   src={"/images/bg2.svg"}
                   alt="img1"
-                  fill
-                  className={`-z-10 ${!card.show && "hidden"} opacity-75`}
+                  width={235} height={175.445}
+                  className={`-z-10 ${!card.show && "hidden"} opacity-75 absolute bottom-0`}
                 />
-              </div>
             </div>
           ))}
         </Carousel>
