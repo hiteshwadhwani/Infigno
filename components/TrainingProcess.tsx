@@ -64,7 +64,7 @@ const TrainingProcess = () => {
   return (
     <div className="mt-12 lg:mt-[100px]">
       {/* top heading */}
-      <div className="flex flex-col items-start lg:items-center gap-y-3 w-[95vw] lg:w-[65vw] m-auto">
+      <div className="flex flex-col items-start lg:items-center gap-y-3 w-[95vw] lg:w-[65vw] pl-6 md:pl-0 md:mx-auto">
         <div className="relative w-[200px] h-[42px]">
           <Image
             src={"/images/logo.svg"}
@@ -86,15 +86,8 @@ const TrainingProcess = () => {
         </div>
       </div>
 
-      {/* process */}
 
       {/* desktop view */}
-      {/* <div className="hidden lg:block flex-col my-6 mt-[40px] md:mt-[60px]">
-        {cardData.map((card) => (
-          <Card4 key={card.heading} {...card} />
-        ))}
-      </div> */}
-
       <div className="hidden lg:block flex-col mt-[40px] md:mt-[60px]">
           <Card4 heading="Counselling Training" show imageSrc="/images/training-process/img1.svg" number="1">
             <div>Get in-depth knowledge of psychometric tests, learn to identify user personas, access an extensive career-library, with 51+ industries and 1300+ career options</div>

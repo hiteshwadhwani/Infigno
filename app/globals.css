@@ -130,3 +130,7 @@ html, body,:root{
   .customBorder{
     border: 0px solid var(--black, #1E2327);
   }
+
+  .customGradiant{
+    background: linear-gradient(138deg, #004EC1 0%, #1E86FF 100%);
+  }

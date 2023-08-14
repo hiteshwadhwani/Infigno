@@ -8,7 +8,7 @@ import Card2 from "./ui/Card2";
 import Card3 from "./ui/Card3";
 import Carousel from "react-multi-carousel";
 import { Button } from "./ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -23,11 +23,12 @@ import { Input } from "@/components/ui/input";
 import { twMerge } from "tailwind-merge";
 import "react-multi-carousel/lib/styles.css";
 import { ChevronLeft, ChevronRight, MoveLeft, MoveRight } from "lucide-react";
-import { Quicksand } from "next/font/google";
+
 import PhoneInput from "react-phone-number-input/input";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
+import { Quicksand } from "next/font/google";
 const font = Quicksand({ subsets: ["latin"] });
 import validator from "validator";
 
@@ -35,7 +36,6 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
-    partialVisibilityGutter: 50,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -84,6 +84,14 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
 };
 
 const CertifiedPlanner = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(true);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 1200px)");
+    mq.addEventListener("change", () => {
+      setIsSmallScreen(mq.matches);
+    });
+  }, []);
   const [loading, setLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -287,87 +295,92 @@ const CertifiedPlanner = () => {
       </div>
 
       {/* why be certified planner */}
-      <div className="mt-12 lg:mt-[100px]">
-        <div
-          className={twMerge(
-            font.className,
-            "text-[28px] md:text-[36px] text-center"
-          )}
-        >
-          Why be a{" "}
-          <span className="font-semibold">certified career planner?</span>
-        </div>
-        <div className="bg-[#034DB3] mt-12 bg-right mx-[20px] md:mx-[100px] rounded-[30px] relative overflow-hidden bg-rocket bg-no-repeat bg-cover">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-6 lg:w-[50%]">
-            <Card2 title="Strong Earning Potential">
-              <div>
-                <span className="font-semibold">Earn up to ₹32.4 Lakh</span> per
-                annum as a Career Counsellor.
-              </div>
-            </Card2>
-            <Card2 title="Nation Building">
-              <p>
-                Help confused students to achieve their
-                <span className="font-semibold">Career goals</span> building a
-                <span className="font-semibold">bright future for India.</span>
-              </p>
-            </Card2>
-            <Card2 title="Government Initiatives">
-              <div>
-                New Education Policy 2020,{" "}
-                <span className="font-semibold">
-                  mandates career guidance for all students.
-                </span>
-              </div>
-            </Card2>
-            <Card2 title="Lack of Awarenes">
-              <div>
-                <span className="font-semibold">90% Indian students</span> are
-                only aware of the top{" "}
-                <span className="font-semibold">7 career options.</span> 
-              </div>
-            </Card2>
-            <Card2 title="Rising Demand">
-              <div>
-                35 Crore Graduate students in India, but{" "}
-                <span className="font-semibold">65% are unemployable.</span>
-              </div>
-            </Card2>
-            <Card2 title="Pool of Opportunities">
-              <div>
-                <span className="font-semibold">1300+ career</span> and{" "}
-                <span className="font-semibold">400+ Education</span> Degrees
-                are available in India. 
-              </div>
-            </Card2>
+      <div className="mt-12 lg:mt-[100px]  ">
+        <div className="bg-gradient-to-br md:bg-none from-[#004EC1] to-[#1E86FF] p-[20px] md:p-0 mx-[20px] md:mx-0 rounded-[15px] md:rounded-none">
+          <div
+            className={twMerge(
+              font.className,
+              "text-[28px] md:text-[36px] md:text-center mx-[20px] md:mx-[100px] text-white md:text-black"
+            )}
+          >
+            Why be a{" "}
+            <span className="font-semibold">certified career planner?</span>
           </div>
-          <Image
-            src={"/images/employee.svg"}
-            alt="image"
-            width={600}
-            height={431}
-            className="absolute bottom-0 right-0 transform -scale-x-[1] hidden lg:block z-10 scale-105"
-          />
-          {/* <Image
+          <div className="md:bg-[#034DB3] bg-none mt-[30px] bg-right md:mx-[100px] rounded-[30px] relative overflow-hidden md:bg-rocket bg-no-repeat bg-cover">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-6 lg:w-[50%]">
+              <Card2 title="Strong Earning Potential">
+                <div>
+                  <span className="font-semibold">Earn up to ₹32.4 Lakh</span>{" "}
+                  per annum as a Career Counsellor.
+                </div>
+              </Card2>
+              <Card2 title="Nation Building">
+                <p>
+                  Help confused students to achieve their
+                  <span className="font-semibold">Career goals</span> building a
+                  <span className="font-semibold">
+                    bright future for India.
+                  </span>
+                </p>
+              </Card2>
+              <Card2 title="Government Initiatives">
+                <div>
+                  New Education Policy 2020,{" "}
+                  <span className="font-semibold">
+                    mandates career guidance for all students.
+                  </span>
+                </div>
+              </Card2>
+              <Card2 title="Lack of Awarenes">
+                <div>
+                  <span className="font-semibold">90% Indian students</span> are
+                  only aware of the top{" "}
+                  <span className="font-semibold">7 career options.</span> 
+                </div>
+              </Card2>
+              <Card2 title="Rising Demand">
+                <div>
+                  35 Crore Graduate students in India, but{" "}
+                  <span className="font-semibold">65% are unemployable.</span>
+                </div>
+              </Card2>
+              <Card2 title="Pool of Opportunities">
+                <div>
+                  <span className="font-semibold">1300+ career</span> and{" "}
+                  <span className="font-semibold">400+ Education</span> Degrees
+                  are available in India. 
+                </div>
+              </Card2>
+            </div>
+            <Image
+              src={"/images/employee.svg"}
+              alt="image"
+              width={600}
+              height={431}
+              className="absolute bottom-0 right-0 transform -scale-x-[1] hidden lg:block z-10 scale-105"
+            />
+            {/* <Image
             src={"/images/bg2.svg"}
             height={1244.496}
             width={993.215}
             className="absolute bottom-0 scale-90 translate-x-28 translate-y-"
             alt="background"
           /> */}
+          </div>
         </div>
       </div>
 
       {/* You can be a Certified Career Planner, IF YOU ARE A */}
       <div className="mt-20 bg-slate-100 py-12">
-        <div className="text-3xl text-center font-semibold">
-          You can be a Certified Career Planner, IF YOU ARE A
+        <div className={twMerge("md:text-[36px] text-[24px] md:text-center font-bold px-[20px] md:px-0", font.className)}>
+          <span className="font-semibold md:font-bold">
+          You can be a Certified Career Planner,</span> <br className="md:hidden" /> <br className="md:hidden" />IF YOU ARE A
         </div>
-        <div className="mt-[60px]">
+        <div className="md:mt-[60px]">
           <Carousel
             responsive={responsive}
             arrows={false}
-            centerMode={true}
+            centerMode={!isSmallScreen}
             renderButtonGroupOutside={true}
             customButtonGroup={<ButtonGroup />}
           >

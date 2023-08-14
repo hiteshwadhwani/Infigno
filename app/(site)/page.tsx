@@ -1,3 +1,4 @@
+import BookAFreeSession from "@/components/BookAFreeSession";
 import CarrerCounselling from "@/components/CarrerCounselling";
 import CertifiedPlanner from "@/components/CertifiedPlanner";
 import ClubPartners from "@/components/ClubPartners";
@@ -17,6 +18,7 @@ export default function LandingPage() {
       <WhatPeopleSaying />
       <Mentors />
       <FAQ />
+      <BookAFreeSession />
       <Footer />
     </div>
   );
