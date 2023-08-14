@@ -13,7 +13,7 @@ interface Card2Props {
 
 const Card3: React.FC<Card2Props> = ({ children, imageSrc , className}) => {
   return (
-    <div className={twMerge("relative h-[400px] rounded-2xl shadow-xl border border-slate-200 mx-[10px] md:mx-[10px]", className)}>
+    <div className={twMerge("relative h-[400px] rounded-2xl mx-[10px] md:mx-[10px] customShadow", className)}>
       <Image
         src={imageSrc}
         alt="asf"
