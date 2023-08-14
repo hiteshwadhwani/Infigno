@@ -14,11 +14,11 @@ const BookAFreeSession = () => {
   }
   
   return (
-    <div className="md:hidden p-[20px] grid grid-cols-2 gap-x-[20px] fixed bottom-4 bg-white customShadow mx-4 rounded-[10px] z-30">
-      <div className={twMerge("text-[16px] text-[#0047AB]", font.className)}>
-        Book a <span className="font-bold">Free Demo Session</span>
+    <div className="md:hidden p-[20px] grid items-center grid-cols-2 gap-x-[20px] fixed bottom-3 bg-white customShadow left-4 right-4 rounded-[10px] z-30">
+      <div className={twMerge("text-[16px] text-[#0047AB] leading-[130%]", font.className)}>
+        Book a <span className="font-bold">Free <br /> Demo Session</span>
       </div>
-      <Button onClick={scrollToTop} className="font-semibold text-white py-[12px] px-[20px] rounded-full bg-[#0047AB] hover:bg-[#0047AB] hover:opacity-80 cursor-pointer">Register NOW</Button>
+      <Button onClick={scrollToTop} className="text-[14px] font-semibold text-white py-[12px] px-[20px] rounded-full bg-[#0047AB] hover:bg-[#0047AB] hover:opacity-80 cursor-pointer">Register NOW</Button>
     </div>
   );
 };

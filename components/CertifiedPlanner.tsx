@@ -303,7 +303,7 @@ const CertifiedPlanner = () => {
 
       {/* why be certified planner */}
       <div className="mt-12 lg:mt-[100px]  ">
-        <div className="bg-gradient-to-br md:bg-none from-[#004EC1] to-[#1E86FF] p-[10px] md:p-0 mx-[20px] md:mx-0 rounded-[15px] md:rounded-none">
+        <div className="bg-gradient-to-br md:bg-none from-[#004EC1] to-[#1E86FF] pb-[20px] md:pb-0 p-[10px] md:p-0 mx-[20px] md:mx-0 rounded-[15px] md:rounded-none">
           <div
             className={twMerge(
               font.className,
@@ -462,6 +462,12 @@ const CertifiedPlanner = () => {
                 <span className="font-bold">Education Industry</span>
               </div>
             </Card3>
+            <div className="h-[400px] rounded-2xl mx-[10px] customShadow">
+                <div className={twMerge(font.className, 'text-p')}>
+
+                </div>
+            </div>
+
           </Carousel>
         </div>
       </div>

@@ -57,6 +57,7 @@ const responsive = {
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
+    partialVisibilityGutter: 80
   },
 };
 
@@ -147,15 +148,15 @@ const TrainingProcess = () => {
 
       {/* mobile view carousel */}
       <div className="lg:hidden m-4">
-        <Carousel responsive={responsive}>
+        <Carousel responsive={responsive} partialVisible={true}>
           {cardData.map((card, idx) => (
             <div
               key={card.heading}
-              className="h-[400px] border border-slate-300 shadow-lg rounded-3xl overflow-hidden"
+              className="h-[360px] border shadow-lg rounded-3xl overflow-hidden ml-[20px]"
             >
               <div className="p-6 md:px-20 md:py-12">
                 <div className="flex flex-row justify-between gap-x-2 items-center">
-                  <h1 className="text-2xl md:text-3xl">{card.heading}</h1>
+                  <h1 className="text-[20px] leading-[130%]">{card.heading}</h1>
                   <Image
                     src={`/images/numbers/${idx + 1}.svg`}
                     width={25}
@@ -164,7 +165,7 @@ const TrainingProcess = () => {
                   />
                 </div>
 
-                <p className="text-neutral-600 text-base text-[12px] mt-[7px]">
+                <p className="text-neutral-600 text-base mt-[7px] text-[10px] leading-[130%]">
                   {card.description}
                 </p>
               </div>
