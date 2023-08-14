@@ -6,6 +6,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const cardData = [
   {
@@ -57,8 +58,33 @@ const responsive = {
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    partialVisibilityGutter: 80
+    partialVisibilityGutter: 80,
   },
+};
+
+const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
+  const {
+    carouselState: { currentSlide },
+  } = rest;
+  return (
+    <div
+      className="carousel-button-group mt-[30px] mb-4 gap-4 flex justify-center
+      items-center w-full"
+    >
+      <button
+        className="rounded-full border-2 bg-transparent text-[#0047AB] border-[#0047AB] hover:text-white hover:bg-[#0047AB] transition p-1"
+        onClick={() => previous()}
+      >
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+      <button
+        className="rounded-full border-2 bg-transparent text-[#0047AB] border-[#0047AB] p-1 hover:text-white hover:bg-[#0047AB] transition"
+        onClick={() => next()}
+      >
+        <ChevronRight className="w-5 h-5" />
+      </button>
+    </div>
+  );
 };
 
 const TrainingProcess = () => {
@@ -147,9 +173,15 @@ const TrainingProcess = () => {
       </div>
 
       {/* mobile view carousel */}
-      <div className="lg:hidden m-4">
-        <Carousel responsive={responsive} partialVisible={true}>
-          {cardData.map((card, idx) => (
+      <div className="lg:hidden">
+        <Carousel
+          responsive={responsive}
+          partialVisible={true}
+          renderButtonGroupOutside={true}
+          customButtonGroup={<ButtonGroup />}
+          arrows={false}
+        >
+          {/* {cardData.map((card, idx) => (
             <div
               key={card.heading}
               className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] relative"
@@ -169,15 +201,204 @@ const TrainingProcess = () => {
                   {card.description}
                 </div>
               </div>
-                <Image src={card.imageSrc} alt="img1" width={235} height={175.445} className="absolute bottom-0" />
+                <Image src={card.imageSrc} alt="img1" width={235} height={175.445} className="absolute bottom-0 scale-110 object-center" />
                 <Image
                   src={"/images/bg2.svg"}
                   alt="img1"
                   width={235} height={175.445}
                   className={`-z-10 ${!card.show && "hidden"} opacity-75 absolute bottom-0`}
                 />
+            </div>  
+          ))} */}
+
+          {/* {cardData.map((card, idx) => (
+            <div
+              key={card.heading}
+              className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center"
+            >
+              <div className="p-[20px] md:px-20 md:py-12">
+                <div className="flex flex-row justify-between gap-x-2 items-start">
+                  <h1 className="text-[20px] leading-[130%]">{card.heading}</h1>
+                  <Image
+                    src={`/images/numbers/${idx + 1}.svg`}
+                    width={25}
+                    height={25}
+                    alt="number"
+                  />
+                </div>
+
+                <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
+                  {card.description}
+                </div>
+              </div>
+              <div className="w-[235px] h-[175px] relative">
+                <Image
+                  src={card.imageSrc}
+                  alt="img1"
+                  fill
+                  className="absolute bottom-0 scale-110 object-center"
+                />
+                <Image
+                  src={"/images/bg2.svg"}
+                  alt="img1"
+                  fill
+                  className={`-z-10 ${
+                    !card.show && "hidden"
+                  } opacity-75 absolute bottom-0`}
+                />
+              </div>
             </div>
-          ))}
+          ))} */}
+
+          <div className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
+            <div className="p-[20px] md:px-20 md:py-12">
+              <div className="flex flex-row justify-between gap-x-2 items-start">
+                <h1 className="text-[20px] leading-[130%]">
+                  Counselling Training
+                </h1>
+                <Image
+                  src={`/images/numbers/1.svg`}
+                  width={25}
+                  height={25}
+                  alt="number"
+                />
+              </div>
+
+              <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
+                Get in-depth knowledge of psychometric tests, learn to identify
+                user personas, access an extensive career-library, with 51+
+                industries and 1300+ career options
+              </div>
+            </div>
+            <div className="w-[235px] h-[175px] relative">
+              <Image
+                src="/images/training-process/img1.svg"
+                alt="img1"
+                fill
+                className="absolute bottom-0 scale-125 object-center"
+              />
+              <Image
+                src={"/images/bg2.svg"}
+                alt="img1"
+                fill
+                className={`-z-10 opacity-75 scale-125 absolute bottom-0`}
+              />
+            </div>
+          </div>
+          <div className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
+            <div className="p-[20px] md:px-20 md:py-12">
+              <div className="flex flex-row justify-between gap-x-2 items-start">
+                <h1 className="text-[20px] leading-[130%]">
+                Certification
+                </h1>
+                <Image
+                  src={`/images/numbers/2.svg`}
+                  width={25}
+                  height={25}
+                  alt="number"
+                />
+              </div>
+
+              <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
+              Earn the prestigious title of a ‘Certified Career Planner’, acknowledged with a certificate awarded by Infigon, a recognized institution accredited by Startup India. Recognized by #StartupIndia
+              </div>
+            </div>
+            <div className="w-[235px] h-[175px] relative">
+              <Image
+                src="/images/training-process/img2.svg"
+                alt="img1"
+                fill
+                className="absolute bottom-0 scale-125 object-center"
+              />
+            </div>
+          </div>
+          <div className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
+            <div className="p-[20px] md:px-20 md:py-12">
+              <div className="flex flex-row justify-between gap-x-2 items-start">
+                <h1 className="text-[20px] leading-[130%]">
+                Website/Product Set-up
+                </h1>
+                <Image
+                  src={`/images/numbers/3.svg`}
+                  width={25}
+                  height={25}
+                  alt="number"
+                />
+              </div>
+
+              <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
+              Get your own co-branded website set-up with an integrated secure payment portal, and an Intuitive Admin Panel to manage your clients.
+              </div>
+            </div>
+            <div className="w-[235px] h-[175px] relative">
+              <Image
+                src="/images/training-process/img3.svg"
+                alt="img1"
+                fill
+                className="absolute bottom-0 scale-125 object-center"
+              />
+            </div>
+          </div>
+          <div className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
+            <div className="p-[20px] md:px-20 md:py-12">
+              <div className="flex flex-row justify-between gap-x-2 items-start">
+                <h1 className="text-[20px] leading-[130%]">
+                Business Set-Up/Sales Training
+                </h1>
+                <Image
+                  src={`/images/numbers/4.svg`}
+                  width={25}
+                  height={25}
+                  alt="number"
+                />
+              </div>
+
+              <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
+              Get expert help to boost online presence with social media, lead generation, and sales training.
+              </div>
+            </div>
+            <div className="w-[235px] h-[180px] relative">
+              <Image
+                src="/images/training-process/img4.svg"
+                alt="img1"
+                fill
+                className="absolute bottom-0 scale-125 translate-y-1 object-center"
+              />
+            </div>
+          </div>
+          <div className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
+            <div className="p-[20px] md:px-20 md:py-12">
+              <div className="flex flex-row justify-between gap-x-2 items-start">
+                <h1 className="text-[20px] leading-[130%]">
+                Lifetime Handholding
+                </h1>
+                <Image
+                  src={`/images/numbers/5.svg`}
+                  width={25}
+                  height={25}
+                  alt="number"
+                />
+              </div>
+
+              <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
+              Get instant support for unfamiliar career inquiries made by clients, through our dedicated R&D team.
+              </div>
+            </div>
+            <div className="w-[367.073px] h-[224.631px] relative">
+              <Image
+                src="/images/training-process/img5.svg"
+                alt="img1"
+                fill
+                className="absolute bottom-0 scale-110  object-center -translate-x-10"
+              />
+              <Image
+                src={"/images/bg2.svg"}
+                alt="img1"
+                fill
+                className={`-z-10 opacity-75 absolute bottom-0 scale-110`}
+              />
+            </div>
+          </div>
         </Carousel>
       </div>
       {/* <MyCarousel /> */}

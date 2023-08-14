@@ -12,27 +12,27 @@ const radix = Readex_Pro({ subsets: ["latin"] });
 const CarrerCounselling = () => {
   return (
     <div className="mx-[20px] md:mx-[100px] mt-12 lg:mt-[100px]">
-      <div className={twMerge("md:text-center text-[28px] md:text-[36px] text-[#0047AB]", font.className)}>
+      <div className={twMerge("md:text-center text-[28px] md:text-[36px] text-[#0047AB] leading-[120%]", font.className)}>
         <span className="font-bold">Why INFIGON’S</span> Career Counselling
         Program
       </div>
-      <div className="md:bg-gradient-to-br from-[#1E86FF] to-[#0047AB] rounded-2xl md:px-10 md:pt-10 mt-10">
-        <div className="bg-gradient-to-br from-[#1E86FF] to-[#0047AB] md:bg-none p-[20px] md:p-0 rounded-[20px] md:rounded-none grid grid-cols-1 lg:grid-cols-2 gap-y-[30px] gap-x-5">
+      <div className="md:bg-gradient-to-br from-[#1E86FF] to-[#0047AB] rounded-2xl md:px-10 md:pt-10 mt-[30px]">
+        <div className="bg-gradient-to-br from-[#1E86FF] to-[#0047AB] md:bg-none p-[20px] md:p-[25px] rounded-[15px] md:rounded-none grid grid-cols-1 lg:grid-cols-2 gap-y-0 md:gap-y-[30px] gap-x-5">
           <div>
-            <p className="text-white text-sm">Business potential </p>
-            <p className="text-slate-800 text-sm">
-              Career Counselling from Grade{" "}
+            <p className={twMerge("text-white text-[12px] md:text-[16px] font-bold", font.className)}>Business potential </p>
+            <p className="text-slate-800 text-[14px] md:text-[18px]  mt-[5px] md:mt-[10px]">
+              Career Counselling from <br className="md:hidden" /> Grade{" "}
               <span className="font-semibold">6th - Graduation</span>
             </p>
             <h1 className="text-[18px] md:text-[32px] text-white mt-[20px] font-light leading-[130%]">
               A Revenue of{" "}
-              <span className="text-yellow-500">₹32.4 Lakhs per</span> annum*
+              <span className="text-[#FDE74C] font-bold">₹32.4 Lakhs</span>  per annum*
               for <span className="font-semibold">648 students</span> on an
               average of{" "}
               <span className="font-semibold">₹5000 per student*</span>
             </h1>
-            <div className="text-white bg-gradient-to-br from-[#004EC1] rounded-2xl mt-[30px] md:mt-[50px] py-[30px] px-[40px] ">
-              <h3 className="text-white mb-2 text-[16px] md:text-[10px]" >Additional Sources of income</h3>
+            <div className="text-white bg-gradient-to-br from-[#004EC1] rounded-2xl mt-[30px] md:mt-[50px] py-[30px] px-[50px] md:w-[80%]">
+              <h3 className="text-white mb-2 text-[10px] md:text-[16px] font-bold" >Additional Sources of income</h3>
               <ul className="list-disc text-[12px] md:text-[18px]">
                 <li className="text-white">
                   Referral from Universities and other academic institutions
@@ -46,34 +46,44 @@ const CarrerCounselling = () => {
               </ul>
             </div>
           </div>
-          <div className="relative h-[400px] lg:h-full w-full">
+          <div className="relative h-[400px] lg:h-full w-full hidden md:block">
             <Image
               src={"/images/CarrerCounselling/img1.svg"}
               fill
               alt="image"
             />
           </div>
+          <div className="relative h-[280px] lg:h-full w-full md:block">
+            <Image
+              src={"/images/CarrerCounselling/img4.svg"}
+              fill
+              alt="image"
+            />
+          </div>
         </div>
-        <div className="flex flex-col relative mt-16 min-h-[600px] h-fit bg-gradient-to-br from-[#1E86FF] to-[#0047AB] md:bg-none p-[20px] md:p-0 rounded-[20px] md:rounded-none">
+        <div className="flex flex-col md:p-[25px] relative mt-[20px] min-h-[600px] h-fit bg-gradient-to-br from-[#1E86FF] to-[#0047AB] md:bg-none p-[20px] rounded-[15px] md:rounded-none">
           <div className="flex flex-col lg:max-w-[40%]">
             <div className="text-white text-[24px] md:text-[42px] font-semibold leading-[130%]">
               Kick-start{" "}
-              <span className="text-yellow-400 font-normal">your</span>{" "}
+              <span className={twMerge("text-yellow-400 font-normal", font.className)}>your</span>{" "}
               Counselling business{" "}
-              <span className="text-yellow-400 font-normal">today at just</span>{" "}
+              <span className={twMerge("text-yellow-400 font-normal", font.className)}>today at just</span>{" "}
               ₹10,000
             </div>
-            <Button className="w-fit mt-[30px]">Know more</Button>
+            <Button className="w-fit mt-[20px] bg-[#FDE74C] text-[#004EC1] text-[12px] ">Know more</Button>
             <Image
               src={"/images/CarrerCounselling/Line.svg"}
-              width={150}
+              width={270}
               height={10}
               alt="line"
               className="my-[20px]"
             />
-            <div className="text-white font-light">
+            <div className="text-white font-light text-[12px] md:text-[21.773px] flex flex-row items-center">
               Recognised by:{" "}
-              <span className="font-semibold text-xl">#startupindia</span>
+              <div className="w-[87.392px] h-[19.286px] md:w-[178.351px] md:h-[39.36px] relative">
+              <Image src={'/images/startupIndia2.svg'} alt="startup india" fill className="transform translate-y-1 md:translate-y-2 ml-1" />
+              </div>
+              
             </div>
           </div>
           <div className="md:absolute md:bottom-0 md:right-4 lg:right-4 xl:right-10 z-10">
@@ -87,28 +97,28 @@ const CarrerCounselling = () => {
           </div>
           <div
             className={twMerge(
-              "md:absolute bottom-0 mx-auto  text-xl md:text-[36px] bg-yellow-300 text-[#5F6163]  p-2 md:p-[40px] rounded-2xl md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-bl-none lg:rounded-br-none leading-[120%] lg:w-[800px]",
+              "md:absolute bottom-0 mx-auto text-center md:text-left  text-xl md:text-[36px] bg-yellow-300 text-[#0047AB]  p-[20px] md:p-[40px] rounded-[10px] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-bl-none lg:rounded-br-none leading-[120%] lg:w-[800px]",
               font.className
             )}
           >
-            <span className={twMerge("text-blue-900", radix.className)}>
+            <span className={twMerge(" font-bold", radix.className)}>
               Earn
             </span>{" "}
             up to <br className="hidden lg:block" />{" "}
-            <span className={twMerge("text-blue-900", radix.className)}>
+            <span className={twMerge(" font-bold", radix.className)}>
               32.4 Lakh per annum
             </span>{" "}
             <br className="hidden md:block" /> through Counselling
           </div>
         </div>
       </div>
-      <div className=" h-fit px-[50px] rounded-2xl md:bg-[#0047AB] flex flex-col md:grid md:grid-cols-3 mt-12 overflow-hidden items-center customShadow  md:shadow-none md:border-none">
-        <div className={twMerge("text-lg text-[14px] md:text-[24px] text-[#0047AB] md:text-white text-center md:text-left py-4 font-medium", font.className)}>
-          Download our{" "}
-          <span className="font-bold">Career Counselling Program brochure</span>{" "}
+      <div className="h-fit px-[20px] md:px-[50px] rounded-[15px] md:bg-[#0047AB] flex flex-col md:grid md:grid-cols-3 mt-[20px] md:mt-[50px] overflow-hidden items-center customShadow  md:shadow-none md:border-none">
+        <div className={twMerge("text-[14px] md:text-[24px] text-[#0047AB] md:text-white text-center md:text-left py-[30px] font-medium leading-[130%]", font.className)}>
+          Download our{" "} <br className="hidden md:block"/> 
+          <span className="font-bold">Career Counselling <br className="md:hidden" /> Program brochure</span>{" "}
           for more details.
         </div>
-        <Button className="bg-white text-[14px] mb-4 md:mb-0 md:text-[16px] text-[#0047AB] rounded-full w-fit mx-auto shadow-3xl md:shadow-none border border-slate-200 md:border-none hover:bg-white hover:opacity-75 transition">
+        <Button className="bg-white text-[14px] mb-4 md:mb-0 md:text-[16px] text-[#0047AB] rounded-[5px] w-full md:w-fit mx-auto md:shadow-none border md:border-none hover:bg-white hover:opacity-75 transition customShadow py-[24px]">
           Download Brochure
         </Button>
         <div className="relative w-full h-full mt-4 hidden md:block">
