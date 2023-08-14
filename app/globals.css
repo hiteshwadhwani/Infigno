@@ -134,3 +134,11 @@ html, body,:root{
   .customGradiant{
     background: linear-gradient(138deg, #004EC1 0%, #1E86FF 100%);
   }
+
+  .customGradiant2{
+    background: linear-gradient(136deg, #FFF 0%, #FFF 36.25%, #1E86FF 100%);
+  }
+  .customGradiant3{
+    background: linear-gradient(141deg, #034DB3 0%, rgba(31, 134, 255, 0.00) 100%, rgba(255, 255, 255, 0.00) 100%);
+  }
+

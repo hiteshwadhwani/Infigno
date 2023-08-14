@@ -5,7 +5,7 @@ interface CertifiedCardProps{
 }
 const CertifiedCard: React.FC<CertifiedCardProps> = ({children}) => {
     return (
-        <div className="w-[258px] p-[15px] bg-[#FFF]  rounded-[10px] text-[#004EC1] border text-center md:text-left leading-[140%] font-normal customShadow">
+        <div className="w-full md:w-[258px] p-[15px] bg-[#FFF] text-[14px] md:text-[21px] rounded-[5px] md:rounded-[10px] text-[#004EC1] border leading-[140%] font-normal customShadow">
             {children}
         </div>
     )

@@ -116,8 +116,8 @@ const CertifiedPlanner = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Become a Certified Career Planner */}
-      <div className="md:customHeight  h-fit w-full bg-gradient-to-br from-[#004EC1] via-[#004EC1] bgop to-[#1E86FF] md:p-5 xl:py-[30px] xl:px-[40px]">
-        <div className="relative py-[20px] px-[40px] md:bg-gradient-to-br from-white via-white to-[#1E86FF] rounded-3xl flex flex-col md:flex-row justify-between h-full items-center overflow-hidden">
+      <div className="md:customHeight  h-fit w-full bg-gradient-to-br from-[#004EC1] via-[#004EC1]  to-[#1E86FF] md:p-5 xl:py-[30px] xl:px-[40px]">
+        <div className="relative px-[20px] py-[20px] md:px-[40px] md:bg-gradient-to-br from-white via-white to-[#1E86FF] rounded-3xl flex flex-col md:flex-row justify-between h-full items-center overflow-hidden">
           <Image
             src={"/images/people.svg"}
             alt="image"
@@ -134,44 +134,51 @@ const CertifiedPlanner = () => {
             alt="background"
           />
 
-          <div className="flex flex-col items-center md:block bg-gradient-to-br from-[#FFF] to-[#1E86FF] md:bg-none px-[20px] py-[20px] md:p-0 rounded-[25px] md:rounded-none mb-[20px] md:mb-0 z-10">
+          <div className="flex flex-col items-center md:block bg-gradient-to-br customGradiant2 md:bg-none px-[15px] md:px-[30px] pt-[30px] md:pt-0 py-0 md:py-[30px] md:p-0 rounded-[25px] md:rounded-none mb-[20px] md:mb-0 z-10">
             <h1
               className={twMerge(
-                "text-[28px] md:text-[38px] text-[#004EC1] font-medium leading-[120%]",
+                "text-[28px] md:text-[38px] text-[#004EC1] font-medium leading-[120%] px-[10px]",
                 font.className
               )}
             >
               Become a <br className="hidden md:block" />
               <span className="font-bold">Certified Career Planner</span>
             </h1>
-            <h3 className="text-[16px] md:text-[21px] leading-[120%] font-normal mt-[10px]">
+            <h3 className="text-[16px] md:text-[21px] leading-[120%] font-normal mt-[10px] px-[10px]">
               Help millions of students to <br className="hidden md:block" />
               achieve their career goals
             </h3>
-            <div className="mt-[30px] md:mt-[40px] flex flex-col gap-y-[15px]">
+            <div className="mt-[30px] md:mt-[40px] flex flex-col gap-y-[10px] md:gap-y-[15px]">
               <CertifiedCard>
-                Earn up to <br />{" "}
-                <span className="text-[#F16136] font-semibold text-[21px] leading-[140%]">
+                Earn up to <br className="hidden md:block" />{" "}
+                <span className="text-[#F16136] font-semibold text-[14px] md:text-[21px] leading-[140%]">
                   32 Lakh*
                 </span>
-                <span className="font-semibold text-[21px]"> per year</span>
+                <span className="font-semibold text-[14px] md:text-[21px]">
+                  {" "}
+                  per year
+                </span>
               </CertifiedCard>
               <CertifiedCard>
-                Lead by ex: <br />
-                <span className="text-[#F16136] font-semibold text-[21px] leading-[140%]">
+                Lead by ex: <br className="hidden md:block" />
+                <span className="text-[#F16136] font-semibold text-[14px] md:text-[21px] leading-[140%]">
                   IIT & IIM
                 </span>{" "}
-                <span className="font-semibold text-[21px]">Graduates</span>
+                <span className="font-semibold text-[14px] md:text-[21px]">
+                  Graduates
+                </span>
               </CertifiedCard>
               <CertifiedCard>
-                Trusted by <br />{" "}
-                <span className="text-[#F16136] font-semibold text-[21px] leading-[140%]">
+                Trusted by
+                <br className="hidden md:block" />{" "}
+                <span className="text-[#F16136] font-semibold text-[14px] md:text-[21px] leading-[140%]">
                   50,000+ Students
                 </span>
               </CertifiedCard>
             </div>
-            <div className="text-[12px] md:text-[16px] mt-3 md:mt-[30px]">
-              Recognised by: <br />{" "}
+            <div className="text-[12px] md:text-[16px] mt-3 md:mt-[30px] flex flex-row gap-x-2 md:block py-2">
+              Recognised by:
+              <br className="hidden md:block" />{" "}
               <Image
                 src={"/images/startupindia.svg"}
                 width={125.24}
@@ -184,12 +191,12 @@ const CertifiedPlanner = () => {
                 src={"/images/people.svg"}
                 alt="image"
                 width={320}
-                height={309}
+                height={320}
                 className="md:hidden"
               />
             </div>
           </div>
-          <div className="w-full md:w-[360px] bg-gradient-to-br from-[#034DB3] to-[#1F86FF] py-[20px] px-[20px] md:px-[30px] rounded-3xl z-10">
+          <div className="w-full md:w-[360px] customGradiant3 py-[20px] px-[20px] md:px-[30px] rounded-3xl z-10">
             <h1
               className={twMerge(
                 "text-[21px] md:text-[36px] text-[#FDE74C] font-bold leading-[120%]",
@@ -296,7 +303,7 @@ const CertifiedPlanner = () => {
 
       {/* why be certified planner */}
       <div className="mt-12 lg:mt-[100px]  ">
-        <div className="bg-gradient-to-br md:bg-none from-[#004EC1] to-[#1E86FF] p-[20px] md:p-0 mx-[20px] md:mx-0 rounded-[15px] md:rounded-none">
+        <div className="bg-gradient-to-br md:bg-none from-[#004EC1] to-[#1E86FF] p-[10px] md:p-0 mx-[20px] md:mx-0 rounded-[15px] md:rounded-none">
           <div
             className={twMerge(
               font.className,
@@ -307,7 +314,7 @@ const CertifiedPlanner = () => {
             <span className="font-semibold">certified career planner?</span>
           </div>
           <div className="md:bg-[#034DB3] bg-none mt-[30px] bg-right md:mx-[100px] rounded-[30px] relative overflow-hidden md:bg-rocket bg-no-repeat bg-cover">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-6 lg:w-[50%]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-[20px] lg:w-[50%]">
               <Card2 title="Strong Earning Potential">
                 <div>
                   <span className="font-semibold">Earn up to ₹32.4 Lakh</span>{" "}
@@ -317,9 +324,9 @@ const CertifiedPlanner = () => {
               <Card2 title="Nation Building">
                 <p>
                   Help confused students to achieve their
-                  <span className="font-semibold">Career goals</span> building a
+                  <span className="font-semibold"> Career goals</span> building a
                   <span className="font-semibold">
-                    bright future for India.
+                     bright future for India.
                   </span>
                 </p>
               </Card2>
@@ -372,9 +379,17 @@ const CertifiedPlanner = () => {
 
       {/* You can be a Certified Career Planner, IF YOU ARE A */}
       <div className="mt-20 py-12">
-        <div className={twMerge("md:text-[36px] text-[24px] md:text-center font-bold px-[20px] md:px-0", font.className)}>
+        <div
+          className={twMerge(
+            "md:text-[36px] text-[24px] md:text-center font-bold px-[20px] md:px-0",
+            font.className
+          )}
+        >
           <span className="font-semibold md:font-bold">
-          You can be a Certified Career Planner,</span> <br className="md:hidden" /> <br className="md:hidden" />IF YOU ARE A
+            You can be a Certified Career Planner,
+          </span>{" "}
+          <br className="md:hidden" /> <br className="md:hidden" />
+          IF YOU ARE A
         </div>
         <div className="md:mt-[60px]">
           <Carousel
