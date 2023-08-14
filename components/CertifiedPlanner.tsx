@@ -313,7 +313,7 @@ const CertifiedPlanner = () => {
             Why be a{" "}
             <span className="font-semibold">certified career planner?</span>
           </div>
-          <div className="md:bg-[#034DB3] bg-none mt-[30px] bg-right md:mx-[100px] rounded-[30px] relative overflow-hidden md:bg-rocket bg-no-repeat bg-cover">
+          <div className="md:bg-[#034DB3] bg-none mt-[30px] bg-right md:py-[20px] md:mx-[100px] rounded-[30px] relative overflow-hidden md:bg-rocket bg-no-repeat bg-cover">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-[20px] lg:w-[50%]">
               <Card2 title="Strong Earning Potential">
                 <div>

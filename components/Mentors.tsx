@@ -64,7 +64,7 @@ const data = [
 const Mentors = () => {
   return (
     <div className="mt-12 lg:mt-[100px]">
-      <div className={twMerge(font.className, "text-[32px] text-center px-3")}>
+      <div className={twMerge(font.className, "text-[32px] text-center mx-[20px]")}>
       Interact with our growing network of <span className="font-bold">80+ Mentors</span>
       </div>
       <div className="mt-12">

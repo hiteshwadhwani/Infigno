@@ -1,6 +1,5 @@
 "use client";
 
-import { AiOutlineDown } from "react-icons/ai";
 import {
   Accordion,
   AccordionContent,
@@ -13,9 +12,39 @@ const font = Quicksand({ subsets: ["latin"] });
 
 const data = [
   {
-    heading: "Interact with our growing network of 80+ Mentors",
+    heading: "What is the course fee",
     content:
-      "Interact with our growing network of 80+ Mentors, Interact with our growing network of 80+ MentorsInteract with our growing network of 80+ MentorsInteract with our growing network of 80+ MentorsInteract with our growing network ",
+      "Our course enrollment fees is 35K + 18% GST.",
+  },
+  {
+    heading: "What is the earning potential as a Career Counsellor",
+    content:
+      "As a career counsellor, you have an earning potential of up to INR 32.4 Lakh per annum.",
+  },
+  {
+    heading: "Will the training be online or offline?",
+    content:
+      "It will be a mix of online and offline, your theory and psychometric test training will be online, and the sales training will be offline.",
+  },
+  {
+    heading: "What is the training duration?",
+    content:
+      "The total training is for 16 hours, which we have divided over a period of 2 months, as after every session there will be some assignments and reading material etc. Each session will be for approx 1.5 hours.",
+  },
+  {
+    heading: "Will the training session be recorded or live?",
+    content:
+      "All sessions will be live Google meetings with an expert trainer.  ",
+  },
+  {
+    heading: "Can we complete it before the given duration?",
+    content:
+      "Yes the course can be completed within a period of 1 month as well. ",
+  },
+  {
+    heading: "What will be the batch size?",
+    content:
+      "There will be at max 3 candidates in every batch.",
   },
 ];
 
@@ -36,8 +65,10 @@ const FAQ = () => {
           collapsible
           className="w-[90vw] md:w-[80vw] lg:w-[60vw] mx-auto flex flex-col gap-y-[12px] mt-12"
         >
-          <AccordionItem
-            value="item-1"
+          {data.map((item, idx) => (
+            <AccordionItem
+            key={idx+1}
+            value={`item-${idx+1}`}
             className="py-[20px] px-[30px] rounded-xl bg-[#F2F2F2]"
           >
             <AccordionTrigger className="hover:no-underline">
@@ -47,8 +78,7 @@ const FAQ = () => {
                   "text-[18px] md:text-[24px] text-[#1E1E1E] font-light"
                 )}
               >
-                Interact with our growing network of{" "}
-                <span className="font-bold">80+ Mentors</span>
+                {item.heading}
               </div>
             </AccordionTrigger>
             <AccordionContent
@@ -57,85 +87,10 @@ const FAQ = () => {
                 "text-[12px] md:text-[18px] font-light ml-12"
               )}
             >
-              Interact with our growing network of
-              <span className="font-bold"> 80+ Mentors</span>, Interact with our
-              growing network of
-              <span className="font-bold"> 80+ Mentors </span>Interact with our
-              growing network of
-              <span className="font-bold"> 80+ Mentors </span>Interact with our
-              growing network of 80+ MentorsInteract with our growing network
+              {item.content}
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem
-            value="item-2"
-            className="py-[20px] px-[30px] rounded-xl bg-[#F2F2F2]"
-          >
-            <AccordionTrigger className="hover:no-underline">
-              <div
-                className={twMerge(
-                  font.className,
-                  "text-[18px] md:text-[24px] text-[#1E1E1E] font-light"
-                )}
-              >
-                What is the course fee
-              </div>
-            </AccordionTrigger>
-            <AccordionContent
-              className={twMerge(
-                font.className,
-                "text-[12px] md:text-[18px] font-light ml-12"
-              )}
-            >
-              Our course enrollment fees is 35K + 18% GST
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem
-            value="item-3"
-            className="py-[20px] px-[30px] rounded-xl bg-[#F2F2F2]"
-          >
-            <AccordionTrigger className="hover:no-underline">
-              <div
-                className={twMerge(
-                  font.className,
-                  "text-[18px] md:text-[24px] text-[#1E1E1E] font-light"
-                )}
-              >
-                What is the earning potential as a Career Counsellor
-              </div>
-            </AccordionTrigger>
-            <AccordionContent
-              className={twMerge(
-                font.className,
-                "text-[12px] md:text-[18px] font-light ml-12"
-              )}
-            >
-              As a career counsellor, you have an earning potential of up to INR 32.4 Lakh per annum.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem
-            value="item-4"
-            className="py-[20px] px-[30px] rounded-xl bg-[#F2F2F2]"
-          >
-            <AccordionTrigger className="hover:no-underline">
-              <div
-                className={twMerge(
-                  font.className,
-                  "text-[18px] md:text-[24px] text-[#1E1E1E] font-light"
-                )}
-              >
-                Will the training be online or offline?
-              </div>
-            </AccordionTrigger>
-            <AccordionContent
-              className={twMerge(
-                font.className,
-                "text-[12px] md:text-[18px] font-light ml-12"
-              )}
-            >
-              It will be a mix of online and offline, your theory and psychometric test training will be online, and the sales training will be offline.
-            </AccordionContent>
-          </AccordionItem>
-          
+          ))}
         </Accordion>
       </div>
     </div>

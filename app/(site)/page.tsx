@@ -6,6 +6,7 @@ import ClubPartners from "@/components/ClubPartners";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Mentors from "@/components/Mentors";
+import StayConnected from "@/components/StayConnected";
 import TrainingProcess from "@/components/TrainingProcess";
 import WhatPeopleSaying from "@/components/WhatPeopleSaying";
 import ScrollToBottom from "react-scroll-to-bottom";
@@ -19,6 +20,7 @@ export default function LandingPage() {
       <ClubPartners />
       <WhatPeopleSaying />
       <Mentors />
+      <StayConnected />
       <FAQ />
       <BookAFreeSession />
     </div>

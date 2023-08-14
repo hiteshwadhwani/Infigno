@@ -48,12 +48,12 @@ const responsive = {
 
 const ClubPartners = () => {
   return (
-    <div className="mt-12 lg:mt-[100px]">
+    <div className=" mt-12 lg:mt-[100px]">
       {/* heading */}
       <div
         className={twMerge(
           font.className,
-          "text-[32px] text-center font-normal"
+          "text-[32px] text-center font-normal mx-[20px]"
         )}
       >
         <span className="font-bold">60+ College Club</span> Partners

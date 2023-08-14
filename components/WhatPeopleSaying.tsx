@@ -94,7 +94,7 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
 const WhatPeopleSaying = () => {
   return (
     <div className="mt-12 lg:mt-[100px]">
-      <div className={twMerge(font.className, "text-[32px] text-center px-3")}>
+      <div className={twMerge(font.className, "text-[32px] text-center mx-[20px]")}>
         What People are <span className="font-bold">Saying About Us</span>
       </div>
       <div className="mt-12">
