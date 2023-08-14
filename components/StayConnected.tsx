@@ -54,11 +54,11 @@ const StayConnected = () => {
     });
   }, []);
   return (
-    <div className="mt-12 lg:mt-[100px]">
+    <div className="mt-[60px] lg:mt-[100px]">
       <div className={twMerge(font.className, "text-[32px] text-center mx-[20px] font-bold")}>
       We stay Connected
       </div>
-      <div className="mt-10">
+      <div className="mt-[30px]">
         <Carousel
         draggable={false}
           responsive={responsive}

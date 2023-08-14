@@ -93,11 +93,11 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
 
 const WhatPeopleSaying = () => {
   return (
-    <div className="mt-12 lg:mt-[100px]">
-      <div className={twMerge(font.className, "text-[32px] text-center mx-[20px]")}>
+    <div className="mt-[60px] lg:mt-[100px]">
+      <div className={twMerge(font.className, "text-[32px] leading-[130%] text-center mx-[20px]")}>
         What People are <span className="font-bold">Saying About Us</span>
       </div>
-      <div className="mt-12">
+      <div className="mt-[30px]">
         <Carousel
           responsive={responsive}
           autoPlay
@@ -112,14 +112,14 @@ const WhatPeopleSaying = () => {
         >
           {data.map((item) => (
             <div
-              className="p-[25px] border border-[#D1D3D4] min-h-[254px] overflow-hidden ml-4 rounded-[15px]"
+              className="p-[25px] border border-[#D1D3D4] min-h-[254px] overflow-hidden mx-4 rounded-[15px]"
               key={item.heading}
             >
-              <div>
-                <h1 className="text-[21px] text-[#194E9F]">{item.heading}</h1>
-                <p className="text-[16px] text-[#808285]">{item.subheading}</p>
+              <div className="">
+                <h1 className="text-[19px] md:text-[21px] text-[#194E9F]">{item.heading}</h1>
+                <p className="text-[14px] md:text-[16px] text-[#808285]">{item.subheading}</p>
               </div>
-              <div className="mt-[20px] text-[18px] text-[#1E2327] text-ellipsis">
+              <div className="text-[16px] mt-[20px] md:text-[18px] text-[#1E2327] text-ellipsis">
                 {item.description}
               </div>
             </div>

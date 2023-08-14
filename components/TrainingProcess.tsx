@@ -281,7 +281,7 @@ const TrainingProcess = () => {
                 src={"/images/bg2.svg"}
                 alt="img1"
                 fill
-                className={`-z-10 opacity-75 scale-125 absolute bottom-0`}
+                className={`-z-10 absolute bottom-0 scale-110 translate-x-20 translate-y-10`}
               />
             </div>
           </div>
@@ -316,7 +316,7 @@ const TrainingProcess = () => {
             <div className="p-[20px] md:px-20 md:py-12">
               <div className="flex flex-row justify-between gap-x-2 items-start">
                 <h1 className="text-[20px] leading-[130%]">
-                Website/Product Set-up
+                Website/ <br /> Product Set-up
                 </h1>
                 <Image
                   src={`/images/numbers/3.svg`}
@@ -335,7 +335,7 @@ const TrainingProcess = () => {
                 src="/images/training-process/img3.svg"
                 alt="img1"
                 fill
-                className="absolute bottom-0 scale-125 object-center"
+                className="absolute bottom-0 scale-125 object-center translate-y-1"
               />
             </div>
           </div>
@@ -343,7 +343,7 @@ const TrainingProcess = () => {
             <div className="p-[20px] md:px-20 md:py-12">
               <div className="flex flex-row justify-between gap-x-2 items-start">
                 <h1 className="text-[20px] leading-[130%]">
-                Business Set-Up/Sales Training
+                Business Set-Up <br /> /Sales Training
                 </h1>
                 <Image
                   src={`/images/numbers/4.svg`}
@@ -362,7 +362,7 @@ const TrainingProcess = () => {
                 src="/images/training-process/img4.svg"
                 alt="img1"
                 fill
-                className="absolute bottom-0 scale-125 translate-y-1 object-center"
+                className="absolute bottom-0 scale-150 translate-y-1 object-center"
               />
             </div>
           </div>
@@ -395,7 +395,7 @@ const TrainingProcess = () => {
                 src={"/images/bg2.svg"}
                 alt="img1"
                 fill
-                className={`-z-10 opacity-75 absolute bottom-0 scale-110`}
+                className={`-z-10 absolute bottom-0 scale-110 translate-x-20 translate-y-10`}
               />
             </div>
           </div>

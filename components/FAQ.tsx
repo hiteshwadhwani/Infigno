@@ -50,14 +50,14 @@ const data = [
 
 const FAQ = () => {
   return (
-    <div className="mt-12 lg:mt-[100px]">
+    <div className="mt-[60px] lg:mt-[100px]">
       <div
         className={twMerge(
           font.className,
           "text-[24px] md:text-[32px] text-center px-3 font-thin"
         )}
       >
-        <span className="font-bold">FAQ’S - </span>Frequently asked questions
+        <span className="font-bold">FAQ’S - </span> <br className="md:hidden" /> Frequently asked questions
       </div>
       <div>
         <Accordion
@@ -75,7 +75,7 @@ const FAQ = () => {
               <div
                 className={twMerge(
                   font.className,
-                  "text-[18px] md:text-[24px] text-[#1E1E1E] font-light"
+                  "text-[18px] md:text-[24px] text-[#1E1E1E]  text-left leading-[130%]"
                 )}
               >
                 {item.heading}
@@ -83,8 +83,7 @@ const FAQ = () => {
             </AccordionTrigger>
             <AccordionContent
               className={twMerge(
-                font.className,
-                "text-[12px] md:text-[18px] font-light ml-12"
+                "text-[12px] md:text-[18px] ml-14 leading-[130%]"
               )}
             >
               {item.content}

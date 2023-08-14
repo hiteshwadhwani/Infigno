@@ -379,7 +379,7 @@ const CertifiedPlanner = () => {
       </div>
 
       {/* You can be a Certified Career Planner, IF YOU ARE A */}
-      <div className="mt-8 md:mt-20 py-10 bg-[#F6F6F6]">
+      <div className="mt-8 md:mt-20 py-10">
         <div
           className={twMerge(
             "md:text-[36px] text-[24px] md:text-center font-bold px-[20px] md:px-0",

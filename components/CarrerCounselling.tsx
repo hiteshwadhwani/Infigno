@@ -65,9 +65,9 @@ const CarrerCounselling = () => {
           <div className="flex flex-col lg:max-w-[40%]">
             <div className="text-white text-[24px] md:text-[42px] font-semibold leading-[130%]">
               Kick-start{" "}
-              <span className={twMerge("text-yellow-400 font-normal", font.className)}>your</span>{" "}
+              <span className={twMerge("text-yellow-400 font-semibold", font.className)}>your</span>{" "}
               Counselling business{" "}
-              <span className={twMerge("text-yellow-400 font-normal", font.className)}>today at just</span>{" "}
+              <span className={twMerge("text-yellow-400 font-semibold", font.className)}>today at just</span>{" "}
               ₹10,000
             </div>
             <Button className="w-fit mt-[20px] bg-[#FDE74C] text-[#004EC1] text-[12px] ">Know more</Button>

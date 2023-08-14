@@ -63,11 +63,11 @@ const data = [
 
 const Mentors = () => {
   return (
-    <div className="mt-12 lg:mt-[100px]">
-      <div className={twMerge(font.className, "text-[32px] text-center mx-[20px]")}>
+    <div className="mt-[60px] lg:mt-[100px]">
+      <div className={twMerge(font.className, "text-[32px] text-center mx-[20px] leading-[130%]")}>
       Interact with our growing network of <span className="font-bold">80+ Mentors</span>
       </div>
-      <div className="mt-12">
+      <div className="mt-[30px]">
         <Carousel
           responsive={responsive}
           autoPlay
