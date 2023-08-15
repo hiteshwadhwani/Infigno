@@ -33,6 +33,7 @@ import validator from "validator";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { saveAs } from "file-saver";
+import { useRouter } from "next/navigation";
 
 
 const formSchema = z.object({
@@ -48,6 +49,7 @@ const formSchema = z.object({
 const Footer = () => {
   const [verified, setIsVerified] = useState(false);
   const [loading, setLoading] = useState(false)
+  const router = useRouter()
 
   const handleRecaptcha = (token: string | null) => {
     if (token) {
@@ -160,9 +162,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between mt-5">
             <div className="flex flex-row gap-x-4 items-center">
               <p className="text-[18px] font-semibold">Follow us on social |</p>
-              <InstagramIcon className="w-4 h-4 hover:cursor-pointer hover:text-pink-500 transition" />
-              <Linkedin className="w-4 h-4 hover:text-[#0088c3] hover:cursor-pointer transition" />
-              <Twitter className="w-4 h-4 hover:text-[#1da0f3] hover:cursor-pointer transition" />
+              <InstagramIcon onClick={() => router.push('https://www.instagram.com/infigon_futures/')} className="w-4 h-4 hover:cursor-pointer hover:text-pink-500 transition" />
+              <Linkedin onClick={() => router.push('https://www.linkedin.com/company/infigon-futures/')} className="w-4 h-4 hover:text-[#0088c3] hover:cursor-pointer transition" />
+              <Twitter onClick={() => router.push('https://twitter.com/infigoninc')} className="w-4 h-4 hover:text-[#1da0f3] hover:cursor-pointer transition" />
             </div>
             <div className="text-[16px]">
               <span onClick={downloadBrochure} className="underline hover:cursor-pointer hover:opacity-80 transition">

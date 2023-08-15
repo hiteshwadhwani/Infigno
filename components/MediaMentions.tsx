@@ -41,7 +41,7 @@ const data = [
   {
     imageurl: "/images/mediaMentions/img8.svg",
     href: "https://unboxingstartups.com/blog/startup-of-the-week-infigon-futures/",
-  },
+  }, 
 ];
 
 const responsive = {
