@@ -12,27 +12,27 @@ import { useRouter } from "next/navigation";
 const data = [
   {
     imageurl: "/images/mediaMentions/img1.svg",
-    href: "https://www.taazatadka.com/",
+    href: "https://www.taazatadka.com/startup-stories/infigon-futures-guidance-student-education-omkar-vishwas-patil/",
   },
   {
     imageurl: "/images/mediaMentions/img2.svg",
-    href: "https://www.vidsaga.com/",
+    href: "https://www.vidsaga.com/expert-interview-marketing-growth-techniques-omkar-patil-infigon-futures/",
   },
   {
     imageurl: "/images/mediaMentions/img3.svg",
-    href: "https://www.insightssuccess.in/",
+    href: "https://www.insightssuccess.in/infigon-futures-unlocking-real-career-potential/",
   },
   {
     imageurl: "/images/mediaMentions/img4.svg",
-    href: "https://www.analyticsinsight.net/",
+    href: "https://www.analyticsinsight.net/exclusive-interview-with-omkar-patil-ceo-infigon-futures/",
   },
   {
     imageurl: "/images/mediaMentions/img5.svg",
-    href: "https://theindiabizz.com/",
+    href: "https://theindiabizz.com/infigon-futures-platforms-for-students-to-help-them-plan-their-career/",
   },
   {
     imageurl: "/images/mediaMentions/img6.svg",
-    href: "https://ballsofsteelshow.com/",
+    href: "https://ballsofsteelshow.com/features/in-conversation-with-omkar-patil/",
   },
 //   {
 //     imageurl: "/images/mediaMentions/img7.svg",
@@ -40,7 +40,7 @@ const data = [
 //   },
   {
     imageurl: "/images/mediaMentions/img8.svg",
-    href: "https://unboxingstartups.com/",
+    href: "https://unboxingstartups.com/blog/startup-of-the-week-infigon-futures/",
   },
 ];
 

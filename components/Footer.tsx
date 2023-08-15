@@ -32,6 +32,7 @@ import PhoneInputWithCountrySelect from "react-phone-number-input";
 import validator from "validator";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { saveAs } from "file-saver";
 
 
 const formSchema = z.object({
@@ -72,6 +73,11 @@ const Footer = () => {
     } finally {
       setLoading(false);
     }
+  }
+
+  const downloadBrochure = () => {
+    const url = "/brochure/Infigon-Brochure.pdf"
+    saveAs(url, 'Infigon-Brochure.pdf')
   }
 
   return (
@@ -159,7 +165,7 @@ const Footer = () => {
               <Twitter className="w-4 h-4 hover:text-[#1da0f3] hover:cursor-pointer transition" />
             </div>
             <div className="text-[16px]">
-              <span className="underline hover:cursor-pointer hover:opacity-80 transition">
+              <span onClick={downloadBrochure} className="underline hover:cursor-pointer hover:opacity-80 transition">
                 Download
               </span>{" "}
               <span className="text-blue-600">our Brochure</span>
@@ -169,7 +175,7 @@ const Footer = () => {
             Send us your questions & ideas{" "}
             <Heart className="h-4 w-4 ml-2" color="red" fill="red" />
             <span className="text-[#0047AB] font-normal ml-4 hover:underline hover:opacity-80 hover:cursor-pointer transition">
-              hello@ninjo.io
+            support@infigonfutures.com
             </span>
           </div>
           <div className="flex flex-row items-center justify-evenly">

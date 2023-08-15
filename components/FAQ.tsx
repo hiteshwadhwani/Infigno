@@ -49,6 +49,7 @@ const data = [
 ];
 
 const FAQ = () => {
+  
   return (
     <div className="mt-[60px] lg:mt-[100px]">
       <div
