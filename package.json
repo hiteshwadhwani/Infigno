@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.2.0",
-    "@prisma/client": "^5.1.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-separator": "^1.0.3",
@@ -48,8 +47,5 @@
     "typescript": "5.1.6",
     "validator": "^13.11.0",
     "zod": "^3.21.4"
-  },
-  "devDependencies": {
-    "prisma": "^5.1.1"
   }
 }

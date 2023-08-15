@@ -40,7 +40,7 @@ const formSchema = z.object({
   name: z.string().nonempty({
     message: "Required",
   }),
-  phone: z.string().refine(validator.isMobilePhone, {
+  phoneNumber: z.string().refine(validator.isMobilePhone, {
     message: "Invalid phone number",
   }),
   email: z.string().email(),
@@ -67,7 +67,7 @@ const Footer = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setLoading(true);
-      await axios.post("/api/connect-us", values);
+      await axios.post("https://api.infigon.app/lead/create-parent-lead", values);
       toast.success("Form Submitted");
     } catch (error) {
       console.log(error);
@@ -113,7 +113,7 @@ const Footer = () => {
               />
               <FormField
                 control={form.control}
-                name="phone"
+                name="phoneNumber"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>

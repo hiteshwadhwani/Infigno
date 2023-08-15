@@ -51,11 +51,11 @@ const formSchema = z.object({
   name: z.string().nonempty({
     message: "Required",
   }),
-  phone: z.string().refine(validator.isMobilePhone, {
+  phoneNumber: z.string().refine(validator.isMobilePhone, {
     message: "Invalid phone number",
   }),
   email: z.string().email(),
-  profession: z.string().min(1),
+  currentProfession: z.string().min(1),
 });
 
 const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
@@ -98,13 +98,13 @@ const CertifiedPlanner = () => {
     defaultValues: {
       name: "",
       email: "",
-      profession: "",
+      currentProfession: "",
     },
   });
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setLoading(true);
-      await axios.post("/api/book-session", values);
+      await axios.post("https://api.infigon.app/lead/book-session-ccp", values);
       toast.success("Session booked");
     } catch (error) {
       console.log(error);
@@ -235,7 +235,7 @@ const CertifiedPlanner = () => {
                 />
                 <FormField
                   control={form.control}
-                  name="phone"
+                  name="phoneNumber"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
@@ -273,7 +273,7 @@ const CertifiedPlanner = () => {
                 />
                 <FormField
                   control={form.control}
-                  name="profession"
+                  name="currentProfession"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
