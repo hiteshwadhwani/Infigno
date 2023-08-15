@@ -3,6 +3,7 @@
 import Carousel from "react-multi-carousel";
 import { twMerge } from "tailwind-merge";
 import { Quicksand } from "next/font/google";
+import Image from "next/image";
 const font = Quicksand({ subsets: ["latin"] });
 
 const responsive = {
@@ -22,40 +23,53 @@ const responsive = {
 
 const data = [
   {
-    heading: "Bangalore Medical College",
-    subheading: "AIIIMS",
+    imageUrl:"/images/mentors/Pranav Suresh.jpg",
+    heading: "BITS Pilani",
   },
   {
-    heading: "Bangalore Medical College",
-    subheading: "AIIIMS",
+    imageUrl:"/images/mentors/Harshi Sharma.png",
+    heading: "IIT Kharagpur",
   },
   {
-    heading: "Bangalore Medical College",
-    subheading: "AIIIMS",
+    imageUrl:"/images/mentors/Ayndru Uniyal.jpg",
+    heading: "IIM Indore",
   },
   {
-    heading: "Bangalore Medical College",
-    subheading: "AIIIMS",
+    imageUrl:"/images/mentors/Srinivasan G.jpeg",
+    heading: "Axis Bank",
+    subheading: "BITS Pilani",
   },
   {
-    heading: "Bangalore Medical College",
-    subheading: "AIIIMS",
+    imageUrl:"/images/mentors/Kinjal Thakkar.jpg",
+    heading: "JP Morgan Chase",
+    subheading: "Chartered Accountant",
   },
   {
-    heading: "Bangalore Medical College",
-    subheading: "AIIIMS",
+    imageUrl:"/images/mentors/Kanika Mitharwala.jpg",
+    heading: "UnSchool",
+    subheading: "Hindu College, DU",
   },
   {
-    heading: "Bangalore Medical College",
-    subheading: "AIIIMS",
+    imageUrl:"/images/mentors/bhavay Agarwal.png",
+    heading: "SRCC",
   },
   {
-    heading: "Bangalore Medical College",
-    subheading: "AIIIMS",
+    imageUrl:"/images/mentors/Gurudatt Rao.png",
+    heading: "Zargun Electronics & Science Pvt. Ltd.",
+    subheading: "SPCE",
   },
   {
-    heading: "Bangalore Medical College",
-    subheading: "AIIIMS",
+    imageUrl:"/images/mentors/Pari Gupta.jpg",
+    heading: "SRCC",
+  },
+  {
+    imageUrl:"/images/mentors/Isha Tavare.jpeg",
+    heading: "SRCC",
+  },
+  {
+    imageUrl:"/images/mentors/Savi Kankani.jpg",
+    heading: "Deloitte / Hindustan Unilever",
+    subheading: "IIM Lucknow",
   },
 ];
 
@@ -81,8 +95,8 @@ const Mentors = () => {
         >
           {data.map((item) => (
             <div key={item.heading} className="flex flex-col items-center px-[24px] py-[16px] customShadow rounded-[16px] customBorder ml-4">
-                <div className="bg-[#D9D9D9] rounded-full w-[90px] h-[90px]">
-
+                <div className="bg-[#D9D9D9] rounded-full w-[90px] h-[90px] relative overflow-hidden">
+                  <Image src={item.imageUrl} alt="mentor image" fill className="object-cover" />
                 </div>
                 <h2 className="text-[14.4px] text-[#0047AB] leading-[18px] mt-[8.8px] text-center">{item.heading}</h2>
                 <p className="mt-[8.8px] text-[12.8px] text-[#1E2327]">{item.subheading}</p>

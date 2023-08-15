@@ -23,46 +23,46 @@ const responsive = {
 
 const data = [
   {
-    heading: "Jheel Tripathi",
-    subheading: "12th - Jai Hind College, Mumbai",
+    heading: "Akshata Narayane",
+    subheading: "B.Com - R.A. Podar, Mumbai",
     description:
-      "“The Infigon mobile application is very user-friendly, and the one on one sessions helped me shortlist my undergrad degree”",
+      "“I started with the Infigon mobile app, took the tests and later connected with their counsellors. Majorly, I got a strong POA for my skill development roadmap and internship domain selection”",
+  },
+  {
+    heading: "Akshat Singhi",
+    subheading: "B.Com - St. Xavier’s Kolkata",
+    description:
+      '"Thanks to Infigon, I now have a better understanding of my career options & feel confident in making informed decisions about my future.”',
+  },
+  {
+    heading: "Sarjana Satam",
+    subheading: "12th - Ruia College, Mumbai",
+    description:
+      "“It was very helpful and mentors were very supportive and kind towards us.They put efforts into choosing our further stream by asking for minute details which is really appreciated.”",
+  },
+  {
+    heading: "Parth Rane",
+    subheading: "7th - Cosmopolitan Education Society, Mumbai",
+    description:
+      '"My son was confused about which subjects to select in his 8th-grade elective, Infigon helped us create a structured education roadmap by understanding our targets and strengths"',
+  },
+  {
+    heading: "Shriya Cheruvulli",
+    subheading: "10th - Amber International School",
+    description:
+      "“I was confused about which board to continue after the 10th. Infigon helped me figure out my target career options, and based on the entrance exams, recommended the right board for my Junior college”",
   },
   {
     heading: "Aditya Kumar",
     subheading: "B.Tech IT - DJ Sanghvi Mumbai",
     description:
-      '"Infigon helped me develop a clear action plan for my MBA journey, prepared a resume and also connected me with MBA grads to get an understanding from insiders”',
-  },
-  {
-    heading: "Harsh Pednekar",
-    subheading: "B.Com - Bhavans College",
-    description:
-      "“Infigon helped me develop a roadmap for skill development through internships and certifications, which will be of great help after graduation”",
+      "“Infigon helped me develop a clear action plan for my MBA journey, prepared a resume and also connected me with MBA grads to get an understanding from insiders”",
   },
   {
     heading: "Jeeshant Sawant",
-    subheading: "BMS - Rithumbara College",
+    subheading: "BMM - Rithumbara college",
     description:
-      '"I highly recommend Infigon for their personalized approach to career guidance and their vast knowledge of career options."',
-  },
-  {
-    heading: "Jheel Tripathi",
-    subheading: "12th - Jai Hind College, Mumbai",
-    description:
-      "“The Infigon mobile application is very user-friendly, and the one on one sessions helped me shortlist my undergrad degree”",
-  },
-  {
-    heading: "Jheel Tripathi",
-    subheading: "12th - Jai Hind College, Mumbai",
-    description:
-      "“The Infigon mobile application is very user-friendly, and the one on one sessions helped me shortlist my undergrad degree”",
-  },
-  {
-    heading: "Jheel Tripathi",
-    subheading: "12th - Jai Hind College, Mumbai",
-    description:
-      "“The Infigon mobile application is very user-friendly, and the one on one sessions helped me shortlist my undergrad degree”",
+      "“I highly recommend Infigon for their personalized approach to career guidance and their vast knowledge of career options.”",
   },
 ];
 
