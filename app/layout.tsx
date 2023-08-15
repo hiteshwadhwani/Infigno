@@ -4,8 +4,6 @@ import type { Metadata } from "next";
 import { Readex_Pro } from "next/font/google";
 import {Toaster} from 'react-hot-toast'
 import Footer from "@/components/Footer";
-import ScrollToBottom from "react-scroll-to-bottom";
-import Head from "next/head";
 
 const font = Readex_Pro({ subsets: ["latin"] });
 
@@ -25,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        
         <Toaster />
         <Navbar />
         {children}
