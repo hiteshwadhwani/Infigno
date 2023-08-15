@@ -6,7 +6,13 @@ import NavItems from "./ui/NavItems";
 import {useScrollToBottom} from 'react-scroll-to-bottom'
 
 const Navbar = () => {
-  
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      left: 0,
+      behavior: 'smooth', // You can use 'auto' for instant scrolling
+    });
+  }
   return (
     <header className="flex flex-row justify-center  md:justify-between items-center md:mx-8 xl:mx-24 p-4 ">
       <div className="relative h-[40px] w-[140px]">
@@ -19,7 +25,7 @@ const Navbar = () => {
         <NavItems>About us</NavItems> */}
         
         <NavItems>For more details : </NavItems>
-        <Button className="px-[20px] py-[12px] bg-[#0047AB] text-white hover:bg-[#0047AB] hover:opacity-75 transition rounded-[10px]">
+        <Button onClick={scrollToBottom} className="px-[20px] py-[12px] bg-[#0047AB] text-white hover:bg-[#0047AB] hover:opacity-75 transition rounded-[10px]">
           Contact us
         </Button>
       </div>

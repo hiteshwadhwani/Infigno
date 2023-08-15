@@ -41,7 +41,7 @@ const formSchema = z.object({
   phone: z.string().refine(validator.isMobilePhone, {
     message: "Invalid phone number",
   }),
-  mail: z.string().email(),
+  email: z.string().email(),
 });
 
 const Footer = () => {
@@ -57,7 +57,7 @@ const Footer = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      mail: "",
+      email: "",
     },
   });
 
@@ -65,7 +65,7 @@ const Footer = () => {
     try {
       setLoading(true);
       await axios.post("/api/connect-us", values);
-      toast.success("Session booked");
+      toast.success("Form Submitted");
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong");
@@ -124,7 +124,7 @@ const Footer = () => {
               />
               <FormField
                 control={form.control}
-                name="mail"
+                name="email"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
