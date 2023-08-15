@@ -8,8 +8,13 @@ import { Quicksand, Readex_Pro } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 const font = Quicksand({ subsets: ["latin"] });
 const radix = Readex_Pro({ subsets: ["latin"] });
+import { saveAs } from "file-saver";
 
 const CarrerCounselling = () => {
+  const downloadBrochure = () => {
+    const url = "/brochure/Infigon-Brochure.pdf"
+    saveAs(url, 'Infigon-Brochure.pdf')
+  }
   return (
     <div className="mx-[20px] md:mx-[100px] mt-12 lg:mt-[100px]">
       <div className={twMerge("md:text-center text-[28px] md:text-[36px] text-[#0047AB] leading-[120%]", font.className)}>
@@ -118,7 +123,7 @@ const CarrerCounselling = () => {
           <span className="font-bold">Career Counselling <br className="md:hidden" /> Program brochure</span>{" "}
           for more details.
         </div>
-        <Button className="bg-white text-[14px] mb-4 md:mb-0 md:text-[16px] text-[#0047AB] rounded-[5px] w-full md:w-fit mx-auto md:shadow-none border md:border-none hover:bg-white hover:opacity-75 transition customShadow py-[24px]">
+        <Button onClick={downloadBrochure} className="bg-white text-[14px] mb-4 md:mb-0 md:text-[16px] text-[#0047AB] rounded-[5px] w-full md:w-fit mx-auto md:shadow-none border md:border-none hover:bg-white hover:opacity-75 transition customShadow py-[24px]">
           Download Brochure
         </Button>
         <div className="relative w-full h-full mt-4 hidden md:block">
