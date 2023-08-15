@@ -6,6 +6,7 @@ import CertifiedPlanner from "@/components/CertifiedPlanner";
 import ClubPartners from "@/components/ClubPartners";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import MediaMentions from "@/components/MediaMentions";
 import Mentors from "@/components/Mentors";
 import StayConnected from "@/components/StayConnected";
 import TrainingProcess from "@/components/TrainingProcess";
@@ -31,6 +32,7 @@ const LandingPageClient = () => {
       <ClubPartners />
       <WhatPeopleSaying />
       <Mentors />
+      <MediaMentions />
       <StayConnected />
       <FAQ />
       <BookAFreeSession />
