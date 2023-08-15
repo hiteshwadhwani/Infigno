@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <header className="flex flex-row justify-center  md:justify-between items-center md:mx-8 xl:mx-24 p-4 ">
       <div className="relative h-[40px] w-[140px]">
-        <Image src={"/images/logo.svg"} fill alt="logo" />
+        <Image src={"https://uploads-ssl.webflow.com/63f5ff2d3827b085d542bb85/63f7a88567f036ab37603c94_Artboard%201%20copy%202.svg"} fill alt="logo" />
       </div>
       <div className="hidden md:flex flex-row items-center gap-x-6 lg:gap-x-12 xl:gap-x-3">
         {/* <NavItems>Home</NavItems>
