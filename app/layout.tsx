@@ -28,8 +28,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel='icon' href='/favicon.ico' />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11302750203"></Script>
-        <Script >
+        <Script id="gtag-script-1" async src="https://www.googletagmanager.com/gtag/js?id=AW-11302750203"></Script>
+        <Script id="gtag-script-2" >
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
