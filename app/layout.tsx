@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Readex_Pro } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
+import Script from 'next/script'
 
 const font = Readex_Pro({ subsets: ["latin"] });
 
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
       url: `/favicon.ico`,
       type: "image/x-icon",
     },
-  }, 
+  },
   title: "Infigon Futures",
   description: "Infigon Futures CCP landing page",
 };
@@ -26,13 +27,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel='icon' href='/favicon.ico'/>
+        <link rel='icon' href='/favicon.ico' />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11302750203"></Script>
+        <Script >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-11302750203');
+          `}
+        </Script>
       </head>
       <body className={font.className}>
-          <Toaster />
-          <Navbar />
-          {children}
-          <Footer />
+        <Toaster />
+        <Navbar />
+        {children}
+        <Footer />
+        
       </body>
     </html>
   );
