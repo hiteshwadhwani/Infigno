@@ -31,6 +31,7 @@ import PhoneInputWithCountrySelect from "react-phone-number-input";
 import { Quicksand } from "next/font/google";
 const font = Quicksand({ subsets: ["latin"] });
 import validator from "validator";
+import { useRouter } from "next/navigation";
 
 const responsive = {
   desktop: {
@@ -86,6 +87,8 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
 const CertifiedPlanner = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(true);
 
+  const router = useRouter();
+
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 1200px)");
     mq.addEventListener("change", () => {
@@ -106,6 +109,7 @@ const CertifiedPlanner = () => {
       setLoading(true);
       await axios.post("https://api.infigon.app/lead/book-session-ccp", values);
       toast.success("Session booked");
+      router.push('/thankyou')
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong");

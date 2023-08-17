@@ -20,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import "react-phone-number-input/style.css";
 import {
   Globe,
+  Youtube,
   Heart,
   Instagram,
   InstagramIcon,
@@ -164,7 +165,7 @@ const Footer = () => {
               <p className="text-[18px] font-semibold">Follow us on social |</p>
               <InstagramIcon onClick={() => router.push('https://www.instagram.com/infigon_futures/')} className="w-4 h-4 hover:cursor-pointer hover:text-pink-500 transition" />
               <Linkedin onClick={() => router.push('https://www.linkedin.com/company/infigon-futures/')} className="w-4 h-4 hover:text-[#0088c3] hover:cursor-pointer transition" />
-              <Twitter onClick={() => router.push('https://twitter.com/infigoninc')} className="w-4 h-4 hover:text-[#1da0f3] hover:cursor-pointer transition" />
+              <Youtube onClick={() => router.push('https://www.youtube.com/channel/UCBHlkJAwR2RVF6fTMAQBZ1A')} className="w-4 h-4 hover:text-red-500 hover:cursor-pointer transition" />
             </div>
             <div className="text-[16px]">
               <span onClick={downloadBrochure} className="underline hover:cursor-pointer hover:opacity-80 transition">
@@ -180,12 +181,12 @@ const Footer = () => {
             support@infigonfutures.com
             </span>
           </div>
-          <div className="flex flex-row items-center justify-evenly">
+          {/* <div className="flex flex-row items-center justify-evenly">
             <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">About us</div>
             <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">Our app</div>
             <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">For students</div>
             <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">For institutions</div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="flex flex-row items-center justify-between gap-x-6 w-[80vw] mx-auto pt-6 pb-10">
