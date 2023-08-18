@@ -37,12 +37,6 @@ export default function RootLayout({
             gtag('config', 'AW-11302750203');
           `}
         </Script>
-
-        <Script>
-          {` 
-            gtag('event', 'conversion', {'send_to': 'AW-11302750203/dygICJCi3dMYEPuPyY0q'}); 
-          `}
-        </Script>
       </head>
       <body className={font.className}>
         <Toaster />
