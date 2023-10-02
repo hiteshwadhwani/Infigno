@@ -109,7 +109,7 @@ const CertifiedPlanner = () => {
       setLoading(true);
       await axios.post("https://api.infigon.app/lead/book-session-ccp", values);
       toast.success("Session booked");
-      router.push('/thankyou')
+      router.push("/thankyou");
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong");
@@ -123,7 +123,7 @@ const CertifiedPlanner = () => {
       <div className="md:customHeight  h-fit w-full bg-gradient-to-br from-[#004EC1] via-[#004EC1]  to-[#1E86FF] md:p-5 xl:py-[30px] xl:px-[40px]">
         <div className="relative px-[20px] py-[20px] md:px-[40px] md:bg-gradient-to-br from-white via-white to-[#1E86FF] rounded-3xl flex flex-col md:flex-row justify-between h-full items-center overflow-hidden">
           <Image
-            src={"/images/people.svg"}
+            src={"/images/people.webp"}
             alt="image"
             width={536.372}
             height={502.625}
@@ -192,7 +192,7 @@ const CertifiedPlanner = () => {
             </div>
             <div>
               <Image
-                src={"/images/people.svg"}
+                src={"/images/people.webp"}
                 alt="image"
                 width={320}
                 height={320}
@@ -365,11 +365,11 @@ const CertifiedPlanner = () => {
               </Card2>
             </div>
             <Image
-              src={"/images/employee.svg"}
+              src={"/images/employee.webp"}
               alt="image"
               width={600}
               height={431}
-              className="absolute bottom-0 right-0 transform -scale-x-[1] hidden lg:block z-10 scale-105"
+              className="absolute bottom-0 right-0  hidden lg:block z-10 scale-105"
             />
             {/* <Image
             src={"/images/bg2.svg"}
@@ -405,13 +405,13 @@ const CertifiedPlanner = () => {
             renderButtonGroupOutside={true}
             customButtonGroup={<ButtonGroup />}
           >
-            <Card3 imageSrc="/images/CarrerPlanner/img1.svg">
+            <Card3 imageSrc="/images/CarrerPlanner/img1.webp">
               <div className="text-[18px] font-normal">
                 <span className="font-bold text-[#0047AB]">Housewife </span>
                 wanting to do counselling as your passion
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img2.svg">
+            <Card3 imageSrc="/images/CarrerPlanner/img2.webp">
               <div className="text-[18px] font-normal">
                 Wanting to{" "}
                 <span className="font-bold text-[#0047AB]">
@@ -419,7 +419,7 @@ const CertifiedPlanner = () => {
                 </span>
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img3.svg">
+            <Card3 imageSrc="/images/CarrerPlanner/img3.webp">
               <div className="text-[18px] font-normal">
                 <span className="font-bold text-[#0047AB]">
                   Working professional
@@ -427,13 +427,13 @@ const CertifiedPlanner = () => {
                 wanting to switch your career
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img4.svg">
+            <Card3 imageSrc="/images/CarrerPlanner/img4.webp">
               <div className="text-[18px] font-normal">
                 Wanting to generate{" "}
                 <span className="font-bold text-[#0047AB]">Passive income</span>
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img5.svg">
+            <Card3 imageSrc="/images/CarrerPlanner/img5.webp">
               <div className="text-[18px] font-normal">
                 <span className="font-bold text-[#0047AB]">
                   Passionate about helping students
@@ -441,7 +441,7 @@ const CertifiedPlanner = () => {
                 to achieve their dreams
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img6.svg">
+            <Card3 imageSrc="/images/CarrerPlanner/img6.webp">
               <div className="text-[18px] w-[70%] font-normal">
                 <span className="font-bold text-[#0047AB]">
                   Education Business Owner
@@ -449,7 +449,7 @@ const CertifiedPlanner = () => {
                 wanting to expand your offerings
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img7.svg">
+            <Card3 imageSrc="/images/CarrerPlanner/img7.webp">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#0047AB]">
                   Retired Professional
@@ -457,7 +457,7 @@ const CertifiedPlanner = () => {
                 looking for a low investment business opportunity
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img8.svg">
+            <Card3 imageSrc="/images/CarrerPlanner/img8.webp">
               <div className="text-[18px] font-normal text-white">
                 <span className="font-bold">
                   A School/College/Tuition teacher
@@ -466,16 +466,10 @@ const CertifiedPlanner = () => {
                 <span className="font-bold">Education Industry</span>
               </div>
             </Card3>
-            <div className="h-[400px] rounded-2xl mx-[10px] customShadow">
-                <div className={twMerge(font.className, 'text-p')}>
-
-                </div>
-            </div>
-
           </Carousel>
         </div>
       </div>
     </div>
   );
 };
-export default CertifiedPlanner
+export default CertifiedPlanner;

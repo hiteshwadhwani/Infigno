@@ -13,14 +13,14 @@ const cardData = [
     heading: "Counselling Training",
     description:
       "Get in-depth knowledge of psychometric tests, learn to identify user personas, access an extensive career-library, with 51+ industries and 1300+ career options",
-    imageSrc: "/images/training-process/img1.svg",
+    imageSrc: "/images/training-process/img1.webp",
     show: true,
   },
   {
     heading: "Certification",
     description:
       "Earn the prestigious title of a ‘Certified Career Planner’, acknowledged with a certificate awarded by Infigon, a recognized institution accredited by Startup India. Recognized by #StartupIndia",
-    imageSrc: "/images/training-process/img2.svg",
+    imageSrc: "/images/training-process/img2.webp",
     show: false,
   },
   {
@@ -118,7 +118,7 @@ const TrainingProcess = () => {
         <Card4
           heading="Counselling Training"
           show
-          imageSrc="/images/training-process/img1.svg"
+          imageSrc="/images/training-process/img1.webp"
           number="1"
         >
           <div>
@@ -129,7 +129,7 @@ const TrainingProcess = () => {
         </Card4>
         <Card4
           heading="Certification"
-          imageSrc="/images/training-process/img2.svg"
+          imageSrc="/images/training-process/img2.webp"
           number="2"
         >
           <div>
@@ -272,7 +272,7 @@ const TrainingProcess = () => {
             </div>
             <div className="w-[235px] h-[175px] relative">
               <Image
-                src="/images/training-process/img1.svg"
+                src="/images/training-process/img1.webp"
                 alt="img1"
                 fill
                 className="absolute bottom-0 scale-125 object-center"
@@ -306,7 +306,7 @@ const TrainingProcess = () => {
             </div>
             <div className="w-[235px] h-[175px] relative">
               <Image
-                src="/images/training-process/img2.svg"
+                src="/images/training-process/img2.webp"
                 alt="img1"
                 fill
                 className="absolute bottom-0 scale-125 object-center"
