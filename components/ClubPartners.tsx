@@ -53,7 +53,11 @@ const ClubPartners = () => {
           "text-[32px] text-center font-normal mx-[20px] leading-[130%]"
         )}
       >
-        <span className="font-bold">60+ College <br className="md:hidden" />Club</span> Partners
+        <span className="font-bold">
+          60+ College <br className="md:hidden" />
+          Club
+        </span>{" "}
+        Partners
       </div>
       <div className="mt-[30px]">
         <Carousel

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Carousel from "react-multi-carousel";
 import { twMerge } from "tailwind-merge";
@@ -23,29 +23,26 @@ const responsive = {
 };
 
 const data = [
-    '/images/StayConnected/img1.jpeg',
-    '/images/StayConnected/img2.jpg',
-    '/images/StayConnected/img3.jpg',
-    '/images/StayConnected/img4.jpg',
-    '/images/StayConnected/img5.jpg',
-    '/images/StayConnected/img6.jpg',
-    '/images/StayConnected/img7.jpg',
-    '/images/StayConnected/img8.jpg',
-    '/images/StayConnected/img9.jpg',
-    '/images/StayConnected/img10.png',
-    '/images/StayConnected/img11.png',
-    '/images/StayConnected/img12.png',
-    '/images/StayConnected/img13.jpeg',
-    '/images/StayConnected/img14.jpeg',
-    '/images/StayConnected/img15.jpeg',
-    '/images/StayConnected/img16.jpeg',
-]
-
-
-
+  "/images/StayConnected/img1.jpeg",
+  "/images/StayConnected/img2.jpg",
+  "/images/StayConnected/img3.jpg",
+  "/images/StayConnected/img4.jpg",
+  "/images/StayConnected/img5.jpg",
+  "/images/StayConnected/img6.jpg",
+  "/images/StayConnected/img7.jpg",
+  "/images/StayConnected/img8.jpg",
+  "/images/StayConnected/img9.jpg",
+  "/images/StayConnected/img10.png",
+  "/images/StayConnected/img11.png",
+  "/images/StayConnected/img12.png",
+  "/images/StayConnected/img13.jpeg",
+  "/images/StayConnected/img14.jpeg",
+  "/images/StayConnected/img15.jpeg",
+  "/images/StayConnected/img16.jpeg",
+];
 
 const StayConnected = () => {
-    const [isSmallScreen, setIsSmallScreen] = useState(true);
+  const [isSmallScreen, setIsSmallScreen] = useState(true);
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 1200px)");
@@ -55,12 +52,17 @@ const StayConnected = () => {
   }, []);
   return (
     <div className="mt-[60px] lg:mt-[100px]">
-      <div className={twMerge(font.className, "text-[32px] text-center mx-[20px] font-bold")}>
-      We stay Connected
+      <div
+        className={twMerge(
+          font.className,
+          "text-[32px] text-center mx-[20px] font-bold"
+        )}
+      >
+        We stay Connected
       </div>
       <div className="mt-[30px]">
         <Carousel
-        draggable={false}
+          draggable={false}
           responsive={responsive}
           autoPlay
           arrows={false}
@@ -71,13 +73,16 @@ const StayConnected = () => {
           containerClass="carousel-container"
           centerMode={!isSmallScreen}
         >
-          {
-            data.map(url => (
-                <div className="ml-4 h-[233px] relative" key={url}>
-                    <Image src={url} alt='stay connected' fill className="object-cover" />
-                </div> 
-            ))
-          }
+          {data.map((url) => (
+            <div className="ml-4 h-[233px] relative" key={url}>
+              <Image
+                src={url}
+                alt="stay connected"
+                fill
+                className="object-cover"
+              />
+            </div>
+          ))}
         </Carousel>
       </div>
     </div>

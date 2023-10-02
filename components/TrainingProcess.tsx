@@ -189,7 +189,7 @@ const TrainingProcess = () => {
               <div className="p-[20px] md:px-20 md:py-12">
                 <div className="flex flex-row justify-between gap-x-2 items-start">
                   <h1 className="text-[20px] leading-[130%]">{card.heading}</h1>
-                  <Image
+                  <Image 
                     src={`/images/numbers/${idx + 1}.svg`}
                     width={25}
                     height={25}
@@ -201,8 +201,8 @@ const TrainingProcess = () => {
                   {card.description}
                 </div>
               </div>
-                <Image src={card.imageSrc} alt="img1" width={235} height={175.445} className="absolute bottom-0 scale-110 object-center" />
-                <Image
+                <Image  src={card.imageSrc} alt="img1" width={235} height={175.445} className="absolute bottom-0 scale-110 object-center" />
+                <Image 
                   src={"/images/bg2.svg"}
                   alt="img1"
                   width={235} height={175.445}
@@ -219,7 +219,7 @@ const TrainingProcess = () => {
               <div className="p-[20px] md:px-20 md:py-12">
                 <div className="flex flex-row justify-between gap-x-2 items-start">
                   <h1 className="text-[20px] leading-[130%]">{card.heading}</h1>
-                  <Image
+                  <Image 
                     src={`/images/numbers/${idx + 1}.svg`}
                     width={25}
                     height={25}
@@ -232,13 +232,13 @@ const TrainingProcess = () => {
                 </div>
               </div>
               <div className="w-[235px] h-[175px] relative">
-                <Image
+                <Image 
                   src={card.imageSrc}
                   alt="img1"
                   fill
                   className="absolute bottom-0 scale-110 object-center"
                 />
-                <Image
+                <Image 
                   src={"/images/bg2.svg"}
                   alt="img1"
                   fill

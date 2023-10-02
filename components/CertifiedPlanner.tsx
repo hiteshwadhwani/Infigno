@@ -371,7 +371,7 @@ const CertifiedPlanner = () => {
               height={431}
               className="absolute bottom-0 right-0  hidden lg:block z-10 scale-105"
             />
-            {/* <Image
+            {/* <Image 
             src={"/images/bg2.svg"}
             height={1244.496}
             width={993.215}

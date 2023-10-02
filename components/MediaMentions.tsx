@@ -34,14 +34,14 @@ const data = [
     imageurl: "/images/mediaMentions/img6.svg",
     href: "https://ballsofsteelshow.com/features/in-conversation-with-omkar-patil/",
   },
-//   {
-//     imageurl: "/images/mediaMentions/img7.svg",
-//     href: "https://www.viralindiandiary.com/",
-//   },
+  //   {
+  //     imageurl: "/images/mediaMentions/img7.svg",
+  //     href: "https://www.viralindiandiary.com/",
+  //   },
   {
     imageurl: "/images/mediaMentions/img8.svg",
     href: "https://unboxingstartups.com/blog/startup-of-the-week-infigon-futures/",
-  }, 
+  },
 ];
 
 const responsive = {
