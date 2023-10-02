@@ -42,7 +42,6 @@ const LandingPageClient = () => {
       <StayConnected />
       <FAQ />
       <BookAFreeSession />
-      <Footer/>
     </>
   );
 };
