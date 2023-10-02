@@ -1,7 +1,14 @@
 import React from 'react';
+import Script from 'next/script'
 
 const Page: React.FC = () => {
   return (
+    <>
+     <Script id="gtag-script-3" >
+          {` 
+            gtag('event', 'conversion', {'send_to': 'AW-11302750203/dygICJCi3dMYEPuPyY0q'}); 
+          `}
+        </Script>
     <div className="flex items-center justify-center h-screen">
       <div>
         <div className="flex flex-col items-center space-y-2">
@@ -24,6 +31,7 @@ const Page: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
