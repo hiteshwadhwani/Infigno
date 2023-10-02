@@ -56,7 +56,7 @@ const Card4: React.FC<Card4Props> = ({
           src={imageSrc}
           fill
           alt="image"
-          className={twMerge(className, "absolute bottom-0 right-0")}
+          className={twMerge(className, "absolute bottom-0 right-0 ")}
         />
 
         <Image

@@ -118,7 +118,7 @@ const TrainingProcess = () => {
         <Card4
           heading="Counselling Training"
           show
-          imageSrc="/images/training-process/img1.webp"
+          imageSrc="/images/training-process/img1.svg"
           number="1"
         >
           <div>
@@ -129,7 +129,7 @@ const TrainingProcess = () => {
         </Card4>
         <Card4
           heading="Certification"
-          imageSrc="/images/training-process/img2.webp"
+          imageSrc="/images/training-process/img2.svg"
           number="2"
         >
           <div>
