@@ -11,7 +11,7 @@ const font = Readex_Pro({ subsets: ["latin"] });
 export const metadata: Metadata = {
   icons: {
     icon: {
-      url: `/favicon.ico`,
+      url: `/logo_sm.svg`,
       type: "image/x-icon",
     },
   },
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='./logo_sm.svg' />
         <Script id="gtag-script-1" async src="https://www.googletagmanager.com/gtag/js?id=AW-11302750203"></Script>
         <Script id="gtag-script-2" >
           {`
