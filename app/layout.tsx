@@ -11,8 +11,8 @@ const font = Readex_Pro({ subsets: ["latin"] });
 export const metadata: Metadata = {
   icons: {
     icon: {
-      url: `/logo_sm.svg`,
-      type: "image/x-icon",
+      url: `/icon.svg`,
+      type: "image/svg+xml",
     },
   },
   title: "Infigon Futures",
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel='icon' href='./logo_sm.svg' />
+      <link rel="manifest" type="image/png" sizes="32x32" href="/favicon.png" />
         <Script id="gtag-script-1" async src="https://www.googletagmanager.com/gtag/js?id=AW-11302750203"></Script>
         <Script id="gtag-script-2" >
           {`
