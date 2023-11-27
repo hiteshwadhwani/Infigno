@@ -92,7 +92,7 @@ const MediaMentions = () => {
           {data.map((item, idx) => (
             <div
               onClick={() => router.push(item.href)}
-              className="h-[155.54px] relative saturate-200 ml-[15px] grayscale hover:grayscale-0 hover:scale-110 transition hover:cursor-pointer"
+              className="h-[155.54px] relative saturate-200 ml-[15px] "
               key={idx}
             >
               <Image src={item.imageurl} alt="club image" fill />
