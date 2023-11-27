@@ -11,6 +11,7 @@ const TrainingProcess = dynamic(() => import("@/components/TrainingProcess"));
 const CarrerCounselling = dynamic(() => import("@/components/CarrerCounselling"));
 const ClubPartners = dynamic(() => import("@/components/ClubPartners"));
 const WhatPeopleSaying = dynamic(() => import("@/components/WhatPeopleSaying"));
+const Counsellors = dynamic(() => import("@/components/Counsellors"));
 const Mentors = dynamic(() => import("@/components/Mentors"));
 const MediaMentions = dynamic(() => import("@/components/MediaMentions"));
 const StayConnected = dynamic(() => import("@/components/StayConnected"));
@@ -33,6 +34,7 @@ const LandingPageClient = () => {
   return (
     <>
       <CertifiedPlanner />
+      <Counsellors/>
       <TrainingProcess />
       <CarrerCounselling />
       <ClubPartners />

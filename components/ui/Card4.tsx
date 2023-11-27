@@ -22,26 +22,18 @@ const Card4: React.FC<Card4Props> = ({
   className,
 }) => {
   return (
-    <div className="min-h-[340px]  h-fit rounded-[30px] mx-[100px] mt-[35px] relative flex flex-row overflow-hidden customShadow">
-      {/* <Image
-        src={`images/numbers/${number}.svg`}
-        width={50}
-        height={50}
-        alt="number"
-        className="absolute left-8 -top-5"
-      /> */}
-
-      <div className="w-[40%] pl-8">
+    <div className="min-h-[340px] h-fit rounded-[30px] mx-[100px] mt-[35px] relative flex flex-row justify-between customShadow">
+      <div className="w-[50%] p-8 px-[80px]">
         <Image
           src={`/images/numbers/${number}.svg`}
           width={50}
           height={50}
           alt="number"
-          className="mt-[15px]"
+          className="mt-[15px] absolute -z-15 -top-9"
         />
         <h1
           className={twMerge(
-            "text-[20px] lg:text-[42px] font-semibold mt-[15px] leading-[110%]",
+            "text-[20px] lg:text-[42px] font-[700] mt-[15px] leading-[110%]",
             font.className
           )}
         >
@@ -56,11 +48,11 @@ const Card4: React.FC<Card4Props> = ({
           src={imageSrc}
           fill
           alt="image"
-          className={twMerge(className, "absolute bottom-0 right-0 ")}
+          className={twMerge(className, "")}
         />
 
         <Image
-          src={"/images/bg2.svg"}
+          src={"/images/rocket.svg"}
           alt="img1"
           fill
           className={`-z-10 ${!show && "hidden"} opacity-75`}

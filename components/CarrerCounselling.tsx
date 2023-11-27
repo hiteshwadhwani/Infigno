@@ -16,7 +16,7 @@ const CarrerCounselling = () => {
     saveAs(url, "Infigon-Brochure.pdf");
   };
   return (
-    <div className="mx-[20px] md:mx-[100px] mt-12 lg:mt-[100px]">
+    <div className="mx-[20px] md:mx-[100px] mt-12 lg:mt-[100px] ">
       <div
         className={twMerge(
           "md:text-center text-[28px] md:text-[36px] text-[#0047AB] leading-[120%]",
@@ -37,7 +37,7 @@ const CarrerCounselling = () => {
             >
               Business potential{" "}
             </p>
-            <p className="text-slate-800 text-[14px] md:text-[18px]  mt-[5px] md:mt-[10px]">
+            <p className="text-[#013B8C] text-[16px] md:text-[21px]  mt-[5px] md:mt-[10px]">
               Career Counselling from <br className="md:hidden" /> Grade{" "}
               <span className="font-semibold">6th - Graduation</span>
             </p>
@@ -81,27 +81,18 @@ const CarrerCounselling = () => {
           </div>
         </div>
         <div className="flex flex-col md:p-[25px] relative mt-[20px] min-h-[600px] h-fit bg-gradient-to-br from-[#1E86FF] to-[#0047AB] md:bg-none p-[20px] rounded-[15px] md:rounded-none">
-          <div className="flex flex-col lg:max-w-[40%]">
-            <div className="text-white text-[24px] md:text-[42px] font-semibold leading-[130%]">
-              Kick-start{" "}
-              <span
-                className={twMerge(
-                  "text-yellow-400 font-semibold",
-                  font.className
-                )}
-              >
-                your
-              </span>{" "}
-              Counselling business{" "}
-              <span
-                className={twMerge(
-                  "text-yellow-400 font-semibold",
-                  font.className
-                )}
-              >
-                today at just
-              </span>{" "}
-              ₹10,000
+          <div className="flex flex-col lg:max-w-[50%]">
+            <div className="bg-white mb-[10px] md:text-[16px] text-[12px] font-[400] text-transparent bg-clip-text py-[8px] px-[15px] rounded-[5px] border border-white w-fit">
+              Enrolment Fee:{" "}
+              <span className="font-[600]">₹ 35,000/- + GST</span>
+            </div>
+            <div
+              className={twMerge(
+                "text-white text-[24px] md:text-[42px] font-semibold leading-[130%]",
+                font.className
+              )}
+            >
+              Kick-start your Counselling business today,<span className="font-[300]">with a first instalment of</span> ₹10,000
             </div>
             <Button className="w-fit mt-[20px] bg-[#FDE74C] text-[#004EC1] text-[12px] ">
               Know more
@@ -113,17 +104,14 @@ const CarrerCounselling = () => {
               alt="line"
               className="my-[20px]"
             />
-            <div className="text-white font-light text-[12px] md:text-[21.773px] flex flex-row items-center">
-              Recognised by:{" "}
-              <div className="w-[87.392px] h-[19.286px] md:w-[178.351px] md:h-[39.36px] relative">
-                <Image
-                  src={"/images/startupIndia2.svg"}
-                  alt="startup india"
-                  fill
-                  className="transform translate-y-1 md:translate-y-2 ml-1"
-                />
-              </div>
-            </div>
+            {/* <div className="text-[#0C5ECA] bg-[#F8F8F8] w-fit font-light text-[12px] md:text-[21.773px] flex flex-row items-center"> */}
+            <Image
+              src={"/images/Frame.svg"}
+              width={321}
+              height={41}
+              alt="startup"
+            />
+            {/* </div> */}
           </div>
           <div className="md:absolute md:bottom-0 md:right-4 lg:right-4 xl:right-10 z-10">
             <Image
@@ -136,7 +124,7 @@ const CarrerCounselling = () => {
           </div>
           <div
             className={twMerge(
-              "md:absolute bottom-0 mx-auto text-center md:text-left  text-xl md:text-[36px] bg-yellow-300 text-[#0047AB]  p-[20px] md:p-[40px] rounded-[10px] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-bl-none lg:rounded-br-none leading-[120%] lg:w-[800px]",
+              "relative  bottom-0  text-center md:text-left  text-xl md:text-[36px] bg-yellow-300 text-[#0047AB]  p-[20px] md:p-[40px] rounded-[10px] md:rounded-tl-2xl md:rounded-tr-2xl lg:rounded-bl-none lg:rounded-br-none leading-[120%] md:w-[70%] w-[100%] mt-5",
               font.className
             )}
           >

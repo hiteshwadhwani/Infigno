@@ -181,12 +181,12 @@ const Footer = () => {
             support@infigonfutures.com
             </span>
           </div>
-          {/* <div className="flex flex-row items-center justify-evenly">
+          <div className="flex flex-row items-center justify-evenly">
             <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">About us</div>
             <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">Our app</div>
             <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">For students</div>
             <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">For institutions</div>
-          </div> */}
+          </div>
         </div>
       </div>
       <div className="flex flex-row items-center justify-between gap-x-6 w-[80vw] mx-auto pt-6 pb-10">
