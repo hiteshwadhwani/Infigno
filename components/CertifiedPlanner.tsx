@@ -3,6 +3,7 @@
 import Image from "next/image";
 import CertifiedCard from "./ui/CertifiedCard";
 import CertifiedForm from "./ui/CertifiedForm";
+import Images from "./ui/float";
 import { url } from "inspector";
 import Card2 from "./ui/Card2";
 import Card3 from "./ui/Card3";
@@ -152,7 +153,10 @@ const CertifiedPlanner = () => {
             </div>
           </div>
 
-          <div className="md:w-[360px] bg-[#FFFFFF] shadow-[0px_0px_20px_0px_#00000033] py-[20px] px-[20px] md:px-[30px] rounded-3xl z-10">
+          <div className="flex flex-col justify-end md:w-[360px] bg-[#FFFFFF] shadow-[0px_0px_20px_0px_#00000033] py-[20px] px-[20px] md:px-[30px] rounded-3xl z-10">
+            <div className="w-1/2 z-0">
+              <Images />
+            </div>
             <h1
               className={twMerge(
                 "text-[21px] md:text-[32px] text-[#004EC1] font-bold leading-[120%]",
