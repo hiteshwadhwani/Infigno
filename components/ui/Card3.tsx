@@ -12,7 +12,7 @@ const Card3: React.FC<Card2Props> = ({ children, imageSrc, className }) => {
   return (
     <div
       className={twMerge(
-        "flex flex-col  rounded-2xl mx-2 md:mx-2 shadow-[0px_0px_10px_0px_#00000040]", 
+        "flex flex-col  rounded-2xl mx-2 md:mx-2 shadow-[0px_0px_10px_0px_#00000040]",
         className
       )}
       style={{ width: "255px", height: "350px" }}
@@ -21,12 +21,12 @@ const Card3: React.FC<Card2Props> = ({ children, imageSrc, className }) => {
         <span className="text-[12px] font-[400] mb-5">If you are</span>
         <div>{children}</div>
       </div>
-      <div className="flex-shrink-0 h-[200px] relative overflow-hidden">
+      <div className="flex-shrink-0 h-[200px] relative bg-[#034DB3] bg-none bg-right  md:bg-rocket bg-no-repeat bg-cover overflow-hidden">
         <Image
           src={imageSrc}
           alt="asf"
           layout="fill"
-          objectFit="cover"
+          objectFit="object-cover"
         />
       </div>
     </div>

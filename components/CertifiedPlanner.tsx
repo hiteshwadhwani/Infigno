@@ -35,9 +35,13 @@ import validator from "validator";
 import { useRouter } from "next/navigation";
 
 const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 1300 },
     items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 1300, min: 1024 },
+    items: 3,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -152,11 +156,11 @@ const CertifiedPlanner = () => {
               />
             </div>
           </div>
-
-          <div className="flex flex-col justify-end md:w-[360px] bg-[#FFFFFF] shadow-[0px_0px_20px_0px_#00000033] py-[20px] px-[20px] md:px-[30px] rounded-3xl z-10">
-            <div className="w-1/2 z-0">
+          <div className="flex flex-col" >
+            <div className="md:hidden hidden lg:flex w-1/2 -z-10">
               <Images />
             </div>
+            <div className="md:w-[360px] bg-[#FFFFFF] shadow-[0px_0px_20px_0px_#00000033] py-[20px] px-[20px] md:px-[30px] rounded-3xl z-10">
             <h1
               className={twMerge(
                 "text-[21px] md:text-[32px] text-[#004EC1] font-bold leading-[120%]",
@@ -256,6 +260,8 @@ const CertifiedPlanner = () => {
               </form>
             </Form>
           </div>
+          </div>
+          
         </div>
       </div>
 
@@ -330,7 +336,7 @@ const CertifiedPlanner = () => {
             <span className="font-[700]">Certified Career Planner</span>
           </span>{" "}
         </div>
-        <div className="md:mt-[60px] md:px-[10px] px-12 md:mx-0">
+        <div className="md:mt-[60px] md:px-[10px]  md:mx-0">
           <Carousel
             responsive={responsive}
             autoPlay
@@ -341,13 +347,13 @@ const CertifiedPlanner = () => {
             transitionDuration={3000}
             containerClass="carousel-container"
           >
-            <Card3 imageSrc="/images/CarrerPlanner/img1.webp">
+            <Card3 imageSrc="/images/CarrerPlanner/8.png">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#1E2327]">Housewife </span>
                 wanting to do counselling as your passion
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img2.webp">
+            <Card3 imageSrc="/images/CarrerPlanner/1.png">
               <div className="text-[16px] font-normal">
                 Wanting to{" "}
                 <span className="font-bold text-[#1E2327]">
@@ -355,7 +361,7 @@ const CertifiedPlanner = () => {
                 </span>
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img3.webp">
+            <Card3 imageSrc="/images/CarrerPlanner/7.png">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#1E2327]">
                   Working professional
@@ -363,13 +369,13 @@ const CertifiedPlanner = () => {
                 wanting to switch your career
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img4.webp">
+            <Card3 imageSrc="/images/CarrerPlanner/3.png">
               <div className="text-[16px] font-normal">
                 Wanting to generate{" "}
                 <span className="font-bold text-[#1E2327]">Passive income</span>
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img5.webp">
+            <Card3 imageSrc="/images/CarrerPlanner/5.png">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#1E2327]">
                   Passionate about helping students
@@ -377,7 +383,7 @@ const CertifiedPlanner = () => {
                 to achieve their dreams
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img6.webp">
+            <Card3 imageSrc="/images/CarrerPlanner/2.png">
               <div className="text-[16px]  font-normal">
                 <span className="font-bold text-[#1E2327]">
                   Education Business Owner
@@ -385,7 +391,7 @@ const CertifiedPlanner = () => {
                 wanting to expand your offerings
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img7.webp">
+            <Card3 imageSrc="/images/CarrerPlanner/4.png">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#1E2327]">
                   Retired Professional
@@ -393,7 +399,7 @@ const CertifiedPlanner = () => {
                 looking for a low investment business opportunity
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/img8.webp">
+            <Card3 imageSrc="/images/CarrerPlanner/6.png">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#1E2327]">
                   A School/College/Tuition teacher
