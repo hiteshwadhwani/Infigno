@@ -21,13 +21,19 @@ const Card3: React.FC<Card2Props> = ({ children, imageSrc, className }) => {
         <span className="text-[12px] font-[400] mb-5">If you are</span>
         <div>{children}</div>
       </div>
-      <div className=" h-full relative  bg-right bg-rocket bg-no-repeat bg-fill overflow-hidden">
+      <div className=" h-full flex-1 rounded-b-2xl relative overflow-hidden">
 
         <Image
           src={imageSrc}
           alt="asf"
           fill
           className="object-cover absolute z-10"
+        />
+        <Image
+          src={"/images/counsellors.svg"}
+          alt="img1"
+          fill
+          className="z-0 object-cover"
         />
       </div>
 

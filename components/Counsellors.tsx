@@ -99,7 +99,7 @@ const Mentors = () => {
               key={item.heading}
               className="flex flex-col gap-[3px] justify-around items-center p-[10px] customShadow rounded-[16px] border border-[#D1D3D4] ml-4 h-[250px]"
             >
-              <div className="bg-[#034DB3] relative bg-right bg-rocket bg-no-repeat bg-cover w-5/6 h-[156px] overflow-hidden rounded-[16px] border-[1px_solid_#D1D3D4]">
+              <div className=" relative bg-[#034DB3] bg-[url('/images/cc.svg')] bg-cover w-5/6 h-[156px] overflow-hidden rounded-[16px] border-[1px_solid_#D1D3D4]">
                 <Image
                   src={item.imageUrl}
                   loading="lazy"
