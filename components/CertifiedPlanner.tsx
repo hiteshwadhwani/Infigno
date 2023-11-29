@@ -324,7 +324,7 @@ const CertifiedPlanner = () => {
       </div>
 
       {/* You can be a Certified Career Planner, IF YOU ARE A */}
-      <div className="mt-8 md:mt-20 py-10">
+      <div className="mt-8 md:mt-20 p-10">
         <div
           className={twMerge(
             "md:text-[36px] text-[24px] text-center md:text-center font-bold px-[20px] md:px-0 leading-[130%]",
@@ -383,7 +383,7 @@ const CertifiedPlanner = () => {
                 to achieve their dreams
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/2.png">
+            <Card3 imageSrc="/images/CarrerPlanner/4.png">
               <div className="text-[16px]  font-normal">
                 <span className="font-bold text-[#1E2327]">
                   Education Business Owner
@@ -391,7 +391,7 @@ const CertifiedPlanner = () => {
                 wanting to expand your offerings
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/4.png">
+            <Card3 imageSrc="/images/CarrerPlanner/2.png">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#1E2327]">
                   Retired Professional
