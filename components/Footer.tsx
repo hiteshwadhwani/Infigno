@@ -158,7 +158,7 @@ const Footer = () => {
               </Button>
               <div className="m-auto">
                 <ReCAPTCHA
-                  sitekey="6Ld8SiApAAAAADT_ogZavZs2rRnTL3gt5S52s-s6"
+                  sitekey="6Ld6SiApAAAAAIHjZ84McqLD0pYOgyZnsd65mSRh"
                   onChange={handleRecaptcha}
                 />
               </div>
