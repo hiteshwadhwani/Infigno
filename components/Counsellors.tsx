@@ -98,7 +98,7 @@ const Mentors = () => {
                   src={item.imageUrl}
                   alt="mentor image"
                   fill
-                  className="absolute z-10 px-4"
+                  className="absolute z-10 px-7 scale-105"
                 />
               </div>
               <div className="flex flex-col items-center rounded-[5px] bg-[#EDEDED] px-[10px] py-[15px] w-fit">
