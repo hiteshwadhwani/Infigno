@@ -123,20 +123,31 @@ const TrainingProcess = () => {
         >
           <div>
             Get in-depth knowledge of psychometric tests, learn to identify user
-            personas, access an extensive career-library, with 51+ industries
-            and 1300+ career options
+            personas, access an{" "}
+            <span className="font-[700]">extensive career-library</span>, with{" "}
+            <span className="font-[700]">
+              51+ industries and 1300+ career options
+            </span>
           </div>
         </Card4>
         <Card4
           heading="Certification"
-          imageSrc="/images/training-process/img2.svg"
+          imageSrc="/images/training-process/Certificate.svg"
           number="2"
         >
-          <div>
-            Earn the prestigious title of a ‘Certified Career Planner’,
+          <div className="mb-5">
+            Earn the prestigious title of a{" "}
+            <span className="font-[700]">‘Certified Career Planner’</span>,
             acknowledged with a certificate awarded by Infigon, a recognized
-            institution accredited by Startup India.
+            institution accredited by{" "}
+            <span className="font-[700]">Startup India</span>.
           </div>
+          <Image
+            src={"/images/startup.svg"}
+            width={321}
+            height={41}
+            alt="startup"
+          />
         </Card4>
         <Card4
           heading="Website/Product Set-up"
@@ -144,8 +155,10 @@ const TrainingProcess = () => {
           number="3"
         >
           <div>
-            Get your own co-branded website set-up with an integrated secure
-            payment portal, and an Intuitive Admin Panel to manage your clients.
+            Get your own <span className="font-[700]">co-branded website</span>{" "}
+            set-up with an integrated secure payment portal, and an{" "}
+            <span className="font-[700]">Intuitive Admin Panel</span> to manage
+            your clients.
           </div>
         </Card4>
         <Card4
@@ -154,8 +167,10 @@ const TrainingProcess = () => {
           number="4"
         >
           <div>
-            Get expert help to boost online presence with social media, lead
-            generation, and sales training.
+            Get expert help to{" "}
+            <span className="font-[700]">boost online presence</span> with
+            social media, lead generation, and{" "}
+            <span className="font-[700]">sales training</span>.
           </div>
         </Card4>
         <Card4
@@ -166,8 +181,9 @@ const TrainingProcess = () => {
           className="scale-125 xl:scale-110 2xl:scale-105"
         >
           <div>
-            Get instant support for unfamiliar career inquiries made by clients,
-            through our dedicated R&D team.
+            Get <span className="font-[700]">instant support</span> for
+            unfamiliar career inquiries made by clients, through our{" "}
+            <span className="font-[700]">dedicated R&D team.</span>
           </div>
         </Card4>
       </div>
@@ -181,75 +197,6 @@ const TrainingProcess = () => {
           customButtonGroup={<ButtonGroup />}
           arrows={false}
         >
-          {/* {cardData.map((card, idx) => (
-            <div
-              key={card.heading}
-              className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] relative"
-            >
-              <div className="p-[20px] md:px-20 md:py-12">
-                <div className="flex flex-row justify-between gap-x-2 items-start">
-                  <h1 className="text-[20px] leading-[130%]">{card.heading}</h1>
-                  <Image 
-                    src={`/images/numbers/${idx + 1}.svg`}
-                    width={25}
-                    height={25}
-                    alt="number"
-                  />
-                </div>
-
-                <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
-                  {card.description}
-                </div>
-              </div>
-                <Image  src={card.imageSrc} alt="img1" width={235} height={175.445} className="absolute bottom-0 scale-110 object-center" />
-                <Image 
-                  src={"/images/bg2.svg"}
-                  alt="img1"
-                  width={235} height={175.445}
-                  className={`-z-10 ${!card.show && "hidden"} opacity-75 absolute bottom-0`}
-                />
-            </div>  
-          ))} */}
-
-          {/* {cardData.map((card, idx) => (
-            <div
-              key={card.heading}
-              className="h-[360px] shadow-lg rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center"
-            >
-              <div className="p-[20px] md:px-20 md:py-12">
-                <div className="flex flex-row justify-between gap-x-2 items-start">
-                  <h1 className="text-[20px] leading-[130%]">{card.heading}</h1>
-                  <Image 
-                    src={`/images/numbers/${idx + 1}.svg`}
-                    width={25}
-                    height={25}
-                    alt="number"
-                  />
-                </div>
-
-                <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
-                  {card.description}
-                </div>
-              </div>
-              <div className="w-[235px] h-[175px] relative">
-                <Image 
-                  src={card.imageSrc}
-                  alt="img1"
-                  fill
-                  className="absolute bottom-0 scale-110 object-center"
-                />
-                <Image 
-                  src={"/images/bg2.svg"}
-                  alt="img1"
-                  fill
-                  className={`-z-10 ${
-                    !card.show && "hidden"
-                  } opacity-75 absolute bottom-0`}
-                />
-              </div>
-            </div>
-          ))} */}
-
           <div className="h-[360px] rounded-[15px] overflow-hidden ml-[20px] flex flex-col justify-between items-center">
             <div className="p-[20px] md:px-20 md:py-12">
               <div className="flex flex-row justify-between gap-x-2 items-start">
@@ -266,8 +213,12 @@ const TrainingProcess = () => {
 
               <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
                 Get in-depth knowledge of psychometric tests, learn to identify
-                user personas, access an extensive career-library, with 51+
-                industries and 1300+ career options
+                user personas, access an{" "}
+                <span className="font-[700]">extensive career-library</span>,
+                with{" "}
+                <span className="font-[700]">
+                  51+ industries and 1300+ career options
+                </span>
               </div>
             </div>
             <div className="w-[235px] h-[175px] relative">
@@ -298,11 +249,18 @@ const TrainingProcess = () => {
               </div>
 
               <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
-                Earn the prestigious title of a ‘Certified Career Planner’,
+                Earn the prestigious title of a{" "}
+                <span className="font-[700]">‘Certified Career Planner’</span>,
                 acknowledged with a certificate awarded by Infigon, a recognized
-                institution accredited by Startup India. Recognized by
-                #StartupIndia
+                institution accredited by{" "}
+                <span className="font-[700]">Startup India</span>.
               </div>
+              <Image
+                src={"/images/startup.svg"}
+                width={100}
+                height={41}
+                alt="startup"
+              />
             </div>
             <div className="w-[235px] h-[175px] relative">
               <Image
@@ -328,9 +286,11 @@ const TrainingProcess = () => {
               </div>
 
               <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
-                Get your own co-branded website set-up with an integrated secure
-                payment portal, and an Intuitive Admin Panel to manage your
-                clients.
+                Get your own{" "}
+                <span className="font-[700]">co-branded website</span> set-up
+                with an integrated secure payment portal, and an{" "}
+                <span className="font-[700]">Intuitive Admin Panel</span> to
+                manage your clients.
               </div>
             </div>
             <div className="w-[235px] h-[175px] relative">
@@ -357,8 +317,10 @@ const TrainingProcess = () => {
               </div>
 
               <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
-                Get expert help to boost online presence with social media, lead
-                generation, and sales training.
+                Get expert help to{" "}
+                <span className="font-[700]">boost online presence</span> with
+                social media, lead generation, and{" "}
+                <span className="font-[700]">sales training</span>.
               </div>
             </div>
             <div className="w-[235px] h-[180px] relative">
@@ -385,8 +347,9 @@ const TrainingProcess = () => {
               </div>
 
               <div className="text-neutral-600 mt-[7px] text-[12px] leading-[130%]">
-                Get instant support for unfamiliar career inquiries made by
-                clients, through our dedicated R&D team.
+                Get <span className="font-[700]">instant support</span> for
+                unfamiliar career inquiries made by clients, through our{" "}
+                <span className="font-[700]">dedicated R&D team.</span>
               </div>
             </div>
             <div className="w-[367.073px] h-[224.631px] relative">
