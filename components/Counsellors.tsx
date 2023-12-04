@@ -23,53 +23,47 @@ const responsive = {
     breakpoint: { max: 464, min: 0 },
     items: 2,
   },
-};
-
+}; 
 const data = [
   {
-    imageUrl: "/images/Counsellors/1.png",
+    imageUrl: "/images/Counsellors/1-min.png",
+    heading: "Runa Sharma",
+    subheading: "Mumbai",
+  },
+  {
+    imageUrl: "/images/Counsellors/2-min.png",
+    heading: "Asha Harisha",
+    subheading: "Mumbai",
+  },
+  {
+    imageUrl: "/images/Counsellors/3-min.png",
     heading: "Sameer Adtani",
     subheading: "Bangalore",
   },
   {
-    imageUrl: "/images/Counsellors/2.png",
-    heading: "Sameer kumar Poruri",
+    imageUrl: "/images/Counsellors/4-min.png",
+    heading: "Sameer Kumar",
     subheading: "Bangalore",
   },
   {
-    imageUrl: "/images/Counsellors/3.png",
+    imageUrl: "/images/Counsellors/5-min.png",
     heading: "Sangeetha Doke",
     subheading: "Hyderabad",
   },
   {
-    imageUrl: "/images/Counsellors/4.png",
+    imageUrl: "/images/Counsellors/6-min.png",
     heading: "Indrani Mukherjee",
     subheading: "Kolkata",
   },
   {
-    imageUrl: "/images/Counsellors/5.png",
-    heading: "Sameer Adtani",
-    subheading: "Bangalore",
+    imageUrl: "/images/Counsellors/7-min.png",
+    heading: "Shahla Khateeb",
+    subheading: "Nagpur",
   },
   {
-    imageUrl: "/images/Counsellors/6.png",
-    heading: "Sameer kumar Poruri",
-    subheading: "Bangalore",
-  },
-  {
-    imageUrl: "/images/Counsellors/7.png",
-    heading: "Sangeetha Doke",
-    subheading: "Hyderabad",
-  },
-  {
-    imageUrl: "/images/Counsellors/8.png",
-    heading: "Indrani Mukherjee",
-    subheading: "Kolkata",
-  },
-  {
-    imageUrl: "/images/Counsellors/9.png",
-    heading: "Indrani Mukherjee",
-    subheading: "Kolkata",
+    imageUrl: "/images/Counsellors/8-min.png",
+    heading: "Mona Mehta",
+    subheading: "Mumbai",
   },
 ];
 const Mentors = () => {
@@ -102,7 +96,6 @@ const Mentors = () => {
               <div className=" relative bg-[#034DB3] bg-[url('/images/cc.svg')] bg-cover w-5/6 h-[156px] overflow-hidden rounded-[16px] border-[1px_solid_#D1D3D4]">
                 <Image
                   src={item.imageUrl}
-                  loading="lazy"
                   alt="mentor image"
                   fill
                   className="absolute z-10 px-4"

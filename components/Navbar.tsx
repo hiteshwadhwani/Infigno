@@ -3,16 +3,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import NavItems from "./ui/NavItems";
+import Link from "next/link";
 import { useScrollToBottom } from "react-scroll-to-bottom";
 
 const Navbar = () => {
   const links = [
     { id: 1, text: "Home", url: "/" },
-    { id: 2, text: "Programs", url: "/programs" },
     { id: 3, text: "About Us", url: "/about" },
-    { id: 4, text: "App", url: "/app" },
-    { id: 5, text: "Login", url: "/login" },
-    { id: 6, text: "Book Session", url: "/book-session" },
+    { id: 6, text: "Book Session", url: "/" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -63,34 +61,12 @@ const Navbar = () => {
               <div className="fixed inset-0 flex items-center justify-center z-50">
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className="bg-white p-8 flex text-xl flex-col gap-2 items-center rounded-md z-10">
-                  <NavItems>Home</NavItems>
-                  <NavItems>
-                    <div className="flex gap-[5px]">
-                      Programs{""}
-                      <Image
-                        src={"/arrow-down.svg"}
-                        height={12}
-                        width={12}
-                        alt="Down Arrow"
-                      />
-                    </div>
-                  </NavItems>
-                  <NavItems>About Us</NavItems>
-                  <NavItems>App</NavItems>
+                  
+                    <NavItems href="https://infigonfutures.com/">Home</NavItems>
+
+                  <NavItems href="https://infigonfutures.com/about-us">About Us</NavItems>
+
                   <div className="flex my-4 gap-2.5 font-normal text-base items-center">
-                    <Button
-                      variant={"outline"}
-                      size={"lg"}
-                      className="rounded-[40px] gap-[5px] border-[#0047AB] border-2"
-                    >
-                      Login
-                      <Image
-                        src={"/arrow-down.svg"}
-                        height={12}
-                        width={12}
-                        alt="Down Arrow"
-                      />
-                    </Button>
                     <Button
                       size={"lg"}
                       className="bg-[#0047AB] text-white hover:bg-[#0047AB] hover:opacity-75 transition rounded-[40px]"
@@ -98,7 +74,11 @@ const Navbar = () => {
                       Book Session
                     </Button>
                   </div>
-                  <Button variant={"destructive"} onClick={() => setIsOpen(!isOpen)} className="mt-4">
+                  <Button
+                    variant={"destructive"}
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="mt-4"
+                  >
                     Close
                   </Button>
                 </div>
@@ -108,34 +88,10 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex flex-row items-center font-normal text-base gap-x-6 lg:gap-x-12 xl:gap-x-14">
-          <NavItems>Home</NavItems>
-          <NavItems>
-            <div className="flex gap-[5px]">
-              Programs{""}
-              <Image
-                src={"/arrow-down.svg"}
-                height={12}
-                width={12}
-                alt="Down Arrow"
-              />
-            </div>
-          </NavItems>
-          <NavItems>About Us</NavItems>
-          <NavItems>App</NavItems>
+          <NavItems href="https://infigonfutures.com/">Home</NavItems>
+
+          <NavItems href="https://infigonfutures.com/about-us">About Us</NavItems>
           <div className="flex gap-2.5 font-normal text-base items-center">
-            <Button
-              variant={"outline"}
-              size={"lg"}
-              className="rounded-[40px] gap-[5px] border-[#0047AB] border-2"
-            >
-              Login
-              <Image
-                src={"/arrow-down.svg"}
-                height={12}
-                width={12}
-                alt="Down Arrow"
-              />
-            </Button>
             <Button
               size={"lg"}
               className="bg-[#0047AB] text-white hover:bg-[#0047AB] hover:opacity-75 transition rounded-[40px]"

@@ -99,7 +99,6 @@ const imgData = [
       width: 0,
       height: 0,
     });
-      console.log(viewportDimensions);
     useEffect(() => {
       const handleResize = () => {
         setViewportDimensions({
