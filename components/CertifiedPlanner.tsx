@@ -347,13 +347,13 @@ const CertifiedPlanner = () => {
             transitionDuration={3000}
             containerClass="carousel-container"
           >
-            <Card3 imageSrc="/images/CarrerPlanner/8.png">
+            <Card3 imageSrc="https://cdn.infigon.app/ccp/CareerPlanner/8.png">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#1E2327]">Housewife </span>
                 wanting to do counselling as your passion
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/1.png">
+            <Card3 imageSrc="https://cdn.infigon.app/ccp/CareerPlanner/1.png">
               <div className="text-[16px] font-normal">
                 Wanting to{" "}
                 <span className="font-bold text-[#1E2327]">
@@ -361,7 +361,7 @@ const CertifiedPlanner = () => {
                 </span>
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/7.png">
+            <Card3 imageSrc="https://cdn.infigon.app/ccp/CareerPlanner/7.png">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#1E2327]">
                   Working professional
@@ -369,13 +369,13 @@ const CertifiedPlanner = () => {
                 wanting to switch your career
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/3.png">
+            <Card3 imageSrc="https://cdn.infigon.app/ccp/CareerPlanner/3.png">
               <div className="text-[16px] font-normal">
                 Wanting to generate{" "}
                 <span className="font-bold text-[#1E2327]">Passive income</span>
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/5.png">
+            <Card3 imageSrc="https://cdn.infigon.app/ccp/CareerPlanner/5.png">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#1E2327]">
                   Passionate about helping students
@@ -383,7 +383,7 @@ const CertifiedPlanner = () => {
                 to achieve their dreams
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/4.png">
+            <Card3 imageSrc="https://cdn.infigon.app/ccp/CareerPlanner/4.png">
               <div className="text-[16px]  font-normal">
                 <span className="font-bold text-[#1E2327]">
                   Education Business Owner
@@ -391,7 +391,7 @@ const CertifiedPlanner = () => {
                 wanting to expand your offerings
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/2.png">
+            <Card3 imageSrc="https://cdn.infigon.app/ccp/CareerPlanner/2.png">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#1E2327]">
                   Retired Professional
@@ -399,7 +399,7 @@ const CertifiedPlanner = () => {
                 looking for a low investment business opportunity
               </div>
             </Card3>
-            <Card3 imageSrc="/images/CarrerPlanner/6.png">
+            <Card3 imageSrc="https://cdn.infigon.app/ccp/CareerPlanner/6.png">
               <div className="text-[16px] font-normal">
                 <span className="font-bold text-[#1E2327]">
                   A School/College/Tuition teacher
