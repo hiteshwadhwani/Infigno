@@ -26,7 +26,7 @@ const Card3: React.FC<Card2Props> = ({ children, imageSrc, className }) => {
         <Image
           src={imageSrc}
           alt="asf"
-          fill
+           fill
           className="object-cover absolute z-10"
         />
         <Image

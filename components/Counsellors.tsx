@@ -25,43 +25,44 @@ const responsive = {
   },
 }; 
 const data = [
+
   {
-    imageUrl: "/images/Counsellors/1-min.png",
+    imageUrl: "https://cdn.infigon.app/ccp/Cousellors/1-min.png",
     heading: "Runa Sharma",
     subheading: "Mumbai",
   },
   {
-    imageUrl: "/images/Counsellors/2-min.png",
+    imageUrl: "https://cdn.infigon.app/ccp/Cousellors/2-min.png",
     heading: "Asha Harisha",
     subheading: "Mumbai",
   },
   {
-    imageUrl: "/images/Counsellors/3-min.png",
+    imageUrl: "https://cdn.infigon.app/ccp/Cousellors/3-min.png",
     heading: "Sameer Adtani",
     subheading: "Bangalore",
   },
   {
-    imageUrl: "/images/Counsellors/4-min.png",
+    imageUrl: "https://cdn.infigon.app/ccp/Cousellors/4-min.png",
     heading: "Sameer Kumar",
     subheading: "Bangalore",
   },
   {
-    imageUrl: "/images/Counsellors/5-min.png",
+    imageUrl: "https://cdn.infigon.app/ccp/Cousellors/5-min.png",
     heading: "Sangeetha Doke",
     subheading: "Hyderabad",
   },
   {
-    imageUrl: "/images/Counsellors/6-min.png",
+    imageUrl: "https://cdn.infigon.app/ccp/Cousellors/6-min.png",
     heading: "Indrani Mukherjee",
     subheading: "Kolkata",
   },
   {
-    imageUrl: "/images/Counsellors/7-min.png",
+    imageUrl: "https://cdn.infigon.app/ccp/Cousellors/7-min.png",
     heading: "Shahla Khateeb",
     subheading: "Nagpur",
   },
   {
-    imageUrl: "/images/Counsellors/8-min.png",
+    imageUrl: "https://cdn.infigon.app/ccp/Cousellors/8-min.png",
     heading: "Mona Mehta",
     subheading: "Mumbai",
   },
