@@ -141,7 +141,7 @@ const CertifiedPlanner = () => {
                 Trusted by
                 <br className="hidden md:block" />{" "}
                 <span className="text-[#004EC1] font-semibold text-[14px] md:text-[21px] leading-[140%]">
-                  50,000+ <br className="hidden md:block" /> Students
+                  2 lakh + <br className="hidden md:block" /> Students
                 </span>
               </CertifiedCard>
             </div>

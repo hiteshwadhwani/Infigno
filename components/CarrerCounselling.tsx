@@ -23,7 +23,7 @@ const CarrerCounselling = () => {
           font.className
         )}
       >
-        <span className="font-bold">Why INFIGON’S</span> Career Counselling
+        <span className="font-bold">Why INFIGON’S</span> Career Planner 
         Program
       </div>
       <div className="md:bg-gradient-to-br from-[#1E86FF] to-[#0047AB] rounded-2xl md:px-10 md:pt-10 mt-[30px]">
@@ -83,8 +83,8 @@ const CarrerCounselling = () => {
         <div className="flex flex-col md:p-[25px] relative mt-[20px] min-h-[600px] h-fit bg-gradient-to-br from-[#1E86FF] to-[#0047AB] md:bg-none p-[20px] rounded-[15px] md:rounded-none">
           <div className="flex flex-col lg:max-w-[50%]">
             <div className="bg-white mb-[10px] md:text-[16px] text-[12px] font-[400] text-transparent bg-clip-text py-[8px] px-[15px] rounded-[5px] border border-white w-fit">
-              Enrolment Fee:{" "}
-              <span className="font-[600]">₹ 35,000/- + GST</span>
+              Program Fees:{" "}
+              <span className="font-[600]">₹ 35,000/- + 18% GST</span>
             </div>
             <div
               className={twMerge(
@@ -92,7 +92,7 @@ const CarrerCounselling = () => {
                 font.className
               )}
             >
-              Kick-start your Counselling business today,<span className="font-[300]">with a first instalment of</span> ₹10,000
+              Kick-start your Counselling business today,<span className="font-[300]">with a processing fee of</span> ₹975/- only
             </div>
             <Button className="w-fit mt-[20px] bg-[#FDE74C] text-[#004EC1] text-[12px] ">
               Know more
