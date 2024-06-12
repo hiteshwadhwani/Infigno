@@ -67,7 +67,7 @@ const data = [
     subheading: "Mumbai",
   },
 ];
-const Mentors = () => {
+const Counsellors = () => {
   return (
     <div className="mt-[60px] lg:mt-[100px]">
       <div
@@ -117,4 +117,4 @@ const Mentors = () => {
     </div>
   );
 };
-export default Mentors;
+export default Counsellors;

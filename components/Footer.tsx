@@ -169,14 +169,14 @@ const Footer = () => {
               <p className="text-[18px] font-semibold">Follow us on social |</p>
               <InstagramIcon
                 onClick={() =>
-                  router.push("https://www.instagram.com/infigon_futures/")
+                  router.push("https://www.instagram.com/infigoncareers/")
                 }
                 className="w-4 h-4 hover:cursor-pointer hover:text-pink-500 transition"
               />
               <Linkedin
                 onClick={() =>
                   router.push(
-                    "https://www.linkedin.com/company/infigon-futures/"
+                    "https://www.linkedin.com/company/infigon-futures"
                   )
                 }
                 className="w-4 h-4 hover:text-[#0088c3] hover:cursor-pointer transition"
@@ -184,7 +184,7 @@ const Footer = () => {
               <Youtube
                 onClick={() =>
                   router.push(
-                    "https://www.youtube.com/channel/UCBHlkJAwR2RVF6fTMAQBZ1A"
+                    "https://www.youtube.com/@infigoncareers"
                   )
                 }
                 className="w-4 h-4 hover:text-red-500 hover:cursor-pointer transition"
@@ -210,15 +210,6 @@ const Footer = () => {
           <div className="flex flex-row items-center justify-evenly">
             <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">
               About us
-            </div>
-            <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">
-              Our app
-            </div>
-            <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">
-              For students
-            </div>
-            <div className="hover:cursor-pointer hover:text-slate-600 transition text-center">
-              For institutions
             </div>
           </div>
         </div>
