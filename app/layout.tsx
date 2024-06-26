@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <link rel="manifest" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link rel="manifest" type="image/png" sizes="32x32" href="/favicon.png" />
         <Script id="gtag-script-1" async src="https://www.googletagmanager.com/gtag/js?id=AW-11302750203"></Script>
         <Script id="gtag-script-2" >
           {`
@@ -37,6 +37,28 @@ export default function RootLayout({
             gtag('config', 'AW-11302750203');
           `}
         </Script>
+        <Script id="freshworks-widget-settings">
+          {`
+          window.fwSettings = {
+            'widget_id': 1041506
+          };
+          !function() {
+            if ("function" != typeof window.FreshworksWidget) {
+              var n = function() {
+                n.q.push(arguments)
+              };
+              n.q = [], window.FreshworksWidget = n
+            }
+          }();
+        `}
+        </Script>
+        <Script
+          id="freshworks-widget-script"
+          type="text/javascript"
+          src="https://in.fw-cdn.com/31976345/1041506.js"
+          async
+          defer
+        ></Script>
       </head>
       <body className={font.className}>
         <Toaster />
