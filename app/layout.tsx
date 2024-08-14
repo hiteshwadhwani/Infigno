@@ -5,6 +5,7 @@ import { Readex_Pro } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
 import Script from 'next/script'
+import ZendeskChat from "@/components/zendesk";
 
 const font = Readex_Pro({ subsets: ["latin"] });
 
@@ -28,41 +29,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="manifest" type="image/png" sizes="32x32" href="/favicon.png" />
-        <Script id="gtag-script-1" async src="https://www.googletagmanager.com/gtag/js?id=AW-11302750203"></Script>
-        <Script id="gtag-script-2" >
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-11302750203');
-          `}
-        </Script>
-        <Script id="freshworks-widget-settings">
-          {`
-          window.fwSettings = {
-            'widget_id': 1041506
-          };
-          !function() {
-            if ("function" != typeof window.FreshworksWidget) {
-              var n = function() {
-                n.q.push(arguments)
-              };
-              n.q = [], window.FreshworksWidget = n
-            }
-          }();
-        `}
-        </Script>
-        <Script
-          id="freshworks-widget-script"
-          type="text/javascript"
-          src="https://in.fw-cdn.com/31976345/1041506.js"
-          async
-          defer
-        ></Script>
       </head>
       <body className={font.className}>
         <Toaster />
         <Navbar />
+        <ZendeskChat />
         {children}
         <Footer />
 

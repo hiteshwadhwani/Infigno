@@ -83,7 +83,7 @@ const Mentors = () => {
         )}
       >
         Interact with our growing network of{" "}
-        <span className="font-bold">100+ Mentors</span>
+        <span className="font-bold">150+ Mentors</span>
       </div>
       <div className="mt-[30px]">
         <Carousel
