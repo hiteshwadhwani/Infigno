@@ -54,7 +54,7 @@ const ClubPartners = () => {
         )}
       >
         <span className="font-bold">
-          80+ College <br className="md:hidden" />
+          100+ College <br className="md:hidden" />
           Club
         </span>{" "}
         Partners

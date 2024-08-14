@@ -24,12 +24,12 @@ const data = [
   {
     heading: "Will the training be online or offline?",
     content:
-      "It will be a mix of online and offline, your theory and psychometric test training will be online, and the sales training will be offline.",
+      "It will be online, 2-3 people in one live session with the trainer. One week prior you will get the slots of training you can select the slot as per your convenience.",
   },
   {
     heading: "What is the training duration?",
     content:
-      "The total training is for 16 hours, which we have divided over a period of 2 months, as after every session there will be some assignments and reading material etc. Each session will be for approx 1.5 hours.",
+      "The total training will be for 12 sessions, which we have divided over a period of 3 months, so after every session there will be some assignments and reading materials provided,d and each session will be for approximately 1 hours to 1.5 hours.You will be having a session once a week.",
   },
   {
     heading: "Will the training session be recorded or live?",
